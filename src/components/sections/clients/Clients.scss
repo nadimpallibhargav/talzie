@@ -1,0 +1,45 @@
+@import '../../../variable.scss';
+
+.clientsContent {
+    padding-top: 75px;
+}
+
+.clientsWrapper {
+    @extend %justify-center;
+    gap: 3px;
+}
+
+.clientsColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    &:first-of-type {
+        padding-top: 40px;
+    }
+    &:nth-of-type(3) {
+        padding-top: 80px;
+    }
+    &:nth-of-type(4) {
+        padding-top: 32px;
+    }
+    &:nth-of-type(5) {
+        padding-top: 128px;
+    }
+    &:last-of-type {
+        padding-top: 64px;
+    }
+}
+
+.clientCard {
+    background-color: $color-black-1;
+    @extend %align-justify-center;
+    min-width: 135px;
+    min-height: 135px;
+    border-radius: 20px;
+    &:nth-of-type(even) {
+        background-color: rgba($color: $color-white-0, $alpha: 0.2);
+    }
+    img {
+        vertical-align: text-top;
+    }
+}

@@ -1,24 +1,26 @@
 $color-black-0: #000000;
+$color-black-1: #212121a6;
+$color-black-2: #212121;
 
 $color-white-0: #ffffff;
 
-@mixin align-center {
+%align-center {
     display: flex;
     align-items: center;
 }
 
-@mixin justify-center {
+%justify-center {
     display: flex;
     justify-content: center;
 }
 
-@mixin align-justify-center {
+%align-justify-center {
     display: flex;
     align-items: center;
     justify-content: center;    
 }
 
-@mixin align-justify-between {
+%align-justify-between {
     display: flex;
     align-items: center;
     justify-content: space-between;    

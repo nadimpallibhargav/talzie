@@ -9,7 +9,7 @@ header {
 }
 
 nav {
-    @include align-justify-between;
+    @extend %align-justify-between;
     .logo {
         font-size: 2rem;
         color: $color-white-0;
@@ -17,7 +17,7 @@ nav {
         letter-spacing: 0.7rem;
     }
     ul {
-        @include align-justify-center;
+        @extend %align-justify-center;
     }
     li {
         a {
