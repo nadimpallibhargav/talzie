@@ -51,7 +51,7 @@ const TabComponent = ({ tabs, autoCycleInterval }) => {
           <p>Lorem ipsum dolor sit amet.</p>
     </div>
     <div className="wrapper">
-    {/* <div className="tab-content">{tabs[activeTab].content}</div> */}
+
     <div className="tabs-wrapper">
       <ul className="tab-list">
         {tabs.map((tab, index) => (
@@ -90,7 +90,7 @@ const TabComponent = ({ tabs, autoCycleInterval }) => {
       </ul>
   
     </div>
-    <div>Image Goes Here</div>
+    <img className="tab-content" src={tabs[activeTab].img} />
     </div>
     </div>
   );
