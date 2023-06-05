@@ -1,0 +1,25 @@
+$color-black-0: #000000;
+
+$color-white-0: #ffffff;
+
+@mixin align-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin align-justify-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+@mixin align-justify-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
