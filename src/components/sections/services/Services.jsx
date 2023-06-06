@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import "./styles.scss";
+
+import "./Services.scss";
 
 const TabComponent = ({ tabs, autoCycleInterval }) => {
   const [activeTab, setActiveTab] = useState(0);
