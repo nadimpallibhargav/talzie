@@ -1,5 +1,18 @@
 @import '../../../variable.scss';
 
+.clients {
+    .heading {
+        h2 {
+            margin: auto;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+}
+
 .clientsContent {
     padding-top: 75px;
 }
@@ -13,18 +26,23 @@
     display: flex;
     flex-direction: column;
     gap: 3px;
+
     &:first-of-type {
         padding-top: 40px;
     }
+
     &:nth-of-type(3) {
         padding-top: 80px;
     }
+
     &:nth-of-type(4) {
         padding-top: 32px;
     }
+
     &:nth-of-type(5) {
         padding-top: 128px;
     }
+
     &:last-of-type {
         padding-top: 64px;
     }
@@ -36,9 +54,11 @@
     min-width: 135px;
     min-height: 135px;
     border-radius: 20px;
+
     &:nth-of-type(even) {
         background-color: rgba($color: $color-white-0, $alpha: 0.2);
     }
+
     img {
         vertical-align: text-top;
     }

@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 import "./Services.scss";
 
 const TabComponent = ({ tabs, autoCycleInterval }) => {
   const [activeTab, setActiveTab] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying] = useState(true);
   const [initialProgress, setInitialProgress] = useState(0);
   const [isFirstRender, setIsFirstRender] = useState(true);
 
@@ -30,70 +30,31 @@ const TabComponent = ({ tabs, autoCycleInterval }) => {
     }
   }, [progress, tabs.length, isFirstRender]);
 
-  const handleTabClick = (index) => {
-    if (index === activeTab) {
-      setIsPlaying(!isPlaying); // Toggle auto-cycling when clicking on the active tab
-    } else {
-      setIsPlaying(true);
-      setActiveTab(index);
-      setProgress(index);
-      setInitialProgress(index);
-    }
-  };
-
-  const handlePlayPauseClick = () => {
-    setIsPlaying(!isPlaying);
-  };
-
   return (
-    <div className="container">
-    <div className="heading">
-          <h2>Clients</h2>
-          <p>Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div className="wrapper">
-
-    <div className="tabs-wrapper">
-      <ul className="tab-list">
-        {tabs.map((tab, index) => (
-          <li
-            key={index}
-            className={index === activeTab ? 'active' : ''}
-          >
-            {/* <img
-              src={
-                index === activeTab
-                  ? '/images/icon-check.svg'
-                  : '/images/icon-check.svg'
-              }
-              width={24}
-              height={24}
-            /> */}
-            {tab.title}
-            {index === activeTab && (
-              <div className="progress-bar">
-                <div
-                  className="progress"
-                  style={{
-                    width: `${
-                      progress === activeTab && initialProgress === activeTab
-                        ? ((progress - initialProgress) / tabs.length) * 100
-                        : 0
-                    }%`,
-                    animationPlayState:
-                      progress === activeTab && isPlaying ? 'running' : 'paused',
-                  }}
-                ></div>
-              </div>
-            )}
-          </li>
-        ))}
-      </ul>
-  
-    </div>
-    <img className="tab-content" src={tabs[activeTab].img} />
-    </div>
-    </div>
+    <section className="services">
+      <div className="container">
+        <div className="servicesContent">
+          <div className="servicesImageContent">
+            <div className="heading">
+              <h2>Services</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div className="imageWrapper">
+              <img src={tabs[activeTab].img} />
+            </div>
+          </div>
+          <div className="servicesTabsWrapper">
+            <ul className="tab-list">
+              {tabs.map((tab, index) => (
+                <li key={index} className={index === activeTab ? "active" : ""}>
+                  {tab.title}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
