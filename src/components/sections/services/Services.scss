@@ -20,6 +20,7 @@
   height: 250px;
   position: relative;
   img {
+    z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
@@ -34,10 +35,9 @@
 }
 
 .tab-list li {
-  position: relative;
   font-weight: 700;
   font-size: 5.4rem;
-  opacity: 0.5;
+  color: $color-black-3;
   display: block;
   &:not(:last-of-type) {
     padding-bottom: 40px;
@@ -45,7 +45,7 @@
 }
 
 .tab-list li.active {
-  opacity: 1;
+  color: $color-white-0;
 }
 
 @keyframes progressAnimation {
