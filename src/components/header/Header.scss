@@ -1,0 +1,36 @@
+@import '../../variable.scss';
+
+header {
+    padding: 25px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: $color-black-0;
+}
+
+nav {
+    .logoAndTitle{
+        @include align-justify-between;
+        gap:9px;
+        img{
+           max-width: 30px;
+        }
+    }
+    @include align-justify-between;
+    .logo {
+        font-size: 2rem;
+        color: $color-white-0;
+        font-weight: 700;
+        letter-spacing: 0.7rem;
+    }
+    ul {
+        @include align-justify-center;
+    }
+    li {
+        a {
+            font-size: 1.6rem;
+            color: $color-white-0;
+            padding: 5px 15px;
+        }
+    }
+}
