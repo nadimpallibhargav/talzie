@@ -9,6 +9,13 @@ header {
 }
 
 nav {
+    .logoAndTitle{
+        @include align-justify-between;
+        gap:9px;
+        img{
+           max-width: 30px;
+        }
+    }
     @include align-justify-between;
     .logo {
         font-size: 2rem;
