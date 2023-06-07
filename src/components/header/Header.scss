@@ -9,9 +9,9 @@ header {
 }
 
 nav {
-    @include align-end-justify-between;
+    @extend %align-end-justify-between;
     .logoAndTitle{
-        @include align-end;
+        @extend %align-end;
         gap: 0.7rem;
         img{
            max-width: 35px;
@@ -25,7 +25,7 @@ nav {
         line-height: 1.9rem;
     }
     ul {
-        @include align-end-justify-end;
+        @extend %align-end-justify-end;
     }
     li {
         a {

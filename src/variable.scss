@@ -10,36 +10,36 @@ $color-white-0: #ffffff;
     align-items: center;
 }
 
+%align-end {
+    display: flex;
+    align-items: flex-end;
+}
+
 %justify-center {
     display: flex;
     justify-content: center;
 }
 
-%justify-between {
-    display: flex;
-    justify-content: space-between;
-}
-
 %align-justify-center {
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
 }
 
 %align-justify-between {
     display: flex;
     align-items: center;
-    justify-content: space-between;    
+    justify-content: space-between;
 }
 
-@mixin align-end-justify-between {
+%align-end-justify-between {
     display: flex;
     align-items: end;
-    justify-content: space-between;    
+    justify-content: space-between;
 }
 
-@mixin align-end-justify-end {
+%align-end-justify-end {
     display: flex;
     align-items: end;
-    justify-content: end;    
+    justify-content: end;
 }
