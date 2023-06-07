@@ -2,41 +2,41 @@ $color-black-0: #000000;
 
 $color-white-0: #ffffff;
 
-@mixin align-center {
+%align-center {
     display: flex;
     align-items: center;
 }
 
-@mixin align-end {
+%align-end {
     display: flex;
     align-items: flex-end;
 }
 
-@mixin justify-center {
+%justify-center {
     display: flex;
     justify-content: center;
 }
 
-@mixin align-justify-center {
+%align-justify-center {
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
 }
 
-@mixin align-justify-between {
+%align-justify-between {
     display: flex;
     align-items: center;
-    justify-content: space-between;    
+    justify-content: space-between;
 }
 
-@mixin align-end-justify-between {
+%align-end-justify-between {
     display: flex;
     align-items: end;
-    justify-content: space-between;    
+    justify-content: space-between;
 }
 
-@mixin align-end-justify-end {
+%align-end-justify-end {
     display: flex;
     align-items: end;
-    justify-content: end;    
+    justify-content: end;
 }
