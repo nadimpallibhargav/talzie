@@ -15,7 +15,7 @@ const Banner = () => {
             nobis?
           </p>
           <div className="heroImageContainer">
-            <img src={heroPic} alt="heroSectionImage" />
+            <img src={heroPic} alt="heroSectionImage"/>
           </div>
         </div>
       </div>
