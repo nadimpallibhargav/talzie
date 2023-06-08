@@ -1,25 +1,50 @@
 $color-black-0: #000000;
+$color-black-1: #212121a6;
+$color-black-2: #212121;
+$color-black-3: #808080;
 
 $color-white-0: #ffffff;
 
-@mixin align-center {
+%align-center {
     display: flex;
     align-items: center;
 }
 
-@mixin justify-center {
+%align-end {
+    display: flex;
+    align-items: flex-end;
+}
+
+%justify-center {
     display: flex;
     justify-content: center;
 }
 
-@mixin align-justify-center {
+%justify-between {
     display: flex;
-    align-items: center;
-    justify-content: center;    
+    justify-content: space-between;
 }
 
-@mixin align-justify-between {
+%align-justify-center {
     display: flex;
     align-items: center;
-    justify-content: space-between;    
+    justify-content: center;
+}
+
+%align-justify-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+%align-end-justify-between {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+%align-end-justify-end {
+    display: flex;
+    align-items: end;
+    justify-content: end;
 }

@@ -13,6 +13,11 @@ html {
     font-family: sans-serif;
 }
 
+section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
 li {
     list-style-type: none;
 }
@@ -26,6 +31,22 @@ a {
     width: 100%;
     padding-inline: 15px;
     margin-inline: auto;
+}
+
+.heading {
+    h2 {
+        font-size: 6rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        line-height: 1;
+        max-width: 50%;
+    }
+    p {
+        font-size: 20px;
+        line-height: 1.35;
+        font-weight: 300;
+        padding-top: 15px;
+    }
 }
 
 @media (min-width: 1200px) {

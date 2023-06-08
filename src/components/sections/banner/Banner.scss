@@ -2,7 +2,7 @@
 
 .bannerContent {
     min-height: calc(100vh - 73px);
-    @include align-justify-center;
+    @extend %align-justify-center;
     flex-direction: column;
     text-align: center;
     h1 {
