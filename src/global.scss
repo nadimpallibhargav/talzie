@@ -28,8 +28,12 @@ a {
 }
 
 .primaryBtn {
-    padding: 10px 15px;
+    padding: 17px 30px;
     font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.37px;
+    line-height: 1;
+    border-radius: 28px;
     background-color: $color-white-0;
     color: $color-black-0;
     border: 1px solid $color-white-0;
@@ -42,8 +46,11 @@ a {
 }
 
 .borderBtn {
-    padding: 10px 15px;
+    padding: 17px 30px;
     font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.37px;
+    line-height: 1;
     border: 1px solid $color-white-0;
     color: $color-white-0;
     display: inline-flex;
