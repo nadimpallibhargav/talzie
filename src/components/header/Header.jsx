@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../../assets/images/talzie_logo.svg'
+import logo from "../../../public/talzie_logo.svg";
 import "./Header.scss";
 
 const Header = () => {
@@ -8,9 +8,11 @@ const Header = () => {
       <div className="container">
         <nav>
           <div className="logoAndTitle">
-          <img src={logo}/>     
-          <a className="logo" href="">TALZIE</a>
-          </div> 
+            <img src={logo} />
+            <a className="logo" href="">
+              ALZIE
+            </a>
+          </div>
           <ul>
             <li>
               <a href="">CLIENTS</a>

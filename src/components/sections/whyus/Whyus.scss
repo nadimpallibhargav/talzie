@@ -1,0 +1,40 @@
+@import '../../../variable.scss';
+
+.whyus {
+    .heading {
+        flex-basis: 60%;
+    }
+}
+
+.whyusHeading {
+    @extend %justify-between;
+    border-bottom: 1px solid $color-white-0;
+    padding-bottom: 30px;
+}
+
+.whyusHeadingImage {
+    flex-basis: 40%;
+    text-align: center;
+    img {
+        max-width: 200px;
+    }
+}
+
+.whyusWrapper {
+    @extend %justify-between;
+    gap: 30px;
+    padding-top: 50px;
+}
+
+.whyusCard {
+    h3 {
+        padding-top: 30px;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    p {
+        padding-top: 15px;
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,59 @@
+@import '../../../variable.scss';
+
+.services {
+  .heading {
+    padding-bottom: 50px;
+  }
+}
+
+.servicesContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.servicesImageContent {
+  flex-basis: 43%;
+}
+
+.imageWrapper {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  img {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.servicesTabsWrapper {
+  flex-basis: 57%;
+}
+
+.tab-list li {
+  font-weight: 700;
+  font-size: 5.4rem;
+  color: $color-black-3;
+  display: block;
+  &:not(:last-of-type) {
+    padding-bottom: 40px;
+  }
+}
+
+.tab-list li.active {
+  color: $color-white-0;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
