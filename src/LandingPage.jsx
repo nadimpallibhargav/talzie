@@ -1,5 +1,6 @@
 import Header from "./components/header/Header";
 import Banner from "./components/sections/banner/Banner";
+import BannerV2 from "./components/sections/bannerV2/BannerV2";
 import Clients from "./components/sections/clients/Clients";
 import Hiring from "./components/sections/hiring/Hiring";
 import HowWeDo from "./components/sections/howwedo/HowWeDo";
@@ -12,7 +13,7 @@ function LandingPage() {
     <>
       <Header />
       <main>
-        <Banner />
+        <BannerV2 />
         <Clients />
         <Services tabs={tabs} autoCycleInterval={3000} />
         <Whyus />
