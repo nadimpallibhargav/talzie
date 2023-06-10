@@ -9,7 +9,6 @@
 
 .whyusHeading {
     @extend %justify-between;
-    // border-bottom: 1px solid $color-white-0;
     padding-bottom: 30px;
 }
 
@@ -41,4 +40,24 @@
         font-size: 1.6rem;
         line-height: 1.5;
     }
+}
+
+@media (max-width: 769px) {
+ .whyusWrapper {
+    flex-wrap: wrap;
+    flex-direction: column;
+ }
+ .whyusCard {
+    width: 100%;
+    padding: 20px;
+    h3 {
+        padding-top: 20px;
+    }
+ }   
+}
+
+@media (max-width: 569px) {
+    .whyusHeading {
+        flex-direction: column;
+    }   
 }
