@@ -32,7 +32,7 @@ function Contact() {
               </div>
             </div>
             <div class="contactButton">
-              <PrimaryButton btnName="Submit" />
+                <input type="submit" value="Submit" />
             </div>
           </form>
         </div>
