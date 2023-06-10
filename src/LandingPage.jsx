@@ -2,6 +2,7 @@ import Header from "./components/header/Header";
 import Banner from "./components/sections/banner/Banner";
 import BannerV2 from "./components/sections/bannerV2/BannerV2";
 import Clients from "./components/sections/clients/Clients";
+import Contact from "./components/sections/contact/Contact";
 import Hiring from "./components/sections/hiring/Hiring";
 import HowWeDo from "./components/sections/howwedo/HowWeDo";
 import Services from "./components/sections/services/Services";
@@ -19,6 +20,7 @@ function LandingPage() {
         <Whyus />
         <HowWeDo />
         <Hiring />
+        <Contact/>
       </main>
     </>
   );

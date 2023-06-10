@@ -20,7 +20,7 @@ function BannerV2() {
                <div className='buttonWrapper'>
                   <p><Lottie animationData={LottieExplore} loop={true} style={{height:50 , width:50}}/> / hello@talzie.com</p>
                 </div>
-              <Lottie animationData={LottieTeam} loop={true} style={{height:"550px" , width:"auto"}}/>
+              <Lottie animationData={LottieTeam} loop={true} style={{height:"400px" , width:"auto"}}/>
             </div>
         </div>
     </div>

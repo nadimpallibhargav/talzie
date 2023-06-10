@@ -9,7 +9,7 @@
 
 .whyusHeading {
     @extend %justify-between;
-    border-bottom: 1px solid $color-white-0;
+    // border-bottom: 1px solid $color-white-0;
     padding-bottom: 30px;
 }
 
@@ -28,6 +28,9 @@
 }
 
 .whyusCard {
+        border: 2px solid $color-white-0;
+        padding: 34px 24px;
+        border-radius: 8px;
     h3 {
         padding-top: 30px;
         font-size: 2rem;

@@ -36,7 +36,7 @@ const TabComponent = ({ tabs, autoCycleInterval }) => {
         <div className="servicesContent">
           <div className="servicesImageContent">
             <div className="heading">
-              <h2>Services</h2>
+              <h2>What we do.</h2>
               <p>Lorem ipsum dolor sit amet.</p>
             </div>
             <div className="imageWrapper">

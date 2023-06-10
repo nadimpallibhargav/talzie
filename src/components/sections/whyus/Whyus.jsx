@@ -12,9 +12,9 @@ const Whyus = () => {
                         <h2>Why Us</h2>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad natus cupiditate deserunt dignissimos rem in corporis veritatis sed est necessitatibus!</p>
                     </div>
-                    <div className="whyusHeadingImage">
+                    {/* <div className="whyusHeadingImage">
                         <img src="https://uploads-ssl.webflow.com/61a9d163662d2084d7cbc38f/637ca0961ec666cd8dadf60a_yellow-brick.svg" alt="why us" />
-                    </div>
+                    </div> */}
                 </div>
                 <div className="whyusWrapper">
                     <div className="whyusCard">
