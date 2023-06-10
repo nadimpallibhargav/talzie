@@ -39,6 +39,7 @@ a {
     color: $color-black-0;
     border: 1px solid $color-white-0;
     display: inline-flex;
+    justify-content: center;
 
     &:hover {
         background-color: $color-black-0;
