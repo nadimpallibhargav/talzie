@@ -1,5 +1,4 @@
 import Header from "./components/header/Header";
-import Banner from "./components/sections/banner/Banner";
 import BannerV2 from "./components/sections/bannerV2/BannerV2";
 import Clients from "./components/sections/clients/Clients";
 import Contact from "./components/sections/contact/Contact";
