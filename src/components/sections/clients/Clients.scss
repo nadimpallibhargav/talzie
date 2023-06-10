@@ -2,6 +2,7 @@
 
 .clients {
     background-color: $color-black-0;
+
     .heading {
         h2 {
             margin: auto;
@@ -62,5 +63,53 @@
 
     img {
         vertical-align: text-top;
+    }
+}
+
+@media (max-width: 991px) {
+    .clientCard {
+        min-width: 100px;
+        min-height: 100px;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .clientsColumn {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &:first-of-type {
+            padding-top: 0px;
+        }
+
+        &:nth-of-type(3) {
+            padding-top: 0px;
+        }
+
+        &:nth-of-type(4) {
+            padding-top: 0px;
+        }
+
+        &:nth-of-type(5) {
+            padding-top: 0px;
+        }
+
+        &:last-of-type {
+            padding-top: 0px;
+        }
+    }
+
+    .clientsWrapper {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 769px) {
+
+    .clientsColumn {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
