@@ -5,12 +5,12 @@ import LottieExplore from "../../../../public/lottie/LottieExplore.json";
 import LottieOffer from "../../../../public/lottie/LottieOffer.json";
 import LottieTeam from "../../../../public/lottie/LottieTeam.json";
 
-function BannerV2() {
+function BannerV2({banner}) {
   return (
     <>
       <section className="banner">
-        <div className="priceTag">
-          <p>
+        <div className="priceTag" >
+          <p ref={banner} > 
           <span>Limited Time Offer</span>. We are offering an exclusive website for your business at an unbeatable price of <span>####</span>
           </p>
           {/* <Lottie

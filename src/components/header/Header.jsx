@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../../../public/talzie_logo.svg";
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({scrollToSection , services ,clients ,whyUs, howWeDo, contact, banner}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,9 +13,9 @@ const Header = () => {
     <header>
       <div className="container">
         <nav>
-          <div className="logoAndTitle">
+          <div className="logoAndTitle" onClick={()=> scrollToSection(banner)} style={{cursor:"pointer"}}>
             <img src={logo} alt="Logo" />
-            <a className="logo" href="">
+            <a className="logo">
               ALZIE
             </a>
           </div>
@@ -25,20 +25,20 @@ const Header = () => {
             <div className="bar"></div>
           </div>
           <ul className={`menu ${isMenuOpen ? 'open' : ''}`}>
-            <li>
-              <a href="">CLIENTS</a>
+            <li onClick={()=> scrollToSection(clients)}>
+              <a>CLIENTS</a>
             </li>
-            <li>
-              <a href="">SERVICES</a>
+            <li onClick={()=> scrollToSection(services)}>
+              <a>SERVICES</a>
             </li>
-            <li>
-              <a href="">WHY US</a>
+            <li onClick={()=> scrollToSection(whyUs)}>
+              <a>WHY US</a>
             </li>
-            <li>
-              <a href="">HOW WE DO</a>
+            <li onClick={()=> scrollToSection(howWeDo)}>
+              <a>HOW WE DO</a>
             </li>
-            <li>
-              <a href="">CONTACT</a>
+            <li onClick={()=> scrollToSection(contact)}>
+              <a>CONTACT</a>
             </li>
           </ul>
         </nav>

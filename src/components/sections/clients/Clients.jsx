@@ -1,9 +1,9 @@
 import React from "react";
 import "./Clients.scss";
 
-const Clients = () => {
+const Clients = ({clients}) => {
   return (
-    <section className="clients">
+    <section className="clients" ref={clients}>
       <div className="container">
         <div className="heading">
           <h2>We’ve worked with some cool people.</h2>

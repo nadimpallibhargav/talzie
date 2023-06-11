@@ -2,10 +2,10 @@ import React from "react";
 import "./HowWeDo.scss";
 import { PrimaryButton } from "../../buttons/Buttons";
 
-const HowWeDo = () => {
+const HowWeDo = ({howWeDo}) => {
 
   return (
-    <section className="howWeDo">
+    <section className="howWeDo" ref={howWeDo}>
       <div className="container">
         <div className="howWeDoContent">
           <div className="howWeDoMainHeading">

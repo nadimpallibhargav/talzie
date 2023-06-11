@@ -1,7 +1,7 @@
 import React from "react";
 import "./Contact.scss";
 
-function Contact() {
+function Contact({contact}) {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -67,7 +67,7 @@ function Contact() {
 
   return (
     <>
-      <section className="contact">
+      <section className="contact" ref={contact}>
         <div className="container">
           <div className="heading" style={{ textAlign: "center" }}>
             <h5>What's Next?</h5>

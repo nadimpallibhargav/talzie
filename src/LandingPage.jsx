@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import Header from "./components/header/Header";
 import BannerV2 from "./components/sections/bannerV2/BannerV2";
 import Clients from "./components/sections/clients/Clients";
@@ -9,17 +10,31 @@ import Whyus from "./components/sections/whyus/Whyus";
 import { tabs } from "./utlis/common";
 
 function LandingPage() {
+  const banner = useRef(null);
+  const services = useRef(null);
+  const clients = useRef(null)
+  const whyUs = useRef(null)
+  const howWeDo = useRef(null)
+  const contact = useRef(null)
+
+  const scrollToSection = (elementRef) => {
+    console.log(elementRef)
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: "smooth"
+    })
+  }
   return (
     <>
-      <Header />
+      <Header scrollToSection={scrollToSection} services={services} clients={clients} whyUs={whyUs} howWeDo={howWeDo} contact={contact} banner={banner}/>
       <main>
-        <BannerV2 />
-        <Clients />
-        <Services tabs={tabs} autoCycleInterval={3500} />
-        <Whyus />
-        <HowWeDo />
+        <BannerV2 banner={banner}/>
+        <Clients clients={clients}/>
+        <Services tabs={tabs} autoCycleInterval={3500} services={services}/>
+        <Whyus whyUs={whyUs}/>
+        <HowWeDo howWeDo={howWeDo}/>
         {/* <Hiring /> */}
-        <Contact/>
+        <Contact contact={contact}/>
       </main>
     </>
   );

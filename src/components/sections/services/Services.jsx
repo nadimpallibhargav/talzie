@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./Services.scss";
 import Lottie from "lottie-react";
 
-const TabComponent = ({ tabs, autoCycleInterval }) => {
+const TabComponent = ({ tabs, autoCycleInterval, services }) => {
   const [activeTab, setActiveTab] = useState(0);
   const [progress, setProgress] = useState(0);
   const [isPlaying] = useState(true);
@@ -32,7 +32,7 @@ const TabComponent = ({ tabs, autoCycleInterval }) => {
   }, [progress, tabs.length, isFirstRender]);
 
   return (
-    <section className="services">
+    <section className="services" ref={services}>
       <div className="container">
         <div className="servicesContent">
           <div className="servicesImageContent">
