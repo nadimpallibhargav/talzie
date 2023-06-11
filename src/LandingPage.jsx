@@ -15,10 +15,10 @@ function LandingPage() {
       <main>
         <BannerV2 />
         <Clients />
-        <Services tabs={tabs} autoCycleInterval={3000} />
+        <Services tabs={tabs} autoCycleInterval={3500} />
         <Whyus />
         <HowWeDo />
-        <Hiring />
+        {/* <Hiring /> */}
         <Contact/>
       </main>
     </>
