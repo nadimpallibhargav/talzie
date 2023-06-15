@@ -1,20 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.scss";
 
-function Contact({contact}) {
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+function Contact({ contact }) {
+  const [userData, setUserData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    usermessage: "",
+  });
 
-    const { firstName, lastName, email, phoneNumber } = event.target;
+  let name, value;
+  const postUserData = (event) => {
+    name = event.target.name;
+    value = event.target.value;
+
+    setUserData({ ...userData, [name]: value });
+  };
+
+  // connect with firebase
+  const submitData = async (event) => {
+    event.preventDefault();
+    const { fullName, phone, email, usermessage } = userData;
+
+    if (fullName || phone || email || usermessage) {
+      const res = await fetch(
+        "https://talzieform-default-rtdb.firebaseio.com/userDataRecords.json",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullName,
+            phone,
+            email,
+            usermessage,
+          }),
+        }
+      );
+
+      if (res) {
+        setUserData({
+          fullName: "",
+          phone: "",
+          email: "",
+          usermessage: "",
+        });
+        alert("Data Stored");
+      } else {
+        alert("plz fill the data");
+      }
+    } else {
+      alert("plz fill the data");
+    }
 
     // Send email using a simple email sending service
     const senderEmail = "bhargavraju98@gmail.com"; // Replace with the actual sender email
-    const recipientEmail = email.value;
+    const recipientEmail = email;
     const subject = "New Contact Form Submission";
     const message = `
-    Name: ${firstName.value} ${lastName.value}
-    Email: ${email.value}
-    Phone Number: ${phoneNumber.value}
+    Name: ${fullName}
+    Email: ${email}
+    Phone Number: ${phone}
     `;
 
     try {
@@ -49,7 +96,7 @@ function Contact({contact}) {
           user_id: "L4EmhoTI2BsKkdWyX",
           template_params: {
             senderEmail,
-            recipientEmail: email.value, // Set the sender's email as the recipient for the auto-reply
+            recipientEmail: email, // Set the sender's email as the recipient for the auto-reply
             subject: "Thank you for contacting us",
             message:
               "This is an auto-reply message. We have received your contact form submission. We will get back to you soon.",
@@ -61,8 +108,6 @@ function Contact({contact}) {
     } catch (error) {
       console.error("Error sending email:", error);
     }
-
-    // ...
   };
 
   return (
@@ -75,47 +120,64 @@ function Contact({contact}) {
           </div>
           <div className="contactFormWrapper">
             <div className="formContainer">
-              <form onSubmit={handleSubmit}>
+              <form method="POST">
                 <div className="user__details">
                   <div className="input__box">
-                    <span className="details">First Name</span>
+                    <span className="details">Full Name</span>
                     <input
                       type="text"
-                      name="firstName"
-                      placeholder="E.g: John"
-                      required
+                      name="fullName"
+                      id=""
+                      className="form-control"
+                      placeholder="Enter Full Name"
+                      value={userData.fullName}
+                      onChange={postUserData}
                     />
                   </div>
                   <div className="input__box">
-                    <span className="details">Last Name</span>
+                    <span className="details">Mobile</span>
                     <input
                       type="text"
-                      name="lastName"
-                      placeholder="E.g: Smith"
-                      required
+                      name="phone"
+                      id=""
+                      className="form-control"
+                      placeholder="Enter Phone Number "
+                      value={userData.phone}
+                      onChange={postUserData}
                     />
                   </div>
                   <div className="input__box">
                     <span className="details">Email</span>
                     <input
-                      type="email"
+                      type="text"
                       name="email"
-                      placeholder="johnsmith@hotmail.com"
-                      required
+                      id=""
+                      className="form-control"
+                      placeholder="Enter Email"
+                      value={userData.email}
+                      onChange={postUserData}
                     />
                   </div>
                   <div className="input__box">
-                    <span className="details">Phone Number</span>
+                    <span className="details">Project Details</span>
                     <input
-                      type="tel"
-                      name="phoneNumber"
-                      placeholder="012-345-6789"
-                      required
+                      type="text"
+                      name="usermessage"
+                      id=""
+                      className="form-control"
+                      placeholder="Enter Project Details"
+                      value={userData.usermessage}
+                      onChange={postUserData}
                     />
                   </div>
                 </div>
                 <div className="contactButton">
-                  <input type="submit" className="primaryBtn" value="Submit" />
+                  <input
+                    type="submit"
+                    className="primaryBtn"
+                    value="Submit"
+                    onClick={submitData}
+                  />
                 </div>
               </form>
             </div>
