@@ -6,7 +6,7 @@ function Contact({ contact }) {
     fullName: "",
     phone: "",
     email: "",
-    usermessage: "",
+    projectdetails: "",
   });
 
   let name, value;
@@ -20,11 +20,11 @@ function Contact({ contact }) {
   // connect with firebase
   const submitData = async (event) => {
     event.preventDefault();
-    const { fullName, phone, email, usermessage } = userData;
+    const { fullName, phone, email, projectdetails } = userData;
 
-    if (fullName || phone || email || usermessage) {
+    if (fullName || phone || email || projectdetails) {
       const res = await fetch(
-        "https://talzieform-default-rtdb.firebaseio.com/userDataRecords.json",
+        "https://talzie-4e5a1-default-rtdb.firebaseio.com//userDataRecords.json",
         {
           method: "POST",
           headers: {
@@ -34,7 +34,7 @@ function Contact({ contact }) {
             fullName,
             phone,
             email,
-            usermessage,
+            projectdetails,
           }),
         }
       );
@@ -44,7 +44,7 @@ function Contact({ contact }) {
           fullName: "",
           phone: "",
           email: "",
-          usermessage: "",
+          projectdetails: "",
         });
         alert("Data Stored");
       } else {
@@ -55,13 +55,14 @@ function Contact({ contact }) {
     }
 
     // Send email using a simple email sending service
-    const senderEmail = "bhargavraju98@gmail.com"; // Replace with the actual sender email
+    const senderEmail = "talzie.contact@gmail.com"; // Replace with the actual sender email
     const recipientEmail = email;
     const subject = "New Contact Form Submission";
     const message = `
     Name: ${fullName}
     Email: ${email}
     Phone Number: ${phone}
+    Project Details: ${projectdetails}
     `;
 
     try {
@@ -72,9 +73,9 @@ function Contact({ contact }) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          service_id: "service_m495mln",
-          template_id: "template_lhwzl98",
-          user_id: "L4EmhoTI2BsKkdWyX",
+          service_id: "service_apyi5hc",
+          template_id: "template_f34kfgm",
+          user_id: "G3kBEdhcK456nPl9e",
           template_params: {
             senderEmail,
             recipientEmail,
@@ -91,9 +92,9 @@ function Contact({ contact }) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          service_id: "service_m495mln",
-          template_id: "template_lhwzl98", // Replace with the auto-reply template ID
-          user_id: "L4EmhoTI2BsKkdWyX",
+          service_id: "service_apyi5hc",
+          template_id: "template_f34kfgm", // Replace with the auto-reply template ID
+          user_id: "G3kBEdhcK456nPl9e",
           template_params: {
             senderEmail,
             recipientEmail: email, // Set the sender's email as the recipient for the auto-reply
@@ -127,7 +128,6 @@ function Contact({ contact }) {
                     <input
                       type="text"
                       name="fullName"
-                      id=""
                       className="form-control"
                       placeholder="Enter Full Name"
                       value={userData.fullName}
@@ -139,7 +139,6 @@ function Contact({ contact }) {
                     <input
                       type="text"
                       name="phone"
-                      id=""
                       className="form-control"
                       placeholder="Enter Phone Number "
                       value={userData.phone}
@@ -151,7 +150,6 @@ function Contact({ contact }) {
                     <input
                       type="text"
                       name="email"
-                      id=""
                       className="form-control"
                       placeholder="Enter Email"
                       value={userData.email}
@@ -162,11 +160,10 @@ function Contact({ contact }) {
                     <span className="details">Project Details</span>
                     <input
                       type="text"
-                      name="usermessage"
-                      id=""
+                      name="projectdetails"
                       className="form-control"
                       placeholder="Enter Project Details"
-                      value={userData.usermessage}
+                      value={userData.projectdetails}
                       onChange={postUserData}
                     />
                   </div>
