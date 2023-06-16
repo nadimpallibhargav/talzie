@@ -11,7 +11,7 @@ const HowWeDo = () => {
           <div className="howWeDoMainHeading">
             <div className="heading">
                 <h2>How We Do</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, suscipit.</p>
+                <p>From  Onboarding to take off</p>
                 <PrimaryButton btnName='Contact Us' />
             </div>
           </div>
@@ -20,24 +20,24 @@ const HowWeDo = () => {
               <div className="stepNumberWrapper"><span className="numbers">1</span></div>
               <div className="stepContent">
                 <img src="https://uploads-ssl.webflow.com/61a9d163662d2084d7cbc38f/636b5475cbddd71f7b9318f2_kickoff.svg" alt="how we do" />
-                <h3>Lorem</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, at.</p>
+                <h3>Client Onboarding</h3>
+                <p>Understanding Client Requirements and Crafting a Strategy</p>
               </div>
             </div>
             <div className="howWeDoCard">
-              <div className="stepNumberWrapper"><span className="numbers">1</span></div>
+              <div className="stepNumberWrapper"><span className="numbers">2</span></div>
               <div className="stepContent">
                 <img src="https://uploads-ssl.webflow.com/61a9d163662d2084d7cbc38f/636b5475cbddd71f7b9318f2_kickoff.svg" alt="how we do" />
-                <h3>Lorem</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, at.</p>
+                <h3>Design Review</h3>
+                <p>Designing with Precision and Creativity</p>
               </div>
             </div>
             <div className="howWeDoCard">
-              <div className="stepNumberWrapper"><span className="numbers">1</span></div>
+              <div className="stepNumberWrapper"><span className="numbers">3</span></div>
               <div className="stepContent">
                 <img src="https://uploads-ssl.webflow.com/61a9d163662d2084d7cbc38f/636b5475cbddd71f7b9318f2_kickoff.svg" alt="how we do" />
-                <h3>Lorem</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, at.</p>
+                <h3>Project Live</h3>
+                <p>Development, Testing, and Deployment</p>
               </div>
             </div>
           </div>
