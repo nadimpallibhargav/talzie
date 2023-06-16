@@ -1,7 +1,7 @@
 import React from "react";
 import "./Buttons.scss";
 
-export const PrimaryButton = ({ btnClass, btnName }) => {
+export const PrimaryButton = ({ btnClass, btnName, type }) => {
   return (
     <a
       href=""
@@ -10,6 +10,7 @@ export const PrimaryButton = ({ btnClass, btnName }) => {
           ? ["primaryBtn", btnClass ? btnClass : ""].join(" ")
           : "primaryBtn"
       }
+      type={type}
     >
       {btnName}
     </a>

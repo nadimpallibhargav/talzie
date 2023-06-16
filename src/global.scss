@@ -1,5 +1,6 @@
 @import './variable.scss';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 
 * {
     padding: 0;
@@ -12,6 +13,7 @@ html {
     background-color: $color-black-0;
     color: $color-white-0;
     font-family: "Inter";
+    scroll-behavior: smooth;
 }
 
 section {
@@ -26,6 +28,11 @@ li {
 a {
     text-decoration: none;
     cursor: pointer;
+}
+
+input[type='submit'] {
+    cursor: pointer;
+    border-radius: 28px;
 }
 
 .primaryBtn {
@@ -108,13 +115,25 @@ a {
 @media (max-width: 769px) {
 
     section {
-        padding-top: 75px;
-        padding-bottom: 75px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .heading {
         h2 {
-            font-size: 3.5rem;
+            font-size: 24px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+.lotti-wrapper{
+    div{
+        svg{
+            width: 250px !important;
+            height: 250px !important;
         }
     }
 }

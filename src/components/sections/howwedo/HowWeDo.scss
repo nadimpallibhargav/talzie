@@ -114,9 +114,13 @@
 
 @media (max-width: 769px) {
     .howWeDo {
+        padding-top: 0px;
+        .heading p {
+            padding-bottom: 30px;
+        }
         .howWeDoCard {
             gap: 30px;
-
+         
             &:not(:last-of-type) {
                 .stepContent {
                     padding-bottom: 100px;
@@ -140,6 +144,7 @@
 
         .howWeDoSteps {
             flex-basis: 100%;
+            padding-top: 0px;
         }
 
         .heading {

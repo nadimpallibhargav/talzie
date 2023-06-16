@@ -23,7 +23,7 @@
 .whyusWrapper {
     @extend %justify-between;
     gap: 30px;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .whyusCard {
@@ -36,9 +36,10 @@
         font-weight: 700;
     }
     p {
-        padding-top: 15px;
+        padding-top: 8px;
         font-size: 1.6rem;
         line-height: 1.5;
+        max-width: 330px;
     }
 }
 
@@ -46,6 +47,7 @@
  .whyusWrapper {
     flex-wrap: wrap;
     flex-direction: column;
+    padding-top: 30px;
  }
  .whyusCard {
     width: 100%;
@@ -54,10 +56,21 @@
         padding-top: 20px;
     }
  }   
+ #whyusCard{
+    display: none;
+ }
 }
 
 @media (max-width: 569px) {
     .whyusHeading {
         flex-direction: column;
+        padding-bottom: 0;
     }   
+}
+
+.cardWrapper{
+    display: inline-block;
+    background: #fff;
+    padding: 8px 10px;
+    border-radius: 8px;
 }
