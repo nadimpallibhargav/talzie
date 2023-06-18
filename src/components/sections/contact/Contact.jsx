@@ -126,6 +126,7 @@ function Contact({ contact }) {
             <h5>Whats Next?</h5>
             <label>Get In Touch</label>
           </div>
+
           <div className="contactFormWrapper">
             <div className="formContainer">
               <form method="POST">
@@ -175,14 +176,13 @@ function Contact({ contact }) {
                   </div>
                   <div className="input__box">
                     <span className="details">Project Details</span>
-                    <input
-                      type="text"
-                      name="projectdetails"
+                    <textarea
                       className="form-control"
-                      placeholder="Enter Project Details"
+                      name="projectdetails"
                       value={userData.projectdetails}
                       onChange={postUserData}
-                    />
+                      placeholder="Enter Project Details"
+                    ></textarea>
                   </div>
                 </div>
                 <div className="contactButton">
@@ -194,6 +194,28 @@ function Contact({ contact }) {
                   />
                 </div>
               </form>
+            </div>
+            <div className="socialWrapper">
+              <div className="socialInfo">
+                <a className="socialLink" href="mailto:hello@talzie.com">
+                  <span className="socialButton">
+                    <img src="/gmail.png" width={24} />
+                  </span>
+                  <span className="socialText">hello@talzie.com</span>
+                </a>
+              </div>
+
+              <div className="socialInfo">
+                <a
+                  className="socialLink"
+                  target="blank"
+                  href="https://www.linkedin.com/in/talzie-33450b27a/"
+                >
+                  <span className="socialButton">
+                    <img src="/linkedin.png" width={24} />
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
           <ToastContainer />
