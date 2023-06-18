@@ -1,0 +1,112 @@
+@import '../../../variable.scss';
+
+.banner {
+    padding-top: 0;
+    min-height: calc(100vh - 83px);
+
+}
+
+.priceTag{
+    @extend %align-justify-center;
+    width: 100%;
+    margin: auto;
+    background-color: #3E41DA;
+    padding: 5px;
+    margin-bottom: 36px;
+    position: relative;
+    p{
+        padding-top: 8px;
+        color: $color-white-0;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+    }
+    img{
+        position: absolute;
+        right: 0px;
+        bottom: -16px;
+    }
+    span{
+        font-size: 16px;
+        font-weight: 700;
+    }
+    @media (max-width: 769px) {
+        flex-direction: column;
+    }
+}
+
+.title{
+    font-size: 52px;
+    line-height: 63px;
+    // @extend %align-justify-center;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    max-width: 904px;
+    margin-inline: auto;
+    font-weight: 600;
+    color: $color-white-0;
+    span{
+    display: inline-block;
+    font-family: "Gruppo";
+    font-size: 62px;
+    font-weight: 400;
+    border-bottom: 1px solid #fff;
+    }
+    @media (max-width: 769px) {
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: 400;
+        margin-top: 20px;
+        span{
+            font-size: 28px;
+            line-height: 32px;
+            font-weight: 400;
+        }
+    }
+}
+
+.buttonWrapper{
+    margin: 18px 15px 0px 0px;
+    display: inline-block;
+    background: #fff;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.buttonWrapper:hover{
+    scale: 1.2;
+}
+
+.bannerImage {
+    max-width: 400px;
+    margin: auto;
+}
+
+.aboutUs{
+    max-width: 904px;
+    margin: auto;
+    margin-top: 120px;
+    margin-bottom: 30px;
+    h4{
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+    p{
+        font-size: 16px;
+        max-width: 460px;
+        line-height: 24px;
+    }
+    @media (max-width: 769px) {
+        h4{
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+        p{
+            font-size: 12px;
+            max-width: 460px;
+            line-height: 20px;
+        }
+    }
+}

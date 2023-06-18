@@ -1,0 +1,177 @@
+@import '../../../variable.scss';
+
+.howWeDo {
+    padding-top: 70px;
+    background-color: $color-black-0;
+
+    .heading {
+        p {
+            max-width: 400px;
+            padding-bottom: 46px;
+        }
+    }
+
+    .howWeDoContent {
+        @extend %justify-between;
+    }
+
+    .howWeDoMainHeading {
+        padding-top: 50px;
+        position: sticky;
+        top: 83px;
+        flex-basis: 60%;
+        height: calc(100vh - 83px);
+        z-index: 0;
+    }
+
+    .howWeDoSteps {
+        flex-basis: 40%;
+        padding-top: 50px;
+    }
+
+    .howWeDoCard {
+        @extend %justify-between;
+        gap: 50px;
+
+        &:not(:last-of-type) {
+            .stepContent {
+                padding-bottom: 160px;
+            }
+
+            .stepNumberWrapper {
+                position: relative;
+                z-index: 0;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background: $color-white-0;
+                    left: 50%;
+                    top: 56px;
+                    width: 1px;
+                    height: calc(100% - 56px);
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+
+    .stepNumberWrapper {
+        width: 56px;
+    }
+
+    .numbers {
+        color: $color-black-4;
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 25px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: $color-white-0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stepContent {
+        flex-grow: 1;
+
+        h3 {
+            font-size: 2.8rem;
+            padding-top: 25px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.6rem;
+            padding-top: 16px;
+            line-height: 1.4;
+            color: $color-white-1;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: -.005em;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .howWeDo {
+        .howWeDoMainHeading {
+            flex-basis: 50%;
+        }
+
+        .heading {
+            max-width: 70%;
+        }
+
+        .howWeDoSteps {
+            flex-basis: 50%;
+            flex-grow: 0;
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    .howWeDo {
+        padding-top: 0px;
+        .heading p {
+            padding-bottom: 30px;
+        }
+        .howWeDoCard {
+            gap: 30px;
+         
+            &:not(:last-of-type) {
+                .stepContent {
+                    padding-bottom: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 569px) {
+    .howWeDo {
+        .howWeDoContent {
+            flex-direction: column;
+        }
+
+        .howWeDoMainHeading {
+            position: initial;
+            padding-bottom: 50px;
+            flex-basis: 100%;
+        }
+
+        .howWeDoSteps {
+            flex-basis: 100%;
+            padding-top: 0px;
+        }
+
+        .heading {
+            max-width: 100%;
+            a {
+                width: 100%;
+            }
+        }
+
+        .numbers {
+            width: 48px;
+            height: 48px;
+        }
+
+        .howWeDoCard {
+            &:not(:last-of-type) {
+                .stepContent {
+                    padding-bottom: 75px;
+                }
+
+                .stepNumberWrapper {
+                    &::before {
+                        top: 48px;
+                        height: calc(100% - 48px);
+                    }
+                }
+            }
+        }
+    }
+}

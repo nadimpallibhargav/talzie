@@ -1,0 +1,18 @@
+@import '../../../variable.scss';
+
+.hiring {
+    background-color: $color-black-1;
+    text-align: center;
+    background-image: linear-gradient(to bottom, $color-black-1, $color-black-0);
+
+
+    .heading {
+        max-width: 400px;
+        margin-inline: auto;
+        h2,
+        p {
+            margin: auto;
+            padding: 0 0 30px;
+        }
+    }
+}

@@ -1,0 +1,140 @@
+@import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+
+html {
+    font-size: 10px;
+    background-color: $color-black-0;
+    color: $color-white-0;
+    font-family: "Inter";
+    scroll-behavior: smooth;
+}
+
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type='submit'] {
+    cursor: pointer;
+    border-radius: 28px;
+}
+
+.primaryBtn {
+    padding: 17px 30px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.37px;
+    line-height: 1;
+    border-radius: 28px;
+    background-color: $color-white-0;
+    color: $color-black-0;
+    border: 1px solid $color-white-0;
+    display: inline-flex;
+    justify-content: center;
+
+    &:hover {
+        background-color: $color-black-0;
+        color: $color-white-0;
+    }
+}
+
+.borderBtn {
+    padding: 17px 30px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.37px;
+    line-height: 1;
+    border: 1px solid $color-white-0;
+    color: $color-white-0;
+    display: inline-flex;
+
+    &:hover {
+        color: $color-black-0;
+        background-color: $color-white-0;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-inline: 15px;
+    margin-inline: auto;
+}
+
+.heading {
+    h2 {
+        font-size: 6rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 1;
+        max-width: 600px;
+    }
+
+    p {
+        opacity: 0.7;
+        font-size: 20px;
+        line-height: 1.35;
+        font-weight: 300;
+        padding-top: 12px;
+    }
+
+    h5 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    label {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 61px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+
+@media (max-width: 769px) {
+
+    section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .heading {
+        h2 {
+            font-size: 24px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+.lotti-wrapper{
+    div{
+        svg{
+            width: 250px !important;
+            height: 250px !important;
+        }
+    }
+}
