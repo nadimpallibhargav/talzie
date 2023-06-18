@@ -184,8 +184,10 @@
       gap: 15px;
       font-display: column;
       flex-wrap: wrap;
+
       .input__box {
         width: 100%;
+
         textarea.form-control {
           min-height: 150px;
         }
@@ -215,13 +217,10 @@
 
     .socialWrapper {
       gap: 30px;
+      justify-content: flex-start;
     }
 
     .socialInfo {
-      &:first-of-type {
-        flex-basis: 100%;
-        text-align: center;
-      }
 
       &:not(:last-of-type) {
         border-right: none;
