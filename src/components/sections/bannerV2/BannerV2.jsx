@@ -3,7 +3,7 @@ import "./BannerV2.scss";
 import Lottie from "lottie-react";
 import LottieExplore from "../../../../public/lottie/LottieExplore.json";
 import LottieOffer from "../../../../public/lottie/LottieOffer.json";
-import LottieTeam from "../../../../public/lottie/LottieTeam.json";
+import LottieScroll from "../../../../public/lottie/LottieScroll.json";
 
 function BannerV2({ banner }) {
   return (
@@ -32,6 +32,11 @@ function BannerV2({ banner }) {
                     deliver some mind-boggling outcomes.
                   </p>
                 </div>
+                <Lottie
+                      animationData={LottieScroll}
+                      loop={true}
+                      style={{width: 50 , margin:"auto"}}
+                    />
               </div>
             </div>
           </div>
