@@ -13,7 +13,7 @@ function BannerV2({ banner }) {
           <p ref={banner}>
             <span>Limited Time Offer</span>. We are offering an exclusive
             website for your business at an unbeatable price of{" "}
-            <span>####</span>
+            <span>9,999</span>
           </p>
         </div>
         <div className="container">
