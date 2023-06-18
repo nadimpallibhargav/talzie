@@ -1,4 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
+import { saveContactUs, sendMailUs } from "../../../services/contactUsApis";
+import { TALZIE_ADMIN } from "../../../utlis/API_URL";
 import "./Contact.scss";
 
 function Contact({ contact }) {
@@ -8,6 +13,7 @@ function Contact({ contact }) {
     email: "",
     projectdetails: "",
   });
+  const [showError, setShowError] = useState(false);
 
   let name, value;
   const postUserData = (event) => {
@@ -20,42 +26,35 @@ function Contact({ contact }) {
   // connect with firebase
   const submitData = async (event) => {
     event.preventDefault();
+    setShowError(true);
+
+    if (mobileValidation() || emailValidation()) {
+      return;
+    }
+
     const { fullName, phone, email, projectdetails } = userData;
 
-    if (fullName || phone || email || projectdetails) {
-      const res = await fetch(
-        "https://talzie-4e5a1-default-rtdb.firebaseio.com//userDataRecords.json",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            fullName,
-            phone,
-            email,
-            projectdetails,
-          }),
-        }
-      );
+    const res = await saveContactUs({
+      fullName,
+      phone,
+      email,
+      projectdetails,
+    });
 
-      if (res) {
-        setUserData({
-          fullName: "",
-          phone: "",
-          email: "",
-          projectdetails: "",
-        });
-        alert("Data Stored");
-      } else {
-        alert("plz fill the data");
-      }
+    if (res.status === 200) {
+      setUserData({
+        fullName: "",
+        phone: "",
+        email: "",
+        projectdetails: "",
+      });
+      toast.success("Submitted Successfully");
     } else {
-      alert("plz fill the data");
+      toast.error("Something went Wrong...");
     }
 
     // Send email using a simple email sending service
-    const senderEmail = "talzie.contact@gmail.com"; // Replace with the actual sender email
+    const senderEmail = TALZIE_ADMIN; // Replace with the actual sender email
     const recipientEmail = email;
     const subject = "New Contact Form Submission";
     const message = `
@@ -67,47 +66,55 @@ function Contact({ contact }) {
 
     try {
       // Send email to recipientEmail
-      await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      sendMailUs({
+        service_id: "service_apyi5hc",
+        template_id: "template_f34kfgm",
+        user_id: "G3kBEdhcK456nPl9e",
+        template_params: {
+          senderEmail,
+          recipientEmail,
+          subject,
+          message,
         },
-        body: JSON.stringify({
-          service_id: "service_apyi5hc",
-          template_id: "template_f34kfgm",
-          user_id: "G3kBEdhcK456nPl9e",
-          template_params: {
-            senderEmail,
-            recipientEmail,
-            subject,
-            message,
-          },
-        }),
       });
 
       // Send auto-reply email to the user
-      await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      sendMailUs({
+        service_id: "service_apyi5hc",
+        template_id: "template_f34kfgm", // Replace with the auto-reply template ID
+        user_id: "G3kBEdhcK456nPl9e",
+        template_params: {
+          senderEmail,
+          recipientEmail: email, // Set the sender's email as the recipient for the auto-reply
+          subject: "Thank you for contacting us",
+          message:
+            "This is an auto-reply message. We have received your contact form submission. We will get back to you soon.",
         },
-        body: JSON.stringify({
-          service_id: "service_apyi5hc",
-          template_id: "template_f34kfgm", // Replace with the auto-reply template ID
-          user_id: "G3kBEdhcK456nPl9e",
-          template_params: {
-            senderEmail,
-            recipientEmail: email, // Set the sender's email as the recipient for the auto-reply
-            subject: "Thank you for contacting us",
-            message:
-              "This is an auto-reply message. We have received your contact form submission. We will get back to you soon.",
-          },
-        }),
       });
-
-      console.log("Email sent successfully");
     } catch (error) {
       console.error("Error sending email:", error);
+    }
+
+    setShowError(false);
+  };
+
+  const mobileValidation = () => {
+    if (!userData.phone.length || userData.phone.length < 10) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const emailValidation = () => {
+    const regexTest = userData.email.match(
+      /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+    );
+
+    if (!regexTest?.length) {
+      return true;
+    } else {
+      return false;
     }
   };
 
@@ -116,7 +123,7 @@ function Contact({ contact }) {
       <section className="contact" ref={contact}>
         <div className="container">
           <div className="heading" style={{ textAlign: "center" }}>
-            <h5>What's Next?</h5>
+            <h5>Whats Next?</h5>
             <label>Get In Touch</label>
           </div>
           <div className="contactFormWrapper">
@@ -144,6 +151,11 @@ function Contact({ contact }) {
                       value={userData.phone}
                       onChange={postUserData}
                     />
+                    {showError && mobileValidation() ? (
+                      <p className="error">Please enter Valid Number</p>
+                    ) : (
+                      ""
+                    )}
                   </div>
                   <div className="input__box">
                     <span className="details">Email</span>
@@ -155,6 +167,11 @@ function Contact({ contact }) {
                       value={userData.email}
                       onChange={postUserData}
                     />
+                    {showError && emailValidation() ? (
+                      <p className="error">Please enter Valid email</p>
+                    ) : (
+                      ""
+                    )}
                   </div>
                   <div className="input__box">
                     <span className="details">Project Details</span>
@@ -179,6 +196,7 @@ function Contact({ contact }) {
               </form>
             </div>
           </div>
+          <ToastContainer />
         </div>
       </section>
     </>
