@@ -48,6 +48,8 @@ input[type='submit'] {
     border: 1px solid $color-white-0;
     display: inline-flex;
     justify-content: center;
+    cursor: pointer;
+    transition: 0.35s all;
 
     &:hover {
         background-color: $color-black-0;
