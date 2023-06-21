@@ -123,7 +123,7 @@ function Contact({ contact }) {
       <section className="contact" ref={contact}>
         <div className="container">
           <div className="heading" style={{ textAlign: "center" }}>
-            <h5>Whats Next?</h5>
+            <h5>What's Next?</h5>
             <label>Get In Touch</label>
           </div>
 
