@@ -29,7 +29,7 @@ const HowWeDo = ({ howWeDo, contact, scrollToSection }) => {
                   <img src="/handshake.png" alt="how we do" width={32} />
                 </div>
                 <h3>Client Onboarding</h3>
-                <p>Understanding Client Requirements and Crafting a Strategy</p>
+                <p>Understanding client requirements and crafting a strategy</p>
               </div>
             </div>
             <div className="howWeDoCard">
@@ -41,7 +41,7 @@ const HowWeDo = ({ howWeDo, contact, scrollToSection }) => {
                   <img src="/design-thinking.png" alt="how we do" width={32} />
                 </div>
                 <h3>Design Review</h3>
-                <p>Designing with Precision and Creativity</p>
+                <p>Designing with precision and creativity</p>
               </div>
             </div>
             <div className="howWeDoCard">
