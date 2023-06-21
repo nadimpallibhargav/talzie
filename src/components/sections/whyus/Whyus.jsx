@@ -43,7 +43,7 @@ const Whyus = ({whyUs}) => {
                         <img src="/rating.png" alt="why us" width={32}/>
                     </div>
                         <h3>Technical Expertise</h3>
-                        <p>Team member has years of experience in their industry with a proven satisfaction.</p>
+                        <p>Each team member has years of experience in their industry and a proven track record of customer satisfaction.</p>
                     </div>
                     <div className="whyusCard">
                         <div className='cardWrapper'>
