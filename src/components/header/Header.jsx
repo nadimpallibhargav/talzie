@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../../public/talzie_logo.svg";
 import "./Header.scss";
 
@@ -17,6 +17,14 @@ const Header = ({ scrollToSection, services, clients, whyUs, howWeDo, contact, b
     closeMenu();
     scrollToSection(section);
   };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+  }, [isMenuOpen]);
 
   return (
     <header>
