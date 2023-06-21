@@ -10,7 +10,7 @@ const HowWeDo = ({ howWeDo, contact, scrollToSection }) => {
           <div className="howWeDoMainHeading">
             <div className="heading">
               <h2>How We Do</h2>
-              <p>From Onboarding to take off</p>
+              <p>From onboarding to takeoff</p>
               <div
                 onClick={() => scrollToSection(contact) }
                 className="primaryBtn"
