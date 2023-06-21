@@ -3,6 +3,7 @@
 .howWeDo {
     padding-top: 70px;
     background-color: $color-black-0;
+
     .heading {
         p {
             max-width: 400px;
@@ -11,7 +12,7 @@
     }
 
     .howWeDoContent {
-        display: flex;
+        @extend %justify-between;
     }
 
     .howWeDoMainHeading {
@@ -90,6 +91,87 @@
             font-weight: 400;
             line-height: 24px;
             letter-spacing: -.005em;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .howWeDo {
+        .howWeDoMainHeading {
+            flex-basis: 50%;
+        }
+
+        .heading {
+            max-width: 70%;
+        }
+
+        .howWeDoSteps {
+            flex-basis: 50%;
+            flex-grow: 0;
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    .howWeDo {
+        padding-top: 0px;
+        .heading p {
+            padding-bottom: 30px;
+        }
+        .howWeDoCard {
+            gap: 30px;
+         
+            &:not(:last-of-type) {
+                .stepContent {
+                    padding-bottom: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 569px) {
+    .howWeDo {
+        .howWeDoContent {
+            flex-direction: column;
+        }
+
+        .howWeDoMainHeading {
+            position: initial;
+            padding-bottom: 50px;
+            flex-basis: 100%;
+        }
+
+        .howWeDoSteps {
+            flex-basis: 100%;
+            padding-top: 0px;
+        }
+
+        .heading {
+            max-width: 100%;
+            a {
+                width: 100%;
+            }
+        }
+
+        .numbers {
+            width: 48px;
+            height: 48px;
+        }
+
+        .howWeDoCard {
+            &:not(:last-of-type) {
+                .stepContent {
+                    padding-bottom: 75px;
+                }
+
+                .stepNumberWrapper {
+                    &::before {
+                        top: 48px;
+                        height: calc(100% - 48px);
+                    }
+                }
+            }
         }
     }
 }

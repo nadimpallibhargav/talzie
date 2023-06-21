@@ -1,22 +1,48 @@
+import Lottie from "lottie-react";
+import LottieStrategy from '../../public/lottie/LottieStrategy.json'
+import LottieBranding from '../../public/lottie/LottieBranding.json'
+import LottieDesign from '../../public/lottie/LottieDesign.json'
+import LottieEngin from '../../public/lottie/LottieEngin.json'
+import LottieProduct from '../../public/lottie/LottieProduct.json'
+
 export const tabs = [
   {
     title: "Strategy",
-    img: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+    img:    <Lottie
+    animationData={LottieBranding}
+    loop={true}
+
+  />
   },
   {
     title: "Branding",
-    img: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+    img: <Lottie
+    animationData={LottieStrategy}
+    loop={true}
+
+  />,
   },
   {
     title: "Designs",
-    img: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+    img: <Lottie
+    animationData={LottieDesign}
+    loop={true}
+
+  />,
   },
   {
     title: "Engineering",
-    img: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+    img: <Lottie
+    animationData={LottieEngin}
+    loop={true}
+  />,
   },
   {
     title: "Product Management",
-    img: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+    img: <Lottie
+    animationData={LottieProduct}
+    loop={true}
+
+  />,
   },
 ];

@@ -2,53 +2,82 @@
 
 .banner {
     padding-top: 0;
-    min-height: calc(100vh - 83px);
-}
+    padding-bottom: 0;
+    height: calc(100vh - 83px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-.priceTag{
-    @extend %align-justify-center;
-    width: 100%;
-    margin: auto;
-    background-color: #3E41DA;
-    padding: 5px;
-    margin-bottom: 36px;
-    position: relative;
-    p{
-        padding-top: 8px;
+    .priceTag {
+        background-color: $color-blue-0;
+        padding: 15px;
+
+        p {
+            color: $color-white-0;
+            font-size: 1.4rem;
+            line-height: 2.4rem;
+            text-align: center;
+        }
+
+        span {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+    }
+
+    .container {
+        &:first-of-type {
+            flex-basis: 65%;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        &:last-of-type {
+            flex-basis: 35%;
+        }
+    }
+
+    .title {
+        font-size: 5.2rem;
+        line-height: 6.3rem;
+        max-width: 904px;
+        margin-inline: auto;
+        font-weight: 600;
         color: $color-white-0;
-        font-size: 14px;
-        line-height: 24px;
-        text-align: center;
-    }
-    img{
-        position: absolute;
-        right: 0px;
-        bottom: -16px;
-    }
-}
 
-.title{
-    font-size: 52px;
-    line-height: 63px;
-    text-align: center;
-    margin-bottom: 20px;
-    max-width: 954px;
-    margin-inline: auto;
-    font-weight: 500;
-    color: $color-white-0;
-}
-
-.buttonWrapper{
-    p{
-        @extend %align-justify-center;
-        font-size: 14px;
-        line-height: 17px;
-        gap: 5px;
-        color: $color-white-0;
+        span {
+            display: inline-block;
+            font-family: "Gruppo";
+            font-size: 6.2rem;
+            font-weight: 400;
+            border-bottom: 1px solid $color-white-0;
+        }
     }
-}
 
-.bannerImage {
-    max-width: 400px;
-    margin: auto;
+    .aboutUs {
+        max-width: 904px;
+        margin-inline: auto;
+        padding-bottom: 50px;
+
+        h4 {
+            font-size: 2.4rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            max-width: 460px;
+            line-height: 2.4rem;
+        }
+
+    }
+
+    @media (max-width: 769px) {
+        .title {
+            font-size: 3.6rem;
+            line-height: 4.4rem;
+
+            span {
+                font-size: 4rem;
+            }
+        }
+    }
 }
