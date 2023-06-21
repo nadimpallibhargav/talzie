@@ -12,6 +12,7 @@ header {
 nav {
     @extend %align-end-justify-between;
     .logoAndTitle {
+        cursor: pointer;
         @extend %align-end;
         gap: 0.7rem;
         img {
@@ -76,8 +77,11 @@ nav {
             top: 100%;
             left: 0;
             width: 100%;
+            height: calc(100vh - 83px);
+            justify-content: flex-start;
             flex-direction: column;
-            padding: 10px;
+            gap: 70px;
+            padding: 50px 15px 10px;
             background: $color-black-0;
         }
         .menu.open {
@@ -93,9 +97,14 @@ nav {
             transform: rotate(-45deg) translate(7px, -8px);
         }
         li {
+            width: 100%;
+            text-align: center;
             a {
-                padding: 20px 0px;
+                padding: 25px 30px;
                 display: inline-block;
+                font-size: 2rem;
+                border: 1px solid $color-white-0;
+                border-radius: 4px;
             }
         }
     }

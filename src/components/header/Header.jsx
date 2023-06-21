@@ -2,42 +2,55 @@ import React, { useState } from "react";
 import logo from "../../../public/talzie_logo.svg";
 import "./Header.scss";
 
-const Header = ({scrollToSection , services ,clients ,whyUs, howWeDo, contact, banner}) => {
+const Header = ({ scrollToSection, services, clients, whyUs, howWeDo, contact, banner }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const handleMenuLinkClick = (section) => {
+    closeMenu();
+    scrollToSection(section);
+  };
+
   return (
     <header>
       <div className="container">
         <nav>
-          <div className="logoAndTitle" onClick={()=> scrollToSection(banner)} style={{cursor:"pointer"}}>
+          <div
+            className="logoAndTitle"
+            onClick={() => handleMenuLinkClick(banner)}
+          >
             <img src={logo} alt="Logo" />
-            <a className="logo">
-              ALZIE
-            </a>
+            <span className="logo">ALZIE</span>
           </div>
-          <div className={`menu-toggle ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+          <div
+            className={`menu-toggle ${isMenuOpen ? "open" : ""}`}
+            onClick={toggleMenu}
+          >
             <div className="bar"></div>
             <div className="bar"></div>
             <div className="bar"></div>
           </div>
-          <ul className={`menu ${isMenuOpen ? 'open' : ''}`}>
-            <li onClick={()=> scrollToSection(clients)}>
+          <ul className={`menu ${isMenuOpen ? "open" : ""}`}>
+            <li onClick={() => handleMenuLinkClick(clients)}>
               <a>CLIENTS</a>
             </li>
-            <li onClick={()=> scrollToSection(services)}>
+            <li onClick={() => handleMenuLinkClick(services)}>
               <a>SERVICES</a>
             </li>
-            <li onClick={()=> scrollToSection(whyUs)}>
+            <li onClick={() => handleMenuLinkClick(whyUs)}>
               <a>WHY US</a>
             </li>
-            <li onClick={()=> scrollToSection(howWeDo)}>
+            <li onClick={() => handleMenuLinkClick(howWeDo)}>
               <a>HOW WE DO</a>
             </li>
-            <li onClick={()=> scrollToSection(contact)}>
+            <li onClick={() => handleMenuLinkClick(contact)}>
               <a>CONTACT</a>
             </li>
           </ul>
