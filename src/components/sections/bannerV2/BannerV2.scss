@@ -2,111 +2,82 @@
 
 .banner {
     padding-top: 0;
-    min-height: calc(100vh - 83px);
+    padding-bottom: 0;
+    height: calc(100vh - 83px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-}
+    .priceTag {
+        background-color: $color-blue-0;
+        padding: 15px;
 
-.priceTag{
-    @extend %align-justify-center;
-    width: 100%;
-    margin: auto;
-    background-color: #3E41DA;
-    padding: 5px;
-    margin-bottom: 36px;
-    position: relative;
-    p{
-        padding-top: 8px;
+        p {
+            color: $color-white-0;
+            font-size: 1.4rem;
+            line-height: 2.4rem;
+            text-align: center;
+        }
+
+        span {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+    }
+
+    .container {
+        &:first-of-type {
+            flex-basis: 65%;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        &:last-of-type {
+            flex-basis: 35%;
+        }
+    }
+
+    .title {
+        font-size: 5.2rem;
+        line-height: 6.3rem;
+        max-width: 904px;
+        margin-inline: auto;
+        font-weight: 600;
         color: $color-white-0;
-        font-size: 14px;
-        line-height: 24px;
-        text-align: center;
-    }
-    img{
-        position: absolute;
-        right: 0px;
-        bottom: -16px;
-    }
-    span{
-        font-size: 16px;
-        font-weight: 700;
-    }
-    @media (max-width: 769px) {
-        flex-direction: column;
-    }
-}
 
-.title{
-    font-size: 52px;
-    line-height: 63px;
-    // @extend %align-justify-center;
-    margin-bottom: 20px;
-    margin-top: 60px;
-    max-width: 904px;
-    margin-inline: auto;
-    font-weight: 600;
-    color: $color-white-0;
-    span{
-    display: inline-block;
-    font-family: "Gruppo";
-    font-size: 62px;
-    font-weight: 400;
-    border-bottom: 1px solid #fff;
-    }
-    @media (max-width: 769px) {
-        font-size: 28px;
-        line-height: 32px;
-        font-weight: 400;
-        margin-top: 20px;
-        span{
-            font-size: 28px;
-            line-height: 32px;
+        span {
+            display: inline-block;
+            font-family: "Gruppo";
+            font-size: 6.2rem;
             font-weight: 400;
+            border-bottom: 1px solid $color-white-0;
         }
     }
-}
 
-.buttonWrapper{
-    margin: 18px 15px 0px 0px;
-    display: inline-block;
-    background: #fff;
-    padding: 8px 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-}
+    .aboutUs {
+        max-width: 904px;
+        margin-inline: auto;
+        padding-bottom: 50px;
 
-.buttonWrapper:hover{
-    scale: 1.2;
-}
-
-.bannerImage {
-    max-width: 400px;
-    margin: auto;
-}
-
-.aboutUs{
-    max-width: 904px;
-    margin: auto;
-    margin-top: 120px;
-    margin-bottom: 30px;
-    h4{
-        margin-bottom: 10px;
-        font-size: 24px;
-    }
-    p{
-        font-size: 16px;
-        max-width: 460px;
-        line-height: 24px;
-    }
-    @media (max-width: 769px) {
-        h4{
-            font-size: 18px;
-            margin-bottom: 4px;
+        h4 {
+            font-size: 2.4rem;
         }
-        p{
-            font-size: 12px;
+
+        p {
+            font-size: 1.6rem;
             max-width: 460px;
-            line-height: 20px;
+            line-height: 2.4rem;
+        }
+
+    }
+
+    @media (max-width: 769px) {
+        .title {
+            font-size: 3.6rem;
+            line-height: 4.4rem;
+
+            span {
+                font-size: 4rem;
+            }
         }
     }
 }
