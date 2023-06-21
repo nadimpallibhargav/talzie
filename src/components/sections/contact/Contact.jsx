@@ -124,7 +124,7 @@ function Contact({ contact }) {
         <div className="container">
           <div className="heading" style={{ textAlign: "center" }}>
             <h5>What's Next?</h5>
-            <label>Get In Touch</label>
+            <span className="label">Get In Touch</span>
           </div>
 
           <div className="contactFormWrapper">
