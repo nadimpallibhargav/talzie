@@ -7,7 +7,7 @@ const Clients = () => {
       <div className="container">
         <div className="heading">
           <h2>We’ve worked with some cool people.</h2>
-          <p>Teamed up with some digital tycoons</p>
+          <p>Teamed up with some digital tycoons.</p>
         </div>
         <div className="clientsContent">
           <div className="clientsWrapper">
