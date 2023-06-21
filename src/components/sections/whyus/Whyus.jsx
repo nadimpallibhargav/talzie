@@ -10,11 +10,8 @@ const Whyus = ({whyUs}) => {
                 <div className="whyusHeading">
                     <div className="heading">
                         <h2>Why Us</h2>
-                        <p>Choose us for expert devlopment and design that combines stunning visuals, seamless functionality, and personalized attention.</p>
+                        <p>Choose us for expert development and design that combine stunning visuals, seamless functionality, and personalized attention.</p>
                     </div>
-                    {/* <div className="whyusHeadingImage">
-                        <img src="https://uploads-ssl.webflow.com/61a9d163662d2084d7cbc38f/637ca0961ec666cd8dadf60a_yellow-brick.svg" alt="why us" />
-                    </div> */}
                 </div>
                 <div className="whyusWrapper">
                     <div className="whyusCard">
@@ -29,14 +26,14 @@ const Whyus = ({whyUs}) => {
                         <img src="/graphic-design.png" alt="why us" width={32}/>
                         </div>
                         <h3>UI design</h3>
-                        <p>Delight your audience with visually stunning designs that harmonize user experience.</p>
+                        <p>Delight your audience with visually stunning designs that harmonize the user experience.</p>
                     </div>
                     <div className="whyusCard">
                     <div className='cardWrapper'>
                         <img src="/quality.png" alt="why us" width={32}/>
                         </div>
                         <h3>Quality assurance</h3>
-                        <p>Delivering flawless website quality, performance and satisfaction.</p>
+                        <p>Delivering flawless website quality, performance, and satisfaction.</p>
                     </div>
                     
                 </div>
