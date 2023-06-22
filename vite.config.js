@@ -1,13 +1,16 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import copy from 'rollup-plugin-copy';
+import sitemapPlugin from "vite-plugin-sitemap";
 
 export default defineConfig({
-  plugins: [react(), copy({
-    targets: [
-      { src: 'sitemap.xml', dest: 'dist' }, // adjust the destination folder as needed
-    ],
-  })],
+  plugins: [
+    react(),
+    sitemapPlugin({
+      baseURL: "https://talzie.com/", // Replace with your website's base URL
+      sitemapPath: "/sitemap.xml",
+      exclude: ["/404"], // Exclude any URLs you don't want in the sitemap
+    }),
+  ],
   server: {
     proxy: {
       "/api": {
