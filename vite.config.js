@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 export default defineConfig({
   plugins: [react()],
@@ -17,5 +18,17 @@ export default defineConfig({
         },
       },
     },
+  },
+  build: {
+    plugins: [
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: './sitemap.xml',
+            to: 'dist'
+          }
+        ]
+      })
+    ]
   },
 });
