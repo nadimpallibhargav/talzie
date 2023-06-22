@@ -1,16 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import sitemapPlugin from "vite-plugin-sitemap";
 
 export default defineConfig({
-  plugins: [
-    react(),
-    sitemapPlugin({
-      baseURL: "https://talzie.com/", // Replace with your website's base URL
-      sitemapPath: "/sitemap.xml",
-      exclude: ["/404"], // Exclude any URLs you don't want in the sitemap
-    }),
-  ],
+  plugins: [react()],
   server: {
     proxy: {
       "/api": {
