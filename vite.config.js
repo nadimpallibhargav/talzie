@@ -1,9 +1,13 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { createProxyMiddleware } from "http-proxy-middleware";
+import copy from 'rollup-plugin-copy';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), copy({
+    targets: [
+      { src: 'sitemap.xml', dest: 'dist' }, // adjust the destination folder as needed
+    ],
+  })],
   server: {
     proxy: {
       "/api": {
