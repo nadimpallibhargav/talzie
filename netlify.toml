@@ -1,4 +1,0 @@
-[[redirects]]
-  from = "/sitemap.xml"
-  to = "/dist/sitemap.xml"
-  status = 200
