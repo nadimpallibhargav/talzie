@@ -26,7 +26,7 @@ const HowWeDo = ({ howWeDo, contact, scrollToSection }) => {
               </div>
               <div className="stepContent">
                 <div className="iconWrapper">
-                  <img src="/handshake.png" alt="how we do" width={32} />
+                  <img src="/handshake.svg" alt="how we do" width={46} />
                 </div>
                 <h3>Client Onboarding</h3>
                 <p>Understanding client requirements and crafting a strategy</p>
@@ -38,7 +38,7 @@ const HowWeDo = ({ howWeDo, contact, scrollToSection }) => {
               </div>
               <div className="stepContent">
                 <div className="iconWrapper">
-                  <img src="/design-thinking.png" alt="how we do" width={32} />
+                  <img src="/design-thinking.svg" alt="how we do" width={46} />
                 </div>
                 <h3>Design Review</h3>
                 <p>Designing with precision and creativity</p>
@@ -50,7 +50,7 @@ const HowWeDo = ({ howWeDo, contact, scrollToSection }) => {
               </div>
               <div className="stepContent">
                 <div className="iconWrapper">
-                  <img src="/shuttle.png" alt="how we do" width={32} />
+                  <img src="/shuttle.svg" alt="how we do" width={46} />
                 </div>
                 <h3>Project Live</h3>
                 <p>Development, Testing, and Deployment</p>

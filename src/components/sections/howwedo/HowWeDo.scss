@@ -29,6 +29,10 @@
         padding-top: 50px;
     }
 
+    .iconWrapper {
+        padding: 5px;
+    }
+
     .howWeDoCard {
         @extend %justify-between;
         gap: 50px;
@@ -152,11 +156,6 @@
             a {
                 width: 100%;
             }
-        }
-
-        .numbers {
-            width: 48px;
-            height: 48px;
         }
 
         .howWeDoCard {
