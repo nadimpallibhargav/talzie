@@ -40,6 +40,9 @@ nav {
             padding: 5px 15px 0;
             line-height: 0px;
             letter-spacing: 0.12rem;
+            &:hover {
+                color: $color-yellow-0;
+            }
         }
     }
 
@@ -68,11 +71,6 @@ nav {
 
     .menu li {
         margin-left: 10px;
-    }
-
-    .menu li a {
-        color: $color-white-0;
-        text-decoration: none;
     }
 }
 
