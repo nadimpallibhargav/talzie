@@ -1,4 +1,4 @@
-@import '../../../variable.scss';
+@import "../../../variable.scss";
 
 .contact {
   .socialWrapper {
@@ -14,7 +14,6 @@
     border-radius: 8px;
     cursor: pointer;
     transition: 0.2s ease-in-out;
-
   }
 
   .socialButton:hover {
@@ -41,7 +40,7 @@
 
   .socialText {
     color: $color-white-0;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .contactButton {
@@ -125,7 +124,7 @@
         margin-bottom: 5px;
         display: block;
         opacity: 0.7;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
       }
 
       &:nth-of-type(3),
@@ -152,16 +151,14 @@
         border-bottom-width: 2px;
         transition: all 0.3s ease;
         background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid $color-black-3;
         border-radius: 5px;
         color: $color-white-0;
+        &:focus, &:hover {
+          border: 1px solid $color-white-0;
+        }
       }
     }
-  }
-
-  .user__details .input__box .form-control:focus,
-  .user__details .input__box .form-control:valid {
-    border: 1px solid rgba(255, 255, 255, 0.5);
   }
 
   .media {
@@ -171,11 +168,8 @@
     img {
       padding-right: 10px;
     }
-
   }
-
 }
-
 
 @media (max-width: 769px) {
   .contact {
@@ -221,7 +215,6 @@
     }
 
     .socialInfo {
-
       &:not(:last-of-type) {
         border-right: none;
         padding-right: 0px;
