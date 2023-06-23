@@ -19,7 +19,7 @@ const Whyus = ({ whyUs }) => {
           </div>
           <div className="whyusWrapper">
             <div className="whyusCard">
-              <div className="cardWrapper">
+              <div className="iconWrapper">
                 <img src="/terminal.svg" alt="why us" width={32} />
               </div>
               <h3>Clean Code</h3>
@@ -29,7 +29,7 @@ const Whyus = ({ whyUs }) => {
               </p>
             </div>
             <div className="whyusCard">
-              <div className="cardWrapper">
+              <div className="iconWrapper">
                 <img src="/graphic-design.svg" alt="why us" width={32} />
               </div>
               <h3>UI design</h3>
@@ -39,7 +39,7 @@ const Whyus = ({ whyUs }) => {
               </p>
             </div>
             <div className="whyusCard">
-              <div className="cardWrapper">
+              <div className="iconWrapper">
                 <img src="/quality.svg" alt="why us" width={32} />
               </div>
               <h3>Quality assurance</h3>
@@ -49,7 +49,7 @@ const Whyus = ({ whyUs }) => {
               </p>
             </div>
             <div className="whyusCard">
-              <div className="cardWrapper">
+              <div className="iconWrapper">
                 <img src="/rating.svg" alt="why us" width={32} />
               </div>
               <h3>Technical Expertise</h3>
@@ -59,7 +59,7 @@ const Whyus = ({ whyUs }) => {
               </p>
             </div>
             <div className="whyusCard">
-              <div className="cardWrapper">
+              <div className="iconWrapper">
                 <img src="/time.svg" alt="why us" width={32} />
               </div>
               <h3>Long-Term Relationships</h3>
