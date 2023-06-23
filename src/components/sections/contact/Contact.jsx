@@ -124,7 +124,7 @@ function Contact({ contact }) {
         <div className="container">
           <div className="heading" style={{ textAlign: "center" }}>
             <h5>What's Next?</h5>
-            <label>Get In Touch</label>
+            <span className="label">Get In Touch</span>
           </div>
 
           <div className="contactFormWrapper">
@@ -132,25 +132,29 @@ function Contact({ contact }) {
               <form method="POST">
                 <div className="user__details">
                   <div className="input__box">
-                    <span className="details">Full Name</span>
+                    <label htmlFor='fullName' className="details">Full Name</label>
                     <input
+                      id="fullName"
                       type="text"
                       name="fullName"
                       className="form-control"
                       placeholder="Enter Full Name"
                       value={userData.fullName}
                       onChange={postUserData}
+                      autoComplete="true"
                     />
                   </div>
                   <div className="input__box">
-                    <span className="details">Mobile</span>
+                    <label htmlFor='phone' className="details">Mobile</label>
                     <input
+                      id="phone"
                       type="text"
                       name="phone"
                       className="form-control"
                       placeholder="Enter Phone Number "
                       value={userData.phone}
                       onChange={postUserData}
+                      autoComplete="true"
                     />
                     {showError && mobileValidation() ? (
                       <p className="error">Please enter Valid Number</p>
@@ -159,14 +163,16 @@ function Contact({ contact }) {
                     )}
                   </div>
                   <div className="input__box">
-                    <span className="details">Email</span>
+                    <label htmlFor='email' className="details">Email</label>
                     <input
+                      id="email"
                       type="text"
                       name="email"
                       className="form-control"
                       placeholder="Enter Email"
                       value={userData.email}
                       onChange={postUserData}
+                      autoComplete="true"
                     />
                     {showError && emailValidation() ? (
                       <p className="error">Please enter Valid email</p>
@@ -175,13 +181,15 @@ function Contact({ contact }) {
                     )}
                   </div>
                   <div className="input__box">
-                    <span className="details">Project Details</span>
+                    <label htmlFor='projectdetails' className="details">Project Details</label>
                     <textarea
+                      id="projectdetails"
                       className="form-control"
                       name="projectdetails"
                       value={userData.projectdetails}
                       onChange={postUserData}
                       placeholder="Enter Project Details"
+                      autoComplete="true"
                     ></textarea>
                   </div>
                 </div>

@@ -1,76 +1,74 @@
 @import '../../../variable.scss';
 
 .whyus {
-    background-color: $color-black-0;
+
     .heading {
         flex-basis: 60%;
     }
-}
 
-.whyusHeading {
-    @extend %justify-between;
-    padding-bottom: 30px;
-}
+    
 
-.whyusHeadingImage {
-    flex-basis: 40%;
-    text-align: center;
-    img {
-        max-width: 200px;
+
+    .whyusHeading {
+        @extend %justify-between;
+        padding-bottom: 30px;
     }
-}
 
-.whyusWrapper {
-    @extend %justify-between;
-    gap: 30px;
-    padding-top: 30px;
-}
+    .whyusWrapper {
+        @extend %justify-start;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding-top: 30px;
+    }
 
-.whyusCard {
-        border: 2px solid $color-white-0;
+    .whyusCard {
+        flex-basis: calc(33.3% - 20px);
+        border: 1px solid $color-white-0;
         padding: 34px 24px;
         border-radius: 8px;
-    h3 {
-        padding-top: 30px;
-        font-size: 2rem;
-        font-weight: 700;
-    }
-    p {
-        padding-top: 8px;
-        font-size: 1.6rem;
-        line-height: 1.5;
-        max-width: 330px;
-    }
-}
 
-@media (max-width: 769px) {
- .whyusWrapper {
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding-top: 30px;
- }
- .whyusCard {
-    width: 100%;
-    padding: 20px;
-    h3 {
-        padding-top: 20px;
+        h3 {
+            padding-top: 30px;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        p {
+            padding-top: 8px;
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
     }
- }   
- #whyusCard{
-    display: none;
- }
-}
 
-@media (max-width: 569px) {
-    .whyusHeading {
-        flex-direction: column;
-        padding-bottom: 0;
-    }   
-}
+    @media (max-width: 992px) {
 
-.cardWrapper{
-    display: inline-block;
-    background: #fff;
-    padding: 8px 10px;
-    border-radius: 8px;
+        .whyusCard {
+            flex-basis: calc(50% - 15px);
+        }
+    }
+
+    @media (max-width: 769px) {
+        .whyusWrapper {
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding-top: 30px;
+        }
+
+        .whyusCard {
+            width: 100%;
+            flex-basis: 100%;
+            padding: 20px;
+
+            h3 {
+                padding-top: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 569px) {
+        .whyusHeading {
+            flex-direction: column;
+            padding-bottom: 0;
+        }
+    }
 }
