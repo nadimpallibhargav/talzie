@@ -24,6 +24,11 @@ $color-blue-0: #3e41da;
     justify-content: center;
 }
 
+%justify-start {
+    display: flex;
+    justify-content: start;
+}
+
 %justify-between {
     display: flex;
     justify-content: space-between;
