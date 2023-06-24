@@ -34,12 +34,16 @@ nav {
     }
 
     li {
-        a {
+        span {
+            cursor: pointer;
             font-size: 12px;
             color: $color-white-0;
             padding: 5px 15px 0;
             line-height: 0px;
             letter-spacing: 0.12rem;
+            &:hover {
+                color: $color-yellow-0;
+            }
         }
     }
 
@@ -68,11 +72,6 @@ nav {
 
     .menu li {
         margin-left: 10px;
-    }
-
-    .menu li a {
-        color: $color-white-0;
-        text-decoration: none;
     }
 }
 
@@ -116,7 +115,7 @@ nav {
             width: 100%;
             text-align: center;
 
-            a {
+            span {
                 padding: 25px 30px;
                 display: inline-block;
                 font-size: 2rem;

@@ -17,10 +17,10 @@ function BannerV2({ banner }) {
           </p>
         </div>
         <div className="container">
-          <h5 className="title">
+          <h1 className="title">
             We provide clients with stunning <span> Talzie </span> web
             solutions, developed with <span> skill & passion. </span>
-          </h5>
+          </h1>
         </div>
         <div className="container">
           <div className="aboutUs">

@@ -1,116 +1,112 @@
-@import '../../../variable.scss';
+@import "../../../variable.scss";
 
 .clients {
-    background-color: $color-black-0;
+  background-color: $color-black-0;
 
-    .heading {
-        h2 {
-            margin: auto;
-            text-align: center;
-        }
-
-        p {
-            text-align: center;
-        }
+  .heading {
+    h2 {
+      margin: auto;
+      text-align: center;
     }
+
+    p {
+      text-align: center;
+    }
+  }
 }
 
 .clientsContent {
-    padding-top: 75px;
+  padding-top: 75px;
 }
 
 .clientsWrapper {
-    @extend %justify-center;
-    gap: 3px;
+  @extend %justify-center;
+  gap: 3px;
 }
 
 .clientsColumn {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 
-    &:first-of-type {
-        padding-top: 40px;
-    }
+  &:first-of-type {
+    padding-top: 40px;
+  }
 
-    &:nth-of-type(3) {
-        padding-top: 80px;
-    }
+  &:nth-of-type(3) {
+    padding-top: 80px;
+  }
 
-    &:nth-of-type(4) {
-        padding-top: 32px;
-    }
+  &:nth-of-type(4) {
+    padding-top: 32px;
+  }
 
-    &:nth-of-type(5) {
-        padding-top: 128px;
-    }
+  &:nth-of-type(5) {
+    padding-top: 128px;
+  }
 
-    &:last-of-type {
-        padding-top: 64px;
-    }
+  &:last-of-type {
+    padding-top: 64px;
+  }
 }
 
 .clientCard {
-    background-color: $color-black-1;
-    @extend %align-justify-center;
-    min-width: 135px;
-    min-height: 135px;
-    border-radius: 20px;
-    margin: 2px;
+  background-color: $color-black-1;
+  @extend %align-justify-center;
+  min-width: 135px;
+  min-height: 135px;
+  border-radius: 20px;
+  margin: 2px;
+  border: 1px solid $color-black-3;
 
-    // &:nth-of-type(even) {
-    //     background-color: rgba($color: $color-white-0, $alpha: 0.2);
-    // }
-
-    img {
-        vertical-align: text-top;
-    }
+  img {
+    vertical-align: text-top;
+  }
 }
 
 @media (max-width: 991px) {
-    .clientCard {
-        min-width: 100px;
-        min-height: 100px;
-        max-width: 100px;
-        max-height: 100px;
+  .clientCard {
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .clientsColumn {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &:first-of-type {
+      padding-top: 0px;
     }
 
-    .clientsColumn {
-        display: inline-flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-        &:first-of-type {
-            padding-top: 0px;
-        }
-
-        &:nth-of-type(3) {
-            padding-top: 0px;
-        }
-
-        &:nth-of-type(4) {
-            padding-top: 0px;
-        }
-
-        &:nth-of-type(5) {
-            padding-top: 0px;
-        }
-
-        &:last-of-type {
-            padding-top: 0px;
-        }
+    &:nth-of-type(3) {
+      padding-top: 0px;
     }
 
-    .clientsWrapper {
-        flex-wrap: wrap;
+    &:nth-of-type(4) {
+      padding-top: 0px;
     }
+
+    &:nth-of-type(5) {
+      padding-top: 0px;
+    }
+
+    &:last-of-type {
+      padding-top: 0px;
+    }
+  }
+
+  .clientsWrapper {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 769px) {
-
-    .clientsColumn {
-        display: inline-flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+  .clientsColumn {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
