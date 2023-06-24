@@ -18,12 +18,4 @@ export default defineConfig({
       },
     },
   },
-  ssgOptions: {
-    script: "async",
-    formatting: "prettify",
-  },
-  build: {
-    ssrManifest: true,
-    outDir: "dist",
-  },
 });
