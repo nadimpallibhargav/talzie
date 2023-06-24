@@ -132,7 +132,9 @@ function Contact({ contact }) {
               <form method="POST">
                 <div className="user__details">
                   <div className="input__box">
-                    <label htmlFor='fullName' className="details">Full Name</label>
+                    <label htmlFor="fullName" className="details">
+                      Full Name
+                    </label>
                     <input
                       id="fullName"
                       type="text"
@@ -145,7 +147,9 @@ function Contact({ contact }) {
                     />
                   </div>
                   <div className="input__box">
-                    <label htmlFor='phone' className="details">Mobile</label>
+                    <label htmlFor="phone" className="details">
+                      Mobile
+                    </label>
                     <input
                       id="phone"
                       type="text"
@@ -163,7 +167,9 @@ function Contact({ contact }) {
                     )}
                   </div>
                   <div className="input__box">
-                    <label htmlFor='email' className="details">Email</label>
+                    <label htmlFor="email" className="details">
+                      Email
+                    </label>
                     <input
                       id="email"
                       type="text"
@@ -181,7 +187,9 @@ function Contact({ contact }) {
                     )}
                   </div>
                   <div className="input__box">
-                    <label htmlFor='projectdetails' className="details">Project Details</label>
+                    <label htmlFor="projectdetails" className="details">
+                      Project Details
+                    </label>
                     <textarea
                       id="projectdetails"
                       className="form-control"
@@ -207,7 +215,7 @@ function Contact({ contact }) {
               <div className="socialInfo">
                 <a className="socialLink" href="mailto:hello@talzie.com">
                   <span className="socialButton">
-                    <img src="/gmail.png" width={24} />
+                    <img src="/gmail.png" width={24} alt="gmail" />
                   </span>
                   <span className="socialText">hello@talzie.com</span>
                 </a>
@@ -220,7 +228,7 @@ function Contact({ contact }) {
                   href="https://www.linkedin.com/in/talzie-33450b27a/"
                 >
                   <span className="socialButton">
-                    <img src="/linkedin.png" width={24} />
+                    <img src="/linkedin.png" width={24} alt="linkedin" />
                   </span>
                 </a>
               </div>
