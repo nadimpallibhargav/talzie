@@ -47,19 +47,19 @@ const Header = ({ scrollToSection, services, clients, whyUs, howWeDo, contact, b
           </div>
           <ul className={`menu ${isMenuOpen ? "open" : ""}`}>
             <li onClick={() => handleMenuLinkClick(clients)}>
-              <a>CLIENTS</a>
+              <span>CLIENTS</span>
             </li>
             <li onClick={() => handleMenuLinkClick(services)}>
-              <a>SERVICES</a>
+              <span>SERVICES</span>
             </li>
             <li onClick={() => handleMenuLinkClick(whyUs)}>
-              <a>WHY US</a>
+              <span>WHY US</span>
             </li>
             <li onClick={() => handleMenuLinkClick(howWeDo)}>
-              <a>HOW WE DO</a>
+              <span>HOW WE DO</span>
             </li>
             <li onClick={() => handleMenuLinkClick(contact)}>
-              <a>CONTACT</a>
+              <span>CONTACT</span>
             </li>
           </ul>
         </nav>

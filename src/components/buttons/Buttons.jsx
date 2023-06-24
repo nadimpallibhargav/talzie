@@ -3,8 +3,7 @@ import "./Buttons.scss";
 
 export const PrimaryButton = ({ btnClass, btnName, type }) => {
   return (
-    <a
-      href=""
+    <button
       className={
         btnClass
           ? ["primaryBtn", btnClass ? btnClass : ""].join(" ")
@@ -13,14 +12,13 @@ export const PrimaryButton = ({ btnClass, btnName, type }) => {
       type={type}
     >
       {btnName}
-    </a>
+    </button>
   );
 };
 
 export const BorderButton = ({ btnClass, btnName }) => {
   return (
-    <a
-      href=""
+    <button
       className={
         btnClass
           ? ["borderBtn", btnClass ? btnClass : ""].join(" ")
@@ -28,6 +26,6 @@ export const BorderButton = ({ btnClass, btnName }) => {
       }
     >
       {btnName}
-    </a>
+    </button>
   );
 };

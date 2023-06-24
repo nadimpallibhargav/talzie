@@ -34,7 +34,8 @@ nav {
     }
 
     li {
-        a {
+        span {
+            cursor: pointer;
             font-size: 12px;
             color: $color-white-0;
             padding: 5px 15px 0;
@@ -114,7 +115,7 @@ nav {
             width: 100%;
             text-align: center;
 
-            a {
+            span {
                 padding: 25px 30px;
                 display: inline-block;
                 font-size: 2rem;
