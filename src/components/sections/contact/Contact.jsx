@@ -34,12 +34,12 @@ function Contact({ contact }) {
 
     const { fullName, phone, email, projectdetails } = userData;
 
-    const res = await saveContactUs({
-      fullName,
-      phone,
-      email,
-      projectdetails,
-    });
+    // const res = await saveContactUs({
+    //   fullName,
+    //   phone,
+    //   email,
+    //   projectdetails,
+    // });
 
     if (res.status === 200) {
       setUserData({
