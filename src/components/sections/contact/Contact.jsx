@@ -2,8 +2,6 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
-import { saveContactUs, sendMailUs } from "../../../services/contactUsApis";
-import { TALZIE_ADMIN } from "../../../utlis/API_URL";
 import "./Contact.scss";
 
 function Contact({ contact }) {
@@ -21,39 +19,6 @@ function Contact({ contact }) {
     value = event.target.value;
 
     setUserData({ ...userData, [name]: value });
-  };
-
-  // connect with firebase
-  const submitData = async (event) => {
-    event.preventDefault();
-    setShowError(true);
-
-    if (mobileValidation() || emailValidation()) {
-      return;
-    }
-
-    const { fullName, phone, email, projectdetails } = userData;
-
-    const res = await saveContactUs({
-      fullName,
-      phone,
-      email,
-      projectdetails,
-    });
-
-    if (res.status === 200) {
-      setUserData({
-        fullName: "",
-        phone: "",
-        email: "",
-        projectdetails: "",
-      });
-      toast.success("Submitted Successfully");
-    } else {
-      toast.error("Something went Wrong...");
-    }
-
-    setShowError(false);
   };
 
   const mobileValidation = () => {
@@ -78,10 +43,15 @@ function Contact({ contact }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  
+    setShowError(true);
+
+    if (mobileValidation() || emailValidation()) {
+      return;
+    }
+
     const myForm = event.target;
     const formData = new FormData(myForm);
-    
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -89,7 +59,9 @@ function Contact({ contact }) {
     })
       .then(() => toast.success("Submitted Successfully"))
       .catch((error) => toast.error(error));
-  };  
+
+    setShowError(false);
+  };
 
   return (
     <>
