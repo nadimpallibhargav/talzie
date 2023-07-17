@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
 
-import "react-toastify/dist/ReactToastify.css";
 import "./Contact.scss";
 
 function Contact({ contact }) {
@@ -11,7 +9,6 @@ function Contact({ contact }) {
     email: "",
     projectdetails: "",
   });
-  const [showError, setShowError] = useState(false);
 
   let name, value;
   const postUserData = (event) => {
@@ -19,48 +16,6 @@ function Contact({ contact }) {
     value = event.target.value;
 
     setUserData({ ...userData, [name]: value });
-  };
-
-  const mobileValidation = () => {
-    if (!userData.phone.length || userData.phone.length < 10) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
-  const emailValidation = () => {
-    const regexTest = userData.email.match(
-      /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
-    );
-
-    if (!regexTest?.length) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setShowError(true);
-
-    if (mobileValidation() || emailValidation()) {
-      return;
-    }
-
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => toast.success("Submitted Successfully"))
-      .catch((error) => toast.error(error));
-
-    setShowError(false);
   };
 
   return (
@@ -74,7 +29,7 @@ function Contact({ contact }) {
 
           <div className="contactFormWrapper">
             <div className="formContainer">
-              <form name="contact" method="POST" onSubmit={handleSubmit}>
+              <form name="contact" method="POST">
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="user__details">
                   <div className="input__box">
@@ -106,11 +61,6 @@ function Contact({ contact }) {
                       onChange={postUserData}
                       autoComplete="true"
                     />
-                    {showError && mobileValidation() ? (
-                      <p className="error">Please enter Valid Number</p>
-                    ) : (
-                      ""
-                    )}
                   </div>
                   <div className="input__box">
                     <label htmlFor="email" className="details">
@@ -126,11 +76,6 @@ function Contact({ contact }) {
                       onChange={postUserData}
                       autoComplete="true"
                     />
-                    {showError && emailValidation() ? (
-                      <p className="error">Please enter Valid email</p>
-                    ) : (
-                      ""
-                    )}
                   </div>
                   <div className="input__box">
                     <label htmlFor="projectdetails" className="details">
@@ -152,7 +97,6 @@ function Contact({ contact }) {
                     type="submit"
                     className="primaryBtn"
                     value="Submit"
-                    // onClick={handleSubmit}
                   />
                 </div>
               </form>
@@ -180,7 +124,6 @@ function Contact({ contact }) {
               </div>
             </div>
           </div>
-          <ToastContainer />
         </div>
       </section>
     </>
