@@ -129,7 +129,8 @@ function Contact({ contact }) {
 
           <div className="contactFormWrapper">
             <div className="formContainer">
-              <form name="contact" method="POST" netlify>
+              <form name="contact" method="post" data-netlify="true" onSubmit="submit">
+                <input type="hidden" name="form-name" value="contact" />
                 <div className="user__details">
                   <div className="input__box">
                     <label htmlFor="fullName" className="details">
@@ -141,8 +142,8 @@ function Contact({ contact }) {
                       name="fullName"
                       className="form-control"
                       placeholder="Enter Full Name"
-                      value={userData.fullName}
-                      onChange={postUserData}
+                      // value={userData.fullName}
+                      // onChange={postUserData}
                       autoComplete="true"
                     />
                   </div>
@@ -156,8 +157,8 @@ function Contact({ contact }) {
                       name="phone"
                       className="form-control"
                       placeholder="Enter Phone Number "
-                      value={userData.phone}
-                      onChange={postUserData}
+                      // value={userData.phone}
+                      // onChange={postUserData}
                       autoComplete="true"
                     />
                     {showError && mobileValidation() ? (
@@ -176,8 +177,8 @@ function Contact({ contact }) {
                       name="email"
                       className="form-control"
                       placeholder="Enter Email"
-                      value={userData.email}
-                      onChange={postUserData}
+                      // value={userData.email}
+                      // onChange={postUserData}
                       autoComplete="true"
                     />
                     {showError && emailValidation() ? (
@@ -194,20 +195,21 @@ function Contact({ contact }) {
                       id="projectdetails"
                       className="form-control"
                       name="projectdetails"
-                      value={userData.projectdetails}
-                      onChange={postUserData}
+                      // value={userData.projectdetails}
+                      // onChange={postUserData}
                       placeholder="Enter Project Details"
                       autoComplete="true"
                     ></textarea>
                   </div>
                 </div>
                 <div className="contactButton">
-                  <input
+                  {/* <input
                     type="submit"
                     className="primaryBtn"
                     value="Submit"
-                    // onClick={submitData}
-                  />
+                    onClick={submitData}
+                  /> */}
+                  <button type="submit">sbumit</button>
                 </div>
               </form>
             </div>
