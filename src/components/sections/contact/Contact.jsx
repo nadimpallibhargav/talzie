@@ -53,48 +53,6 @@ function Contact({ contact }) {
       toast.error("Something went Wrong...");
     }
 
-    // Send email using a simple email sending service
-    const senderEmail = TALZIE_ADMIN; // Replace with the actual sender email
-    const recipientEmail = email;
-    const subject = "New Contact Form Submission";
-    const message = `
-    Name: ${fullName}
-    Email: ${email}
-    Phone Number: ${phone}
-    Project Details: ${projectdetails}
-    `;
-
-    try {
-      // Send email to recipientEmail
-      sendMailUs({
-        service_id: "service_apyi5hc",
-        template_id: "template_f34kfgm",
-        user_id: "G3kBEdhcK456nPl9e",
-        template_params: {
-          senderEmail,
-          recipientEmail,
-          subject,
-          message,
-        },
-      });
-
-      // Send auto-reply email to the user
-      sendMailUs({
-        service_id: "service_apyi5hc",
-        template_id: "template_f34kfgm", // Replace with the auto-reply template ID
-        user_id: "G3kBEdhcK456nPl9e",
-        template_params: {
-          senderEmail,
-          recipientEmail: email, // Set the sender's email as the recipient for the auto-reply
-          subject: "Thank you for contacting us",
-          message:
-            "This is an auto-reply message. We have received your contact form submission. We will get back to you soon.",
-        },
-      });
-    } catch (error) {
-      console.error("Error sending email:", error);
-    }
-
     setShowError(false);
   };
 
@@ -118,6 +76,21 @@ function Contact({ contact }) {
     }
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+    
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => alert("Thank you for your submission"))
+      .catch((error) => alert(error));
+  };  
+
   return (
     <>
       <section className="contact" ref={contact}>
@@ -129,7 +102,7 @@ function Contact({ contact }) {
 
           <div className="contactFormWrapper">
             <div className="formContainer">
-              <form name="contact" method="POST">
+              <form name="contact" method="POST" onSubmit={handleSubmit}>
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="user__details">
                   <div className="input__box">
@@ -207,7 +180,7 @@ function Contact({ contact }) {
                     type="submit"
                     className="primaryBtn"
                     value="Submit"
-                    // onClick={submitData}
+                    // onClick={handleSubmit}
                   />
                 </div>
               </form>
