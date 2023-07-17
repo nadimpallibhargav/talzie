@@ -87,8 +87,8 @@ function Contact({ contact }) {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => alert("Thank you for your submission"))
-      .catch((error) => alert(error));
+      .then(() => toast.success("Submitted Successfully"))
+      .catch((error) => toast.error(error));
   };  
 
   return (
