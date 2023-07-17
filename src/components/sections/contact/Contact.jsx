@@ -207,7 +207,7 @@ function Contact({ contact }) {
                     type="submit"
                     className="primaryBtn"
                     value="Submit"
-                    // onClick={submitData}
+                    onClick={submitData}
                   />
                 </div>
               </form>
