@@ -129,7 +129,7 @@ function Contact({ contact }) {
 
           <div className="contactFormWrapper">
             <div className="formContainer">
-              <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
+              <form name="contact" method="POST" netlify>
                 <div className="user__details">
                   <div className="input__box">
                     <label htmlFor="fullName" className="details">
