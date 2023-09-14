@@ -3,53 +3,29 @@
 .banner {
     padding-top: 0;
     padding-bottom: 0;
-    height: calc(100vh - 83px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
-    .priceTag {
-        background-color: $color-blue-0;
-        padding: 15px;
-
-        p {
-            color: $color-white-0;
-            font-size: 1.4rem;
-            line-height: 2.4rem;
-            text-align: center;
-        }
-
-        span {
-            font-size: 1.6rem;
-            font-weight: 700;
-        }
-    }
-
-    .container {
-        &:first-of-type {
-            flex-basis: 65%;
-            padding-top: 30px;
-            padding-bottom: 30px;
-        }
-        &:last-of-type {
-            flex-basis: 35%;
-        }
+    .bannerContentWrapper {
+        height: calc(100vh - 83px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 75px;
     }
 
     .title {
         font-size: 5.2rem;
-        line-height: 6.3rem;
-        max-width: 904px;
-        margin-inline: auto;
+        line-height: 8.3rem;
         font-weight: 600;
         color: $color-white-0;
+        text-align: center;
 
         span {
             display: inline-block;
             font-family: "Gruppo";
             font-size: 6.2rem;
             font-weight: 400;
-            border-bottom: 1px solid $color-white-0;
+            color: $color-yellow-0;
+            border-bottom: 1px solid $color-yellow-0;
         }
     }
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 import "./Services.scss";
-import Lottie from "lottie-react";
 
 const TabComponent = ({ tabs, autoCycleInterval, services }) => {
   const [activeTab, setActiveTab] = useState(0);
@@ -38,17 +37,13 @@ const TabComponent = ({ tabs, autoCycleInterval, services }) => {
           <div className="servicesImageContent">
             <div className="heading">
               <h2>What we do.</h2>
-              <p style={{maxWidth:450}}>Transforming ideas into captivating websites through creative web development and design.</p>
+              <p style={{ maxWidth: 450 }}>
+                Transforming ideas into captivating websites through creative
+                web development and design.
+              </p>
             </div>
             <div className="imageWrapper">
-              {/* <Lottie
-            animationData={tabs[activeTab].img}
-            loop={true}
-            style={{ height: 50, width: 50 }}
-          /> */}
-          <div className="lotti-wrapper">
-          {tabs[activeTab].img}
-          </div>
+              <div className="lotti-wrapper">{tabs[activeTab].img}</div>
             </div>
           </div>
           <div className="servicesTabsWrapper">
