@@ -8,6 +8,7 @@ import Services from "./components/sections/services/Services";
 import CaseStudies from "./components/sections/casestudies/CaseStudies";
 import Whyus from "./components/sections/whyus/Whyus";
 import { tabs } from "./utlis/common";
+import  {Blog}  from "./components/sections/blog/Blog";
 
 function LandingPage() {
   const banner = useRef(null);
@@ -17,6 +18,7 @@ function LandingPage() {
   const whyUs = useRef(null)
   const howWeDo = useRef(null)
   const contact = useRef(null)
+  const blog = useRef(null)
 
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -26,7 +28,7 @@ function LandingPage() {
   }
   return (
     <>
-      <Header scrollToSection={scrollToSection} services={services} clients={clients} caseStudies={caseStudies} whyUs={whyUs} howWeDo={howWeDo} contact={contact} banner={banner}/>
+      <Header scrollToSection={scrollToSection} services={services} clients={clients} caseStudies={caseStudies} whyUs={whyUs} howWeDo={howWeDo} contact={contact} blog={blog} banner={banner}/>
       <main>
         <BannerV2 banner={banner} contact={contact} scrollToSection={scrollToSection} />
         <Clients clients={clients}/>
@@ -34,6 +36,7 @@ function LandingPage() {
         <CaseStudies caseStudies={caseStudies} />
         <Whyus whyUs={whyUs}/>
         <HowWeDo howWeDo={howWeDo} contact={contact} scrollToSection={scrollToSection} />
+        <Blog blog={blog}/>
         <Contact contact={contact}/>
       </main>
     </>

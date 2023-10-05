@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../../public/talzie_logo.svg";
 import "./Header.scss";
-const Header = ({ scrollToSection, services, whyUs, howWeDo, contact, banner, caseStudies }) => {
+
+const Header = ({ scrollToSection, services, whyUs, howWeDo, contact, banner, blog, caseStudies }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -56,6 +57,9 @@ const Header = ({ scrollToSection, services, whyUs, howWeDo, contact, banner, ca
             </li>
             <li onClick={() => handleMenuLinkClick(howWeDo)}>
               <span>HOW WE DO</span>
+            </li>
+            <li onClick={() => handleMenuLinkClick(blog)}>
+              <span>Blog</span>
             </li>
             <li onClick={() => handleMenuLinkClick(contact)}>
               <span>CONTACT</span>
