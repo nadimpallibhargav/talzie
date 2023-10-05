@@ -1,6 +1,5 @@
 import React from "react";
 import "./HowWeDo.scss";
-import { PrimaryButton } from "../../buttons/Buttons";
 
 const HowWeDo = ({ howWeDo, contact, scrollToSection }) => {
   return (

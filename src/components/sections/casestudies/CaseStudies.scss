@@ -1,0 +1,104 @@
+@import '../../../variable.scss';
+
+.caseStudies {
+    .caseStudiesHeading {
+        margin-bottom: 30px;    
+    }
+
+    .heading {
+        text-align: center;
+    }
+
+    h2 {
+        min-width: 100%;
+    }
+
+    .caseStudiesWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .caseStudy {
+        flex-basis: calc(50% - 20px);
+        padding: 20px;        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left; 
+        background: linear-gradient(135deg, #0088FF, #FF0000);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        transition: transform 0.2s;
+
+        img {
+            width: 100%; 
+            max-height: 300px; 
+            object-fit: cover; 
+            border-radius: 8px;
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: $color-white-0;
+            margin-bottom: 10px; 
+        }
+    }
+    
+    .caseStudy:hover {
+        transform: translateY(-5px);
+    }
+
+    h3 {
+        font-size: 2rem;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: $color-white-0;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .tag {
+        background-color: transparent;
+        color: $color-black-0; 
+        border: 1px solid $color-black-0;
+        padding: 5px 10px;
+        font-size: 1.4rem;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: default; 
+    }
+    
+    @media (max-width: 991px) {
+        .caseStudy {
+            flex-basis: calc(100%);
+            &:not(:last-of-type) {
+                margin-bottom: 40px;
+            }
+        }      
+    }    
+    
+    @media (max-width: 768px) {
+        .caseStudy {
+            padding: 10px;
+
+            img {
+                max-height: 200px; 
+                margin-bottom: 5px; 
+            }
+
+            p {
+                font-size: 1.4rem;
+            }
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }        
+    }    
+}
