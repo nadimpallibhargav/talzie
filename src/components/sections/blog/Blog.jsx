@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import casestudyone from "../../../../public/casestudyone.png";
 import "./Blog.scss";
 
 export const Blog = ({ blog, scrollToSection }) => {
@@ -7,7 +8,7 @@ export const Blog = ({ blog, scrollToSection }) => {
     {
       id: 1,
       image:
-        "https://templatekit.jegtheme.com/pirus/wp-content/uploads/sites/43/2020/12/banner-16.jpg",
+        casestudyone,
       about:
         "Could this VR sketching tool be coming of age for designers in the future?",
       about1:
@@ -16,7 +17,7 @@ export const Blog = ({ blog, scrollToSection }) => {
     {
       id: 2,
       image:
-        "https://templatekit.jegtheme.com/pirus/wp-content/uploads/sites/43/2020/12/WI1015_cover.jpg",
+        casestudyone,
       about:
         "Could this VR sketching tool be coming of age for designers in the future?",
       about1:
@@ -25,7 +26,7 @@ export const Blog = ({ blog, scrollToSection }) => {
     {
       id: 3,
       image:
-        "https://templatekit.jegtheme.com/pirus/wp-content/uploads/sites/43/2020/11/manuel-cosentino-M3fhZSBFoFQ-unsplash-e1613656498145.jpg",
+        casestudyone,
       about:
         "Could this VR sketching tool be coming of age for designers in the future?",
       about1:
@@ -34,7 +35,7 @@ export const Blog = ({ blog, scrollToSection }) => {
     {
       id: 4,
       image:
-        "https://templatekit.jegtheme.com/pirus/wp-content/uploads/sites/43/2020/11/balazs-ketyi-jRUW43RuZ_A-unsplash-e1613656520111.jpg",
+        casestudyone,
       about:
         "Could this VR sketching tool be coming of age for designers in the future?",
       about1:
@@ -43,7 +44,7 @@ export const Blog = ({ blog, scrollToSection }) => {
     {
       id: 5,
       image:
-        "https://templatekit.jegtheme.com/pirus/wp-content/uploads/sites/43/2020/11/omid-armin-UtuGfdUwdRg-unsplash-e1612884266490.jpg",
+        casestudyone,
       about:
         "Could this VR sketching tool be coming of age for designers in the future?",
       about1:
@@ -52,7 +53,7 @@ export const Blog = ({ blog, scrollToSection }) => {
     {
       id: 6,
       image:
-        "https://templatekit.jegtheme.com/pirus/wp-content/uploads/sites/43/2020/11/Gear-Outdoor-Research-Face-Mask-2.jpg",
+        casestudyone,
       about:
         "Could this VR sketching tool be coming of age for designers in the future?",
       about1:
