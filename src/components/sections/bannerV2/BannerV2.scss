@@ -9,7 +9,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 75px;
+        gap: 30px;
     }
 
     .title {
@@ -45,6 +45,11 @@
             line-height: 2.4rem;
         }
 
+    }
+
+    .primaryBtn {
+        display: inline-block;
+        margin-inline: auto;
     }
 
     @media (max-width: 769px) {
