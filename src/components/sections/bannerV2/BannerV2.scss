@@ -63,3 +63,50 @@
         }
     }
 }
+
+.bannerContentWrapper-v1{   
+    height: calc(100vh - 83px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("/public/hero-bg-1.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    box-shadow: inset 550px 0px 0px 0px $color-black-0; /* mark the inset */
+    h6{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px; /* 166.667% */
+        max-width: 500px;
+        width: 100%;
+    }
+}
+
+.titlel-v1{
+    font-size: 84px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 89px; /* 105.952% */
+    letter-spacing: -3.5px;
+    margin: 8px 0px 24px 0px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.slogan{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px; /* 162.5% */
+    max-width: 500px;
+    width: 100%;
+}
+
+.bannerWrap{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}

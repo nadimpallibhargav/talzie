@@ -59,7 +59,7 @@ const Header = ({ scrollToSection, services, whyUs, howWeDo, contact, banner, bl
               <span>HOW WE DO</span>
             </li>
             <li onClick={() => handleMenuLinkClick(blog)}>
-              <span>Blog</span>
+              <span>BLOG</span>
             </li>
             <li onClick={() => handleMenuLinkClick(contact)}>
               <span>CONTACT</span>
