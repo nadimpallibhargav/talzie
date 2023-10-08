@@ -58,9 +58,9 @@ const Header = ({ scrollToSection, services, whyUs, howWeDo, contact, banner, bl
             <li onClick={() => handleMenuLinkClick(howWeDo)}>
               <span>HOW WE DO</span>
             </li>
-            <li onClick={() => handleMenuLinkClick(blog)}>
+            {/* <li onClick={() => handleMenuLinkClick(blog)}>
               <span>BLOG</span>
-            </li>
+            </li> */}
             <li onClick={() => handleMenuLinkClick(contact)}>
               <span>CONTACT</span>
             </li>

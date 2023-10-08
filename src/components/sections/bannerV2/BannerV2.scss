@@ -74,6 +74,9 @@
     background-position: right;
     background-size: cover;
     box-shadow: inset 550px 0px 0px 0px $color-black-0; /* mark the inset */
+    @media (max-width: 769px) {
+        box-shadow: inset 0px 0px 250px 250px $color-black-0; /* mark the inset */ 
+    }
     h6{
         font-size: 16px;
         font-style: normal;
@@ -93,6 +96,10 @@
     margin: 8px 0px 24px 0px;
     max-width: 500px;
     width: 100%;
+    @media (max-width: 769px) {
+        font-size: 42px !important;
+        line-height: 52px; /* 105.952% */
+     }
 }
 
 .slogan{
