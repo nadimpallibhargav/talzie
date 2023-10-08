@@ -30,7 +30,7 @@ const CaseStudiesV1 = ({contact, caseStudies}) => {
             </div>
             <div className='caseStudiesV1Wrapper'>
                 <div className='caseStudiesV1Content'>
-                    <label>Web3 Gamming</label>
+                    <label>Web3 Gamming </label>
                     <h6>2023 - Product design</h6>
                     <p></p>
                     <p>Transforming a Web3 Play-to-Earn Gaming Platform in India Our journey involved revamping a play-to-earn gaming platform. </p>
