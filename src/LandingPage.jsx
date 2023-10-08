@@ -9,7 +9,7 @@ import CaseStudies from "./components/sections/casestudies/CaseStudies";
 import Whyus from "./components/sections/whyus/Whyus";
 import { tabs } from "./utlis/common";
 import  {Blog}  from "./components/sections/blog/Blog";
-import CaseStudiesV1 from "./components/sections/caseStudiesv1/caseStudies";
+import CaseStudiesV1 from "./components/sections/casestudiesv1/CaseStudiesV1";
 
 function LandingPage() {
   const banner = useRef(null);
@@ -38,7 +38,7 @@ function LandingPage() {
         <CaseStudiesV1 contact={contact} caseStudies={caseStudies} /> 
         <Whyus whyUs={whyUs}/>
         <HowWeDo howWeDo={howWeDo} contact={contact} scrollToSection={scrollToSection} />
-        {/* <Blog blog={blog}/> */}
+        <Blog blog={blog}/>
         <Contact contact={contact}/>
       </main>
     </>

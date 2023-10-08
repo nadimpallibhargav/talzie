@@ -115,7 +115,7 @@ function Contact({ contact }) {
                 <a
                   className="socialLink"
                   target="blank"
-                  href="https://www.linkedin.com/in/talzie-33450b27a/"
+                  href="https://www.linkedin.com/company/talzie/"
                 >
                   <span className="socialButton">
                     <img src="/linkedin.png" width={24} alt="linkedin" />
