@@ -38,7 +38,7 @@ function LandingPage() {
         <CaseStudiesV1 contact={contact} caseStudies={caseStudies} /> 
         <Whyus whyUs={whyUs}/>
         <HowWeDo howWeDo={howWeDo} contact={contact} scrollToSection={scrollToSection} />
-        <Blog blog={blog}/>
+        {/* <Blog blog={blog}/> */}
         <Contact contact={contact}/>
       </main>
     </>

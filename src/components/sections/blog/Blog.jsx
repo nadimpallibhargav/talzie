@@ -10,9 +10,9 @@ export const Blog = ({ blog, scrollToSection }) => {
       image:
         casestudyone,
       about:
-        "Could this VR sketching tool be coming of age for designers in the future?",
+        "Why UI/UX Plays an Important Role",
       about1:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque ornare tincidunt....",
+        "User Interface (UI) and User Experience (UX) Design: Key Pillars for Success",
     },
     {
       id: 2,
