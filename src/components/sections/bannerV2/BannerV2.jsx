@@ -33,7 +33,7 @@ function BannerV2({ contact, scrollToSection }) {
               onClick={() => scrollToSection(contact) }
               className="bw-button"
             >
-              Contact Us
+              Let's collaborate
               <Lottie
               animationData={LottieScroll}
               loop={true}
