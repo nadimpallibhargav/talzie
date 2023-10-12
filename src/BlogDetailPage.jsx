@@ -1,6 +1,8 @@
 import React from "react";
+import Header from "./components/header/Header";
 import { blogsData } from "./utlis/common";
 import { useParams } from "react-router-dom";
+import "./components/sections/blog/Blog.scss";
 
 export const BlogDetailPage = () => {
   const { id } = useParams();
@@ -8,14 +10,24 @@ export const BlogDetailPage = () => {
   blog = blog[0];
 
   return (
-    <div>
-      <div className="container">
-        <div key={blog.id} className="Card">
-          <img src={blog.image} alt={blog.about} className="CardImage" />
-          <h2 className="CardTitle">{blog.title}</h2>
-          <p className="CardDescription">{blog.description}</p>
-        </div>
-      </div>
-    </div>
+    <>
+      <Header />
+      <main>
+        <section className="blogSection blogDetailSection">
+          <div className="container">
+            <h1 className="CardTitle">{blog.title}</h1>
+            <div className="blogFeaturedImage">
+              <img src={blog.image} alt={blog.about} className="CardImage" />
+            </div>
+            <div className="blogDetailContent">
+              <div
+                className="blogDetailText"
+                dangerouslySetInnerHTML={{ __html: blog.description }}
+              ></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
   );
 };
