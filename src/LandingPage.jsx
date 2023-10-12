@@ -5,7 +5,6 @@ import Clients from "./components/sections/clients/Clients";
 import Contact from "./components/sections/contact/Contact";
 import HowWeDo from "./components/sections/howwedo/HowWeDo";
 import Services from "./components/sections/services/Services";
-import CaseStudies from "./components/sections/casestudies/CaseStudies";
 import Whyus from "./components/sections/whyus/Whyus";
 import { tabs } from "./utlis/common";
 import  {Blog}  from "./components/sections/blog/Blog";
@@ -34,11 +33,10 @@ function LandingPage() {
         <BannerV2 banner={banner} contact={contact} scrollToSection={scrollToSection} />
         <Clients clients={clients}/>
         <Services tabs={tabs} autoCycleInterval={3500} services={services}/>
-        {/* <CaseStudies caseStudies={caseStudies} /> */}
         <CaseStudiesV1 contact={contact} caseStudies={caseStudies} /> 
         <Whyus whyUs={whyUs}/>
         <HowWeDo howWeDo={howWeDo} contact={contact} scrollToSection={scrollToSection} />
-        {/* <Blog blog={blog}/> */}
+        <Blog blog={blog}/>
         <Contact contact={contact}/>
       </main>
     </>

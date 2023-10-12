@@ -1,11 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import LandingPage from './LandingPage'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LandingPage from "./LandingPage";
+import BlogPage from "./BlogPage";
+import { BlogDetailPage } from "./BlogDetailPage";
+import "./global.scss";
 
-import './global.scss'
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <LandingPage />
-  </React.StrictMode>,
-)
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />}></Route>
+        <Route path="/blog" element={<BlogPage />}></Route>
+        <Route path="/blog/:id" element={<BlogDetailPage />}></Route>
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
+);
