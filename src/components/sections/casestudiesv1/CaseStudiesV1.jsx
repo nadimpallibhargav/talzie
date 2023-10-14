@@ -28,7 +28,7 @@ const CaseStudiesV1 = ({contact, caseStudies}) => {
                     <img src='/booking-app.png' />
                 </div>
             </div>
-            <div className='caseStudiesV1Wrapper'>
+            {/* <div className='caseStudiesV1Wrapper'>
                 <div className='caseStudiesV1Content'>
                     <label>Web3 Gamming </label>
                     <h6>2023 - Product design</h6>
@@ -39,7 +39,7 @@ const CaseStudiesV1 = ({contact, caseStudies}) => {
                 <div  className='caseStudiesV1Image'>
                     <img src={casestudyone} />
                 </div>
-            </div>
+            </div> */}
             <div className='caseStudiesV1Wrapper'>
                 <div className='caseStudiesV1Content'>
                     <label>HRMS App</label>
