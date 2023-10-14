@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../../../public/talzie_logo.svg";
 import "./Header.scss";
 
-const Header = ({ scrollToSection, services, clients, whyUs, howWeDo, contact, banner }) => {
+const Header = ({ scrollToSection, services, whyUs, howWeDo, contact, banner, blog, caseStudies }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -46,8 +46,8 @@ const Header = ({ scrollToSection, services, clients, whyUs, howWeDo, contact, b
             <div className="bar"></div>
           </div>
           <ul className={`menu ${isMenuOpen ? "open" : ""}`}>
-            <li onClick={() => handleMenuLinkClick(clients)}>
-              <span>CLIENTS</span>
+            <li onClick={() => handleMenuLinkClick(caseStudies)}>
+              <span>OUR WORK</span>
             </li>
             <li onClick={() => handleMenuLinkClick(services)}>
               <span>SERVICES</span>
@@ -58,6 +58,9 @@ const Header = ({ scrollToSection, services, clients, whyUs, howWeDo, contact, b
             <li onClick={() => handleMenuLinkClick(howWeDo)}>
               <span>HOW WE DO</span>
             </li>
+            {/* <li onClick={() => handleMenuLinkClick(blog)}>
+              <span>BLOG</span>
+            </li> */}
             <li onClick={() => handleMenuLinkClick(contact)}>
               <span>CONTACT</span>
             </li>

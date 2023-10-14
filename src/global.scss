@@ -100,7 +100,7 @@ input[type='submit'] {
 
     p {
         opacity: 0.7;
-        font-size: 2rem;
+        font-size: 18px;
         line-height: 3rem;
         font-weight: 300;
         padding-top: 12px;
@@ -121,7 +121,7 @@ input[type='submit'] {
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1170px;
+        max-width: 1240px;
     }
 }
 
@@ -150,4 +150,23 @@ input[type='submit'] {
             height: 250px !important;
         }
     }
+}
+
+.bw-button{
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.37px;
+    line-height: 1;
+    border-radius: 4px;
+    background-color: $color-black-0;
+    color: $color-white-0;
+    border: 1px solid $color-white-0;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.35s all;
+    max-width: 130px;
+    margin-top: 56px;
 }
