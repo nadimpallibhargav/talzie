@@ -40,7 +40,7 @@ const CaseStudiesV1 = ({contact, caseStudies}) => {
                     <img src={casestudyone} />
                 </div>
             </div> */}
-            <div className='caseStudiesV1Wrapper'>
+            {/* <div className='caseStudiesV1Wrapper'>
                 <div className='caseStudiesV1Content'>
                     <label>HRMS App</label>
                     <h6 style={{width:220}}>2023 - React Native Development</h6>
@@ -53,7 +53,7 @@ const CaseStudiesV1 = ({contact, caseStudies}) => {
                 <div  className='caseStudiesV1Image'>
                     <img src={casestudytwo} />
                 </div>
-            </div>
+            </div> */}
         </div>
     </section>
   )
