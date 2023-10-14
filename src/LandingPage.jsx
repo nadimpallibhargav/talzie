@@ -27,7 +27,7 @@ function LandingPage() {
       <Header scrollToSection={scrollToSection} services={services} clients={clients} whyUs={whyUs} howWeDo={howWeDo} contact={contact} banner={banner}/>
       <main>
         <BannerV2 banner={banner}/>
-        <Clients clients={clients}/>
+        {/* <Clients clients={clients}/> */}
         <Services tabs={tabs} autoCycleInterval={3500} services={services}/>
         <Whyus whyUs={whyUs}/>
         <HowWeDo howWeDo={howWeDo} contact={contact} scrollToSection={scrollToSection} />
