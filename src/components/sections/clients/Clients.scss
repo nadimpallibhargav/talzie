@@ -51,14 +51,13 @@
 }
 
 .clientCard {
-  background-color: $color-black-1;
   @extend %align-justify-center;
   min-width: 135px;
   min-height: 135px;
   border-radius: 20px;
   margin: 2px;
-  border: 1px solid $color-black-3;
-
+  border: 1px solid #3B3B3B;
+  background: #121212;
   img {
     vertical-align: text-top;
   }

@@ -40,6 +40,7 @@ const CaseStudiesV1 = ({contact, caseStudies}) => {
                     <img src={casestudyone} />
                 </div>
             </div> */}
+
             {/* <div className='caseStudiesV1Wrapper'>
                 <div className='caseStudiesV1Content'>
                     <label>HRMS App</label>

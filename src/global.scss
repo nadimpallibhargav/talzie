@@ -167,6 +167,11 @@ input[type='submit'] {
     justify-content: space-between;
     cursor: pointer;
     transition: 0.35s all;
-    max-width: 130px;
-    margin-top: 56px;
+    max-width: 168px;
+    margin-top: 26px;
+    border: 1px solid #3B3B3B;
+    background: #121212;    
+    color: #B3B3B3;
+    position: sticky;
+    top: 132px;
 }

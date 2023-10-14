@@ -23,10 +23,10 @@
 
     .whyusCard {
         flex-basis: calc(33.3% - 20px);
-        border: 1px solid $color-white-0;
-        padding: 34px 24px;
         border-radius: 8px;
-
+        border: 1px solid #3B3B3B;
+        background: #121212;
+        padding: 34px 24px;
         h3 {
             padding-top: 30px;
             font-size: 2rem;
