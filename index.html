@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- google search console -->
+    <meta name="google-site-verification" content="VeqJu0ScDZHUm2OoILVz1K6sKjKoEMnb04elKLQagWs" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <meta name="description" content="Transforming visions into stunning digital experiences. We offer expert website and mobile app design and development services to drive your business">
+    <title>Website and App Design and Development Company - Talzie</title>
+    <link rel="icon" type="image/x-icon" href="/talzie_logo.svg">
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-FYPC2P4PDM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-FYPC2P4PDM");
+  </script>
   <body>
     <div id="root"></div>
+    <form name="contact" data-netlify="true" hidden>
+      <div>
+        <input
+          id="fullName"
+          type="text"
+          name="fullName"
+        />
+      </div>
+      <div>
+        <input
+          id="phone"
+          type="text"
+          name="phone"
+        />
+      </div>
+      <div>
+        <input
+          id="email"
+          type="text"
+          name="email"
+        />
+      </div>
+      <div>
+        <textarea
+            id="projectdetails"
+            name="projectdetails"
+          >
+        </textarea>
+      </div>
+    </form>
     <script type="module" src="/src/main.jsx"></script>
   </body>
-</html>
+</html>  

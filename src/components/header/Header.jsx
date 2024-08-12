@@ -1,33 +1,76 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../../public/talzie_logo.svg";
 import "./Header.scss";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({
+  scrollToSection,
+  services,
+  whyUs,
+  howWeDo,
+  contact,
+  banner,
+  caseStudies,
+}) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const handleMenuLinkClick = (section) => {
+    closeMenu();
+    scrollToSection(section);
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+  }, [isMenuOpen]);
+
   return (
     <header>
       <div className="container">
         <nav>
-          <div className="logoAndTitle">
-            <img src={logo} />
-            <a className="logo" href="">
-              ALZIE
-            </a>
+          <Link to="/">
+            <div
+              className="logoAndTitle"
+              onClick={() => handleMenuLinkClick(banner)}
+            >
+              <img src={logo} alt="Logo" />
+              <span className="logo">ALZIE</span>
+            </div>
+          </Link>
+          <div
+            className={`menu-toggle ${isMenuOpen ? "open" : ""}`}
+            onClick={toggleMenu}
+          >
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
           </div>
-          <ul>
-            <li>
-              <a href="">CLIENTS</a>
+          <ul className={`menu ${isMenuOpen ? "open" : ""}`}>
+            <li onClick={() => handleMenuLinkClick(caseStudies)}>
+              <span>OUR WORK</span>
             </li>
-            <li>
-              <a href="">SERVICES</a>
+            <li onClick={() => handleMenuLinkClick(services)}>
+              <span>SERVICES</span>
             </li>
-            <li>
-              <a href="">WHY US</a>
+            <li onClick={() => handleMenuLinkClick(whyUs)}>
+              <span>WHY US</span>
             </li>
-            <li>
-              <a href="">HOW WE DO</a>
+            <li onClick={() => handleMenuLinkClick(howWeDo)}>
+              <span>HOW WE DO</span>
             </li>
-            <li>
-              <a href="">CONTACT</a>
+            <li onClick={() => handleMenuLinkClick(contact)}>
+              <span>CONTACT</span>
             </li>
           </ul>
         </nav>

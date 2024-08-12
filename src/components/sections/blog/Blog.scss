@@ -1,0 +1,145 @@
+@import "../../../variable.scss";
+
+.blogSection {
+  .CheckOutSection {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: $color-white-0;
+
+    .latestNews {
+      font-size: 50px;
+
+      @media (max-width: 992px) {
+        font-size: 40px;
+      }
+    }
+
+    .CheckoutNews {
+      font-size: 20px;
+      margin-top: 10px;
+
+      @media (max-width: 992px) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .CardContainer {
+    @extend %justify-center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 30px;
+  }
+
+  .Card {
+    flex-basis: calc(33.3% - 20px);
+    border-radius: 8px;
+    border: 1px solid #3b3b3b;
+    background: #121212;
+    padding: 34px 24px;
+    h2 {
+      padding-top: 30px;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    p {
+      padding-top: 8px;
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 8px 16px;
+      font-size: 1.4rem;
+    }
+  }
+
+  .CardImage {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .CardTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+
+    @media (max-width: 992px) {
+      font-size: 15px;
+    }
+  }
+
+  .CardDescription {
+    font-size: 16px;
+    color: $color-white-0;
+    margin-top: 10px;
+
+    @media (max-width: 992px) {
+      font-size: 11px;
+    }
+  }
+
+  .blogFeaturedImage {
+    height: 600px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    border: 1px solid #3b3b3b;
+    img {
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &.blogDetailSection {
+    h1 {
+      font-size: 3rem;
+      padding-bottom: 30px;
+      text-align: center;
+      color: $color-yellow-0;
+    }
+
+    .blogDetailContent {
+      p {
+        font-size: 1.6rem;
+        padding-bottom: 30px;
+        line-height: 2em;
+      }
+      h2 {
+        font-size: 2rem;
+        padding-bottom: 15px;
+      }
+
+      ul,
+      ol {
+        padding-left: 30px;
+        padding-bottom: 30px;
+      }
+      li {
+        padding-bottom: 10px;
+        font-size: 1.6rem;
+        line-height: 2em;
+      }
+      b {
+        color: $color-yellow-0;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .Card {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .Card {
+      flex-basis: 100%;
+    }
+  }
+}

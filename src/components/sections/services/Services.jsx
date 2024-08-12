@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./Services.scss";
 
-const TabComponent = ({ tabs, autoCycleInterval }) => {
+const TabComponent = ({ tabs, autoCycleInterval, services }) => {
   const [activeTab, setActiveTab] = useState(0);
   const [progress, setProgress] = useState(0);
   const [isPlaying] = useState(true);
@@ -31,16 +31,19 @@ const TabComponent = ({ tabs, autoCycleInterval }) => {
   }, [progress, tabs.length, isFirstRender]);
 
   return (
-    <section className="services">
+    <section className="services" ref={services}>
       <div className="container">
         <div className="servicesContent">
           <div className="servicesImageContent">
             <div className="heading">
-              <h2>Services</h2>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <h2>What we do.</h2>
+              <p style={{ maxWidth: 450 }}>
+                Transforming ideas into captivating websites through creative
+                web development and design.
+              </p>
             </div>
             <div className="imageWrapper">
-              <img src={tabs[activeTab].img} />
+              <div className="lotti-wrapper">{tabs[activeTab].img}</div>
             </div>
           </div>
           <div className="servicesTabsWrapper">

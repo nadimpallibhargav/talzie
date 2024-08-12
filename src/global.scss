@@ -1,16 +1,20 @@
 @import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Inter";
 }
 
 html {
     font-size: 10px;
     background-color: $color-black-0;
     color: $color-white-0;
-    font-family: sans-serif;
+    font-family: "Inter";
+    scroll-behavior: smooth;
 }
 
 section {
@@ -27,6 +31,11 @@ a {
     cursor: pointer;
 }
 
+input[type='submit'] {
+    cursor: pointer;
+    border-radius: 28px;
+}
+
 .primaryBtn {
     padding: 17px 30px;
     font-size: 1.6rem;
@@ -34,10 +43,13 @@ a {
     letter-spacing: -0.37px;
     line-height: 1;
     border-radius: 28px;
-    background-color: $color-white-0;
+    background-color: $color-yellow-0;
     color: $color-black-0;
-    border: 1px solid $color-white-0;
+    border: 1px solid $color-yellow-0;
     display: inline-flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.35s all;
 
     &:hover {
         background-color: $color-black-0;
@@ -61,6 +73,16 @@ a {
     }
 }
 
+.iconWrapper {
+    display: inline-flex;
+    @extend %align-justify-center;
+    background: $color-blue-0;
+    padding: 5px;
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+}
+
 .container {
     width: 100%;
     padding-inline: 15px;
@@ -70,22 +92,86 @@ a {
 .heading {
     h2 {
         font-size: 6rem;
-        font-weight: 800;
+        font-weight: 700;
         letter-spacing: 1px;
         line-height: 1;
         max-width: 600px;
     }
 
     p {
-        font-size: 20px;
-        line-height: 1.35;
+        opacity: 0.7;
+        font-size: 18px;
+        line-height: 3rem;
         font-weight: 300;
-        padding-top: 15px;
+        padding-top: 12px;
+    }
+
+    h5 {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+
+    .label {
+        font-weight: 700;
+        font-size: 5rem;
+        line-height: 6rem;
     }
 }
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1170px;
+        max-width: 1240px;
     }
+}
+
+@media (max-width: 769px) {
+
+    section {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .heading {
+        h2 {
+            font-size: 2.4rem;            
+        }
+        p{
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+        }
+    }
+}
+
+.lotti-wrapper{
+    div{
+        svg{
+            width: 250px !important;
+            height: 250px !important;
+        }
+    }
+}
+
+.bw-button{
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.37px;
+    line-height: 1;
+    border-radius: 4px;
+    background-color: $color-black-0;
+    color: $color-white-0;
+    border: 1px solid $color-white-0;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.35s all;
+    max-width: 168px;
+    margin-top: 26px;
+    border: 1px solid #3B3B3B;
+    background: #121212;    
+    color: #B3B3B3;
+    position: sticky;
+    top: 132px;
 }

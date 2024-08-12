@@ -1,0 +1,62 @@
+.caseStudiesV1Wrapper{
+    border-radius: 24px;
+    border: 1px solid  #3B3B3B;
+    background:  #121212;
+    padding:60px;
+    margin-top: 56px;
+    display: flex;
+    align-items: self-start;
+    justify-content: space-between;
+    @media (max-width: 769px) {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+.caseStudiesV1Content{
+    label{
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%; /* 41.6px */
+        color: #fff;
+    }
+    h6{
+        color: #B3B3B3;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+        padding: 6px 10px;
+        border: 1px solid #B3B3B3;
+        border-radius: 4px;
+        width: 150px;
+        margin-top: 40px;
+        white-space: nowrap;
+    }
+    p{
+        color: #B3B3B3;
+        font-size: 16px !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 27px */
+        margin-top: 12px;
+        max-width: 386px;
+        @media (max-width: 769px) {
+           font-size: 12px !important;
+        }
+    }
+}
+
+.caseStudiesV1Image{
+
+    overflow: hidden;
+    img{
+        width:626px;
+        border-radius: 12px;
+        @media (max-width: 769px) {
+            width:100%;
+            margin-top: 40px;
+        }
+    }
+}

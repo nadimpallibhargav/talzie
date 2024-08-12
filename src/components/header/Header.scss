@@ -5,35 +5,127 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: $color-black-0;
+    background: $color-black-0;
     z-index: 1;
 }
 
 nav {
     @extend %align-end-justify-between;
-    .logoAndTitle{
+
+    .logoAndTitle {
+        cursor: pointer;
         @extend %align-end;
         gap: 0.7rem;
-        img{
-           max-width: 35px;
+
+        img {
+            max-width: 35px;
         }
     }
+
     .logo {
-        font-size: 2.8rem;
+        font-size: 16px;
         color: $color-white-0;
         font-weight: 700;
         letter-spacing: 0.7rem;
-        line-height: 1.9rem;
     }
+
     ul {
         @extend %align-end-justify-end;
     }
+
     li {
-        a {
-            font-size: 1.6rem;
+        span {
+            cursor: pointer;
+            font-size: 1.4rem;
             color: $color-white-0;
             padding: 5px 15px 0;
             line-height: 0px;
+            letter-spacing: 0.12rem;
+            &:hover {
+                color: $color-yellow-0;
+            }
         }
     }
+
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .bar {
+        width: 100%;
+        height: 2px;
+        background: $color-white-0;
+        transition: transform 0.3s ease;
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+        @extend %align-end-justify-end;
+    }
+
+    .menu li {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        .menu-toggle {
+            display: flex;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 82px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 83px);
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 50px;
+            padding: 50px 15px 10px;
+            background: $color-black-0;
+        }
+
+        .menu.open {
+            display: flex;
+        }
+
+        .menu-toggle.open .bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.open .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.open .bar:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -8px);
+        }
+
+        li {
+            width: 100%;
+            text-align: center;
+
+            span {
+                padding: 25px 30px;
+                display: inline-block;
+                font-size: 2rem;
+                border: 1px solid $color-white-0;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+body.menu-open {
+    overflow: hidden;
 }

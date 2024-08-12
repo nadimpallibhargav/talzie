@@ -1,11 +1,15 @@
-$color-black-0: #000000;
+$color-black-0:#0d0d0d;
 $color-black-1: #212121a6;
 $color-black-2: #212121;
 $color-black-3: #808080;
 $color-black-4: #0f181a;
 
-$color-white-0: #ffffff;
+$color-white-0: #d7d7d7;
 $color-white-1: #c4c4c4;
+
+$color-blue-0: #3e41da;
+
+$color-yellow-0: #ffd30a;
 
 %align-center {
     display: flex;
@@ -20,6 +24,11 @@ $color-white-1: #c4c4c4;
 %justify-center {
     display: flex;
     justify-content: center;
+}
+
+%justify-start {
+    display: flex;
+    justify-content: start;
 }
 
 %justify-between {
