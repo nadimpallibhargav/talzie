@@ -5,10 +5,12 @@ import LandingPage from "./LandingPage";
 import BlogPage from "./BlogPage";
 import { BlogDetailPage } from "./BlogDetailPage";
 import "./global.scss";
+import HeaderV2 from "./components/headerv2";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
+      <HeaderV2 />
       <Routes>
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/blog" element={<BlogPage />}></Route>

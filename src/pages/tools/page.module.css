@@ -1,0 +1,50 @@
+.wrapper {
+  width: 100% !important;
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden; /* Hide overflow to avoid scrollbars */
+  position: relative;
+}
+
+.description {
+  font-family: Century Gothic;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24.52px;
+  letter-spacing: -0.04em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.toolsWrapper {
+  position: relative;
+  height: 115.2px; /* Adjust based on the height of the content */
+  overflow: hidden;
+}
+
+.toolsContainer {
+  display: flex;
+  flex-direction: column;
+  animation: roll 10s linear infinite; /* Adjust the duration as needed */
+}
+
+.tools {
+  font-family: Syne;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 115.2px; /* Ensure this matches the height of .toolsWrapper */
+  letter-spacing: -0.04em;
+  text-align: center;
+  margin: 0;
+}
+
+@keyframes roll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}

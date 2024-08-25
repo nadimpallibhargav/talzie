@@ -1,0 +1,48 @@
+.heroSection {
+  /* background-image: url("../../../public/images/heroBanner.png"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #ebecf0;
+}
+
+.heading {
+  font-family: "Syne", sans-serif;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 115.2px;
+  letter-spacing: -0.04em;
+  text-align: center;
+  color: #000;
+}
+
+.info {
+  font-family: Century Gothic;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.heroFooter {
+  position: absolute;
+  bottom: 32px;
+  left: 46px;
+  right: 46px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #000;
+  padding-top: 40px;
+}
+
+.description {
+  font-family: Century Gothic;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #000;
+}
