@@ -1,13 +1,15 @@
 import React from "react";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 
 function About() {
   return (
-    <section className="containerv2">
-      <p className={styles.content}>
-        YOU THINK WE WORK FOR YOU. ACTUALLY WE ARE PLAYING, AND SOMEHOW THAT
-        HELPS YOU GROW YOUR BUSINESS
-      </p>
+    <section className={styles.about}>
+      <div className='container'>
+        <p>
+          YOU THINK WE WORK FOR YOU. ACTUALLY WE ARE PLAYING, AND SOMEHOW THAT
+          HELPS YOU GROW YOUR BUSINESS
+        </p>
+      </div>
     </section>
   );
 }
