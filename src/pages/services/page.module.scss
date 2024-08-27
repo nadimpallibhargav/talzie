@@ -1,0 +1,125 @@
+.service {
+  .content {
+    color: #fff;
+  }
+
+  .content h5 {
+    font-family: Syne;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 43.2px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+
+  .content p {
+    font-family: Century Gothic;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22.07px;
+    text-align: left;
+    padding-bottom: 6px;
+  }
+
+  .buttonGroup {
+    display: flex;
+    gap: 10px;
+  }
+
+  .buttonGroup button {
+    font-family: Century Gothic;
+    background-color: transparent;
+    color: #fff;
+    font-size: 12px;
+    padding: 12px 20px;
+    border: none;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #fff;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.05fr;
+    grid-gap: 25px;
+    align-items: center;
+    width: 100%;
+    padding-top: 60px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    padding-bottom: 10px;
+  }
+
+  .row h5 {
+    font-size: 48px;
+  }
+
+  .row p {
+    font-family: Century Gothic;
+    font-size: 18px;
+    text-align: start;
+  }
+
+  .row img {
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+
+  .row:hover img {
+    transform: rotate(0deg);
+  }
+
+  .buttonGroup button:hover {
+    background-color: #e0e0e0;
+    color: #000;
+  }
+
+  .activeButton {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid #fff !important;
+  }
+
+  @media screen and (max-width: 991px) {
+    .row {
+      display: flex;      
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+    }
+
+    .row h5 {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {    
+    .row {
+      gap: 10px;
+      padding-top: 40px;
+    }
+
+    .row h5 {
+      font-size: 22px;
+      line-height: 30px;
+      padding-bottom: 0px;
+    }
+    
+    .row p {
+      font-size: 16px;
+      padding-bottom: 0px;
+    }
+    
+    .row img {
+      max-width: 14px;
+    }
+
+    .buttonGroup button {
+      padding: 10px 12px;
+    }
+  }
+
+}

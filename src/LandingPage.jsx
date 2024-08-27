@@ -1,22 +1,21 @@
-import { useEffect, useRef, useState } from "react";
-import Header from "./components/header/Header";
-import BannerV2 from "./components/sections/bannerV2/BannerV2";
-import Clients from "./components/sections/clients/Clients";
+import { useEffect, useRef, useState } from 'react';
+import BannerV2 from './components/sections/bannerV2/BannerV2';
+import Clients from './components/sections/clients/Clients';
 // import Contact from "./components/sections/contact/Contact";
-import HowWeDo from "./components/sections/howwedo/HowWeDo";
+import HowWeDo from './components/sections/howwedo/HowWeDo';
 // import Services from "./components/sections/services/Services";
-import Whyus from "./components/sections/whyus/Whyus";
-import { tabs } from "./utlis/common";
-import { Blog } from "./components/sections/blog/Blog";
-import CaseStudiesV1 from "./components/sections/casestudiesv1/CaseStudiesV1";
-import Hero from "./pages/hero/page";
-import Services from "./pages/services/page";
-import Work from "./pages/works/page";
-import About from "./pages/about/page";
-import Phases from "./pages/phases/page";
-import Tools from "./pages/tools/page";
-import Contact from "./pages/contact/page";
-import Footer from "./components/footer";
+import Whyus from './components/sections/whyus/Whyus';
+import { tabs } from './utlis/common';
+import { Blog } from './components/sections/blog/Blog';
+import CaseStudiesV1 from './components/sections/casestudiesv1/CaseStudiesV1';
+import Hero from './pages/hero/page';
+import Services from './pages/services/page';
+import Work from './pages/works/page';
+import About from './pages/about/page';
+import Phases from './pages/phases/page';
+import Tools from './pages/tools/page';
+import Contact from './pages/contact/page';
+import Footer from './components/footer';
 
 function LandingPage() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -26,10 +25,10 @@ function LandingPage() {
       setCursorPosition({ x: event.clientX, y: event.clientY });
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
@@ -45,70 +44,59 @@ function LandingPage() {
   const scrollToSection = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
   const workItems = {
-    label: "Latest Works (2024)",
-    view: "View Case Study",
+    label: 'Latest Works (2024)',
+    view: 'View Case Study',
     item: [
       {
         id: 1,
-        name: "Project Alpha",
+        name: 'Project Alpha',
       },
       {
         id: 2,
-        name: "Project Beta",
+        name: 'Project Beta',
       },
       {
         id: 3,
-        name: "Project Gamma",
+        name: 'Project Gamma',
       },
       {
         id: 4,
-        name: "Project Delta",
+        name: 'Project Delta',
       },
     ],
   };
 
   // Array of objects with dummy content
   const blogItems = {
-    label: "Blogs (2024)",
-    view: "Read Article",
+    label: 'Blogs (2024)',
+    view: 'Read Article',
     item: [
       {
         id: 1,
-        name: "Project Alpha",
+        name: 'Project Alpha',
       },
       {
         id: 2,
-        name: "Project Beta",
+        name: 'Project Beta',
       },
       {
         id: 3,
-        name: "Project Gamma",
+        name: 'Project Gamma',
       },
       {
         id: 4,
-        name: "Project Delta",
+        name: 'Project Delta',
       },
     ],
   };
 
   return (
     <>
-      {/* <Header
-        scrollToSection={scrollToSection}
-        services={services}
-        clients={clients}
-        caseStudies={caseStudies}
-        whyUs={whyUs}
-        howWeDo={howWeDo}
-        contact={contact}
-        blog={blog}
-        banner={banner}
-      /> */}
       <main>
         {/* <div
           className="custom-cursor"

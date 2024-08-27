@@ -1,6 +1,5 @@
-import { useRef } from "react";
-import Header from "./components/header/Header";
-import { Blog } from "./components/sections/blog/Blog";
+import { useRef } from 'react';
+import { Blog } from './components/sections/blog/Blog';
 
 function BlogPage() {
   const banner = useRef(null);
@@ -15,23 +14,12 @@ function BlogPage() {
   const scrollToSection = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
-    
+
   return (
     <>
-      <Header
-        scrollToSection={scrollToSection}
-        services={services}
-        clients={clients}
-        caseStudies={caseStudies}
-        whyUs={whyUs}
-        howWeDo={howWeDo}
-        contact={contact}
-        blog={blog}
-        banner={banner}
-      />
       <main>
         <Blog blog={blog} />
       </main>

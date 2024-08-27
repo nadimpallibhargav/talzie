@@ -1,0 +1,97 @@
+.contact {
+  background-color: #ebecf0;
+
+  .contactWrap {
+    font-family: Syne;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 76.8px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    color: #000;
+    padding-top: 20px;
+  }
+
+  .contactWrap input {
+    font-family: Syne;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: #ebecf0;
+    font-size: 56px;
+  }
+
+  .splitWrap {
+    padding-top: 30px;
+  }
+
+  .splitWrap input {
+    font-family: Syne;
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    background-color: #ebecf0;
+    font-size: 56px;
+    padding-left: 20px;
+  }
+
+  .contactWrap input:focus,
+  .splitWrap input:focus {
+    border: none;
+    font-size: 56px;
+    outline: none;
+    border-bottom: 1px solid #000;
+  }
+
+  .contactWrap h5 {
+    font-family: Syne;
+    display: inline;
+  }
+
+  .buttonwrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 0px 0px 0px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .submitButton {
+    background-color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 12px 20px;
+    color: #fff;
+    font-family: Century Gothic;
+  }
+
+  .buttonwrap h5 {
+    font-size: 18px;
+    color: #000;
+    line-height: 36px;
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .contactWrap input,
+    .splitWrap input {
+      width: 100%;
+      font-size: 18px;
+      padding: 0;
+    }
+
+    .splitWrap {
+      padding-top: 16px;
+    }
+
+    .contactWrap {
+      line-height: 24px;
+      letter-spacing: 0.01em;
+    }
+
+    .contactWrap h5 {
+      font-size: 24px;
+    }
+  }
+}

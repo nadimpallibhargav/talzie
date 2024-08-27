@@ -1,0 +1,26 @@
+.about {
+  p {
+    font-family: Syne;
+    font-size: 83px;
+    font-weight: 700;
+    line-height: 99.6px;
+    letter-spacing: -0.04em;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 991px){
+    p {
+      font-size: 40px;
+      line-height: 60px;
+      letter-spacing: 0.2em;
+    }
+  }
+
+  @media screen and (max-width: 991px){
+    p {
+      font-size: 22px;
+      line-height: 30px;
+      letter-spacing: 0em;
+    }
+  }
+}
