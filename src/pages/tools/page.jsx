@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 
 function Tools() {
   // Define the tools data as a JavaScript object

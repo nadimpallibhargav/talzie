@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./components/header/Header";
 import { blogsData } from "./utlis/common";
 import { useParams } from "react-router-dom";
 import "./components/sections/blog/Blog.scss";
@@ -11,7 +10,6 @@ export const BlogDetailPage = () => {
 
   return (
     <>
-      <Header />
       <main>
         <section className="blogSection blogDetailSection">
           <div className="container">

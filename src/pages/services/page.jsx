@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 
 function Services() {
   const [activeSection, setActiveSection] = useState("development");
@@ -63,38 +63,42 @@ function Services() {
   };
 
   return (
-    <section className="containerv2">
-      <h5 className="headingv2">Services</h5>
+    <section className={styles.service}>
+      <div className='container'>
+        <h5 className='headingv2'>Services</h5>
 
-      <div className={styles.buttonGroup}>
-        <button
-          className={activeSection === "strategy" ? styles.activeButton : ""}
-          onClick={() => setActiveSection("strategy")}
-        >
-          Strategy
-        </button>
-        <button
-          className={activeSection === "design" ? styles.activeButton : ""}
-          onClick={() => setActiveSection("design")}
-        >
-          Design
-        </button>
-        <button
-          className={activeSection === "development" ? styles.activeButton : ""}
-          onClick={() => setActiveSection("development")}
-        >
-          Development
-        </button>
-      </div>
+        <div className={styles.buttonGroup}>
+          <button
+            className={activeSection === 'strategy' ? styles.activeButton : ''}
+            onClick={() => setActiveSection('strategy')}
+          >
+            Strategy
+          </button>
+          <button
+            className={activeSection === 'design' ? styles.activeButton : ''}
+            onClick={() => setActiveSection('design')}
+          >
+            Design
+          </button>
+          <button
+            className={
+              activeSection === 'development' ? styles.activeButton : ''
+            }
+            onClick={() => setActiveSection('development')}
+          >
+            Development
+          </button>
+        </div>
 
-      <div className={styles.content}>
-        {sections[activeSection].map((item, index) => (
-          <div className={styles.row} key={index}>
-            <h5>{item.title}</h5>
-            <p>{item.description}</p>
-            <img src="/images/icons/arrow.svg" alt="arrow icon" />
-          </div>
-        ))}
+        <div className={styles.content}>
+          {sections[activeSection].map((item, index) => (
+            <div className={styles.row} key={index}>
+              <h5>{item.title}</h5>
+              <p>{item.description}</p>
+              <img src='/images/icons/arrow.svg' alt='arrow icon' />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
