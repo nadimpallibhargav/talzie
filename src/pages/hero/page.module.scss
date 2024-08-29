@@ -1,14 +1,14 @@
 .hero {
   background-color: #ebecf0;
-  padding-top: 100px;
+  padding-top: 75px;
 
   .heroContainer {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    padding: 2rem;
-    text-align: left;
+    gap: 80px;
+      min-height: calc(100vh - 75px);
   }
 
   h1 {
@@ -19,7 +19,6 @@
     letter-spacing: -0.04em;
     text-align: center;
     color: #000;
-    padding-bottom: 30px;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1.5s ease forwards;
@@ -82,6 +81,11 @@
   }
 
   @media screen and (max-width: 568px) {
+    padding-top: 100px;
+    
+      .heroContainer {
+        gap: 40px;
+      }
     .heroFooter {
       flex-direction: column;
       gap: 30px;
