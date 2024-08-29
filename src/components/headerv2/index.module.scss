@@ -3,9 +3,8 @@
   color: #000;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 10000;
-  width: 100%;
 
   .navWrapper {
     padding-top: 20px;
@@ -184,6 +183,7 @@
       font-size: 16px;
       padding: 20px;
       text-align: right;
+      border-left: 0;
     }
 
     .body h5:nth-child(1) {

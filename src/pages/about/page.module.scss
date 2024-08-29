@@ -1,4 +1,5 @@
 .about {
+  padding-bottom: 160px;
   p {
     font-family: Syne;
     font-size: 83px;
@@ -16,7 +17,8 @@
     }
   }
 
-  @media screen and (max-width: 991px){
+  @media screen and (max-width: 768px){
+    padding-bottom: 80px;
     p {
       font-size: 22px;
       line-height: 30px;
