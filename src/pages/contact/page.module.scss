@@ -51,7 +51,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 70px 0px 0px 0px;
+    padding-top: 70px;
     flex-wrap: wrap;
     gap: 20px;
   }
@@ -74,6 +74,9 @@
 
   @media screen and (max-width: 768px) {
 
+    .buttonwrap {
+        padding-top: 40px;
+      }
     .contactWrap input,
     .splitWrap input {
       width: 100%;

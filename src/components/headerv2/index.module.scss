@@ -3,7 +3,7 @@
   color: #000;
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 10000;
 
   .navWrapper {
@@ -171,6 +171,8 @@
   }
 
   @media screen and (max-width: 768px) {
+    right: 0;
+    left: initial;
     .body {
       display: block;
     }
@@ -188,6 +190,10 @@
 
     .body h5:nth-child(1) {
       border: none;
+    }
+    
+    .body h5:nth-child(4) {
+      border-bottom: none;
     }
 
     .buttonwrap {
