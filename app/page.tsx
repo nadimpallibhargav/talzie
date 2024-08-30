@@ -1,6 +1,7 @@
 'use client';
 import About from '@/components/organisms/about/About';
 import Hero from '@/components/organisms/hero/Hero';
+import Phases from '@/components/organisms/phases/Phases';
 import Services from '@/components/organisms/services/Services';
 import Works from '@/components/organisms/works/Works';
 import { useEffect, useState } from 'react';
@@ -48,7 +49,7 @@ export default function Home() {
       <Hero />
       <Works data={workItems} />
       <Services />
-      {/* <Phases /> */}
+      <Phases />
       <About />
       {/* <Contact /> */}
       {/* <Tools /> */}
