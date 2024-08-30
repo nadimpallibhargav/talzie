@@ -1,10 +1,12 @@
+'use client';
 import React, { useState } from 'react';
 import styles from './Services.module.scss';
+import Image from 'next/image';
 
 function Services() {
   const [activeSection, setActiveSection] = useState('development');
 
-  const sections:any = {
+  const sections: any = {
     strategy: [
       {
         title: 'Product Discovery',
@@ -91,11 +93,11 @@ function Services() {
         </div>
 
         <div className={styles.content}>
-          {sections[activeSection].map((item:any, index:any) => (
+          {sections[activeSection].map((item: any, index: any) => (
             <div className={styles.row} key={index}>
               <h5>{item.title}</h5>
               <p>{item.description}</p>
-              <img src='/arrow.svg' alt='arrow icon' />
+              <Image src='/arrow.svg' alt='arrow icon' width={14} height={13} />
             </div>
           ))}
         </div>

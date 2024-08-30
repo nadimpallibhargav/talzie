@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 import styles from './Navbar.module.scss';
 
 function Navbar() {
@@ -15,11 +16,13 @@ function Navbar() {
         <div className='container'>
           <div className={styles.navWrapper}>
             <div className={styles.wrap}>
-              <img
+              <Image
                 src='/talzie-logo-black.png'
                 alt='logo'
                 onClick={toggleDrawer}
                 className={styles.logo}
+                width={50}
+                height={50}
               />
             </div>
           </div>
@@ -29,12 +32,20 @@ function Navbar() {
             <div className={styles.header}>
               <div className={styles.logoContainer} onClick={toggleDrawer}>
                 <div className={styles.talzieBanner}>
-                  <img src='/talzie-logo-black.png' />
+                  <Image
+                    src='/talzie-logo-black.png'
+                    alt='logo'
+                    width={40}
+                    height={40}
+                  />
                 </div>
                 <h5>Talzie</h5>
               </div>
-              <img
+              <Image
                 src='/close.svg'
+                alt='close'
+                width={28}
+                height={28}
                 onClick={toggleDrawer}
                 style={{ cursor: 'pointer' }}
               />
@@ -48,12 +59,12 @@ function Navbar() {
             <div className={styles.footer}>
               <div className={styles.buttonwrap}>
                 <p>
-                  At Talzie web solutions, we don't just design and build
+                  At Talzie web solutions, we don&lsquo;t just design and build
                   websites. <br /> — we create digital experiences that
-                  captivate, convert, and inspire. Whether you're a startup
-                  looking to make a bold entrance or an established brand aiming
-                  to redefine your online presence, our team of creative experts
-                  is here to turn your ideas into reality.
+                  captivate, convert, and inspire. Whether you&lsquo;re a
+                  startup looking to make a bold entrance or an established
+                  brand aiming to redefine your online presence, our team of
+                  creative experts is here to turn your ideas into reality.
                 </p>
                 <h5>FOLLOW US ON : LINKEDIN | FACEBOOK | INSTAGRAM</h5>
               </div>

@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import styles from './Phases.module.scss';
 
@@ -53,17 +54,13 @@ const phases = [
 ];
 
 function Phases() {
-
   return (
     <section className={styles.phases}>
       <div className='container'>
         <h5 className='headingv2'>8 Phases for smooth work-flow</h5>
         <div className={styles.phasesGrid}>
           {phases.map((phase, index) => (
-            <div
-              key={index}
-              className={styles.phaseCard}
-            >
+            <div key={index} className={styles.phaseCard}>
               <div className={styles.phaseNumber}>{`0${index + 1}`}</div>
               <h6>{phase.title}</h6>
               <p>{phase.content}</p>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './Works.module.scss';
 
 function Works({ data }:any) {
@@ -11,7 +12,7 @@ function Works({ data }:any) {
               <div className={styles.card}>
                 <div className={styles.cardImage}>
                   <div className={styles.imageWrapper}>
-                    <img src='/banner-vr.png' alt='' />
+                    <Image src='/banner-vr.png' alt='works' width={635} height={288} />
                   </div>
                   <a href=''>{data.view}</a>
                 </div>
