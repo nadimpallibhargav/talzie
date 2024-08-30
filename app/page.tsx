@@ -79,7 +79,6 @@ export default function Home() {
       <Contact />
       <Tools />
       <Works data={blogItems} />
-      {/* <Footer /> */}
     </main>
   );
 }
