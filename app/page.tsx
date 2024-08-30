@@ -4,6 +4,7 @@ import Contact from '@/components/organisms/contact/Contact';
 import Hero from '@/components/organisms/hero/Hero';
 import Phases from '@/components/organisms/phases/Phases';
 import Services from '@/components/organisms/services/Services';
+import Tools from '@/components/organisms/tools/Tools';
 import Works from '@/components/organisms/works/Works';
 import { useEffect, useState } from 'react';
 
@@ -53,7 +54,7 @@ export default function Home() {
       <Phases />
       <About />
       <Contact />
-      {/* <Tools /> */}
+      <Tools />
       {/* <Work data={blogItems} /> */}
       {/* <Footer /> */}
     </main>
