@@ -1,5 +1,6 @@
 'use client';
 import About from '@/components/organisms/about/About';
+import Hero from '@/components/organisms/hero/Hero';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
@@ -42,15 +43,15 @@ export default function Home() {
 
   return (
     <main>
-      {/* <Hero />
-      <Work data={workItems} />
-      <Services />
-      <Phases /> */}
+      <Hero />
+      {/* <Work data={workItems} /> */}
+      {/* <Services /> */}
+      {/* <Phases /> */}
       <About />
-      {/* <Contact />
-      <Tools />
-      <Work data={blogItems} />
-      <Footer /> */}
+      {/* <Contact /> */}
+      {/* <Tools /> */}
+      {/* <Work data={blogItems} /> */}
+      {/* <Footer /> */}
     </main>
   );
 }
