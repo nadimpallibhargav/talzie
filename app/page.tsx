@@ -46,6 +46,29 @@ export default function Home() {
     ],
   };
 
+  const blogItems = {
+    label: 'Blogs (2024)',
+    view: 'Read Article',
+    item: [
+      {
+        id: 1,
+        name: 'Project Alpha',
+      },
+      {
+        id: 2,
+        name: 'Project Beta',
+      },
+      {
+        id: 3,
+        name: 'Project Gamma',
+      },
+      {
+        id: 4,
+        name: 'Project Delta',
+      },
+    ],
+  };
+
   return (
     <main>
       <Hero />
@@ -55,7 +78,7 @@ export default function Home() {
       <About />
       <Contact />
       <Tools />
-      {/* <Work data={blogItems} /> */}
+      <Works data={blogItems} />
       {/* <Footer /> */}
     </main>
   );
