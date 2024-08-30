@@ -1,5 +1,6 @@
 'use client';
 import About from '@/components/organisms/about/About';
+import Contact from '@/components/organisms/contact/Contact';
 import Hero from '@/components/organisms/hero/Hero';
 import Phases from '@/components/organisms/phases/Phases';
 import Services from '@/components/organisms/services/Services';
@@ -51,7 +52,7 @@ export default function Home() {
       <Services />
       <Phases />
       <About />
-      {/* <Contact /> */}
+      <Contact />
       {/* <Tools /> */}
       {/* <Work data={blogItems} /> */}
       {/* <Footer /> */}
