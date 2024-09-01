@@ -2,7 +2,7 @@
     background-color: #ebecf0;
 
     .contactWrap {
-        font-family: Syne;
+        font-family: "Syne", system-ui;
         font-size: 56px;
         font-weight: 700;
         line-height: 76.8px;
@@ -13,7 +13,7 @@
     }
 
     .contactWrap input {
-        font-family: Syne;
+        font-family: "Syne", system-ui;
         border: none;
         border-bottom: 1px solid #000;
         background-color: #ebecf0;
@@ -25,7 +25,7 @@
     }
 
     .splitWrap input {
-        font-family: Syne;
+        font-family: "Syne", system-ui;
         border: none;
         border-bottom: 1px solid #000;
         width: 100%;
@@ -43,7 +43,7 @@
     }
 
     .contactWrap h5 {
-        font-family: Syne;
+        font-family: "Syne", system-ui;
         display: inline;
     }
 
@@ -63,7 +63,6 @@
         border-radius: 4px;
         padding: 12px 20px;
         color: #fff;
-        font-family: Century Gothic;
     }
 
     .buttonwrap h5 {

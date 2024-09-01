@@ -3,27 +3,35 @@
 @tailwind utilities;
 
 @import "./variable.scss";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+@font-face {
+  font-family: 'Syne';
+  src: url('../public/fonts/syne/Syne-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Inter";
 }
 
 html {
   font-size: 10px;
   background-color: $color-black-0;
   color: $color-white-0;
-  font-family: "Inter";
   scroll-behavior: smooth;
 }
 
 body {
   background-color: #000000;
+  font-family: 'Syne';
+  }
+  
+  h1 {
+    font-family: 'Syne';
 }
 
 .container {
@@ -147,7 +155,7 @@ input[type="submit"] {
 }
 
 .headingv2 {
-  font-family: Syne;
+  font-family: "Syne", system-ui;
   font-size: 32px;
   font-weight: 700;
   line-height: 38.4px;
