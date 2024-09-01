@@ -1,7 +1,7 @@
 .about {
   padding-bottom: 160px;
   p {
-    font-family: "Syne", system-ui;
+    font-family: "myFont", sans-serif !important;
     font-size: 83px;
     font-weight: 700;
     line-height: 99.6px;
@@ -9,7 +9,7 @@
     text-align: center;
   }
 
-  @media screen and (max-width: 991px){
+  @media screen and (max-width: 991px) {
     p {
       font-size: 40px;
       line-height: 60px;
@@ -17,7 +17,7 @@
     }
   }
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     padding-bottom: 80px;
     p {
       font-size: 22px;

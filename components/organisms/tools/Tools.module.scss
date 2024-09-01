@@ -1,59 +1,59 @@
 .wrapper {
-    width: 100% !important;
-    height: 100vh !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
+  width: 100% !important;
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .description {
-    max-width: 768px;
-    margin-inline: auto;
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 54.52px;
-    letter-spacing: -0.04em;
-    text-align: center;
-    padding-bottom: 60px;
+  max-width: 768px;
+  margin-inline: auto;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 54.52px;
+  letter-spacing: -0.04em;
+  text-align: center;
+  padding-bottom: 60px;
 
-    @media screen and (max-width: 768px) {
-        font-size: 24px;
-        line-height: 36px;
-    }
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .toolsWrapper {
-    position: relative;
-    height: 115.2px;
-    overflow: hidden;
+  position: relative;
+  height: 115.2px;
+  overflow: hidden;
 }
 
 .toolsContainer {
-    display: flex;
-    flex-direction: column;
-    animation: roll 10s linear infinite;
-    /* Adjust the duration as needed */
+  display: flex;
+  flex-direction: column;
+  animation: roll 10s linear infinite;
+  /* Adjust the duration as needed */
 }
 
 .tools {
-    font-family: "Syne", system-ui;
-    font-size: 96px;
-    font-weight: 700;
-    line-height: 115.2px;
-    /* Ensure this matches the height of .toolsWrapper */
-    letter-spacing: -0.04em;
-    text-align: center;
-    margin: 0;
+  font-family: "myFont", sans-serif !important;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 115.2px;
+  /* Ensure this matches the height of .toolsWrapper */
+  letter-spacing: -0.04em;
+  text-align: center;
+  margin: 0;
 }
 
 @keyframes roll {
-    0% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    100% {
-        transform: translateY(-100%);
-    }
+  100% {
+    transform: translateY(-100%);
+  }
 }
