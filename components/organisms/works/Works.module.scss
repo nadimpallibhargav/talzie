@@ -26,7 +26,6 @@
         transform: scale(0);
         transition: transform 0.3s ease;
         color: black;
-        font-family: Century Gothic;
         font-size: 12px;
         font-weight: bold;
         opacity: 0;
@@ -39,7 +38,7 @@
     }
 
     .subHeading {
-        font-family: Syne;
+        font-family: "Syne", system-ui;
         font-size: 18px;
         font-weight: 700;
         line-height: 28.8px;
@@ -70,7 +69,6 @@
         width: 100%;
         bottom: 0;
         padding: 20px;
-        font-family: Century Gothic;
         font-size: 12px;
         font-weight: 700;
         line-height: 22.07px;
