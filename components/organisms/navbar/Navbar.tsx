@@ -3,11 +3,16 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './Navbar.module.scss';
 
-function Navbar() {
+function Navbar({ sections }: any) {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);
+  };
+
+  const scrollToSection = (sectionRef: any) => {
+    sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    setDrawerOpen(false);
   };
 
   return (
@@ -51,10 +56,18 @@ function Navbar() {
               />
             </div>
             <div className={styles.body}>
-              <h5>Our Work</h5>
-              <h5>About Us</h5>
-              <h5>Our Process</h5>
-              <h5>Blog</h5>
+              <h5 onClick={() => scrollToSection(sections.worksRef)}>
+                Our Work
+              </h5>
+              <h5 onClick={() => scrollToSection(sections.servicesRef)}>
+                Our Services
+              </h5>
+              <h5 onClick={() => scrollToSection(sections.phasesRef)}>
+                Our Process
+              </h5>
+              <h5 onClick={() => scrollToSection(sections.contactRef)}>
+                Contact Us
+              </h5>
             </div>
             <div className={styles.footer}>
               <div className={styles.buttonwrap}>

@@ -12,13 +12,16 @@
 
   .card {
     border-radius: 8px;
-    background: rgb(74, 72, 72);
+    background: var(
+      --dark-gradient,
+      linear-gradient(133deg, #1a1a1a 0%, #101010 100%)
+    );
     position: relative;
     cursor: pointer;
     transition: all 0.3s ease;
   }
 
-  a {
+  span {
     background-color: white;
     border-radius: 4px;
     padding: 10px 20px;
@@ -30,7 +33,7 @@
     opacity: 0;
   }
 
-  .card:hover a {
+  .card:hover span {
     transform: scale(1);
     opacity: 1;
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -52,6 +55,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
   }
 
   .imageWrapper img {

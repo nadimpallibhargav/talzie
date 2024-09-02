@@ -81,6 +81,7 @@ function Contact() {
              onChange={handleChange}
             placeholder='spill the ink of your mind right here...'
             type='text'
+            className='text-black'
           />
           </div>
           <div className={styles.buttonwrap}>
