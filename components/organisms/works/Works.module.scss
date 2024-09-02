@@ -21,7 +21,7 @@
     transition: all 0.3s ease;
   }
 
-  a {
+  span {
     background-color: white;
     border-radius: 4px;
     padding: 10px 20px;
@@ -33,7 +33,7 @@
     opacity: 0;
   }
 
-  .card:hover a {
+  .card:hover span {
     transform: scale(1);
     opacity: 1;
     transition: opacity 0.3s ease, transform 0.3s ease;
