@@ -1,5 +1,6 @@
-import Image from "next/image";
-import styles from "./Works.module.scss";
+import Image from 'next/image';
+import Link from 'next/link'; // Import Link from next/link
+import styles from './Works.module.scss';
 
 function Works({ data, ref }: any) {
   return (
@@ -14,7 +15,7 @@ function Works({ data, ref }: any) {
                   <div className={styles.imageWrapper}>
                     <Image
                       src={item?.url}
-                      alt='works'
+                      alt={item.name}
                       width={635}
                       height={288}
                     />
@@ -23,7 +24,10 @@ function Works({ data, ref }: any) {
                 </div>
                 <h5 className={styles.info}>{item?.tag}</h5>
               </div>
-              <h6 className={styles.subHeading}>{item.name}</h6>
+              {/* Link to the blog detail page */}
+              <Link href={`/blog/${item.id}`} className={styles.subHeading}>
+                {item.name}
+              </Link>
             </div>
           ))}
         </div>

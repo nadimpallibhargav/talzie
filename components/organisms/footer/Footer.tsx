@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className={styles.footerContainer}>
       <div className='container'>
-        <div className={`${styles.linksWrapper} text-center max-w-[768px] mx-auto py-10 flex items-center justify-between flex-wrap gap-5`}>
+        <div className={`${styles.linksWrapper} text-center max-w-[768px] mx-auto flex items-center justify-between flex-wrap gap-5 pt-[50px] pb-[200px]`}>
           <h5 className='text-2xl font-bold'>
             LINKEDIN | FACEBOOK | INSTAGRAM
           </h5>
