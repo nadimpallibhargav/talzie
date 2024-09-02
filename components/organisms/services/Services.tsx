@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import styles from './Services.module.scss';
 import Image from 'next/image';
 
-function Services() {
+function Services({ ref }:any) {
   const [activeSection, setActiveSection] = useState('development');
 
   const sections: any = {
@@ -65,7 +65,7 @@ function Services() {
   };
 
   return (
-    <section className={styles.service}>
+    <section className={styles.service} ref={ref}>
       <div className='container'>
         <h5 className='headingv2'>Services</h5>
 
@@ -97,7 +97,7 @@ function Services() {
             <div className={styles.row} key={index}>
               <h5>{item.title}</h5>
               <p>{item.description}</p>
-              <Image src='/arrow.svg' alt='arrow icon' width={14} height={13} />
+              {/* <Image src='/arrow.svg' alt='arrow icon' width={14} height={13} /> */}
             </div>
           ))}
         </div>

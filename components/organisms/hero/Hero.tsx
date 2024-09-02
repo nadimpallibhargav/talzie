@@ -5,7 +5,7 @@ function Hero() {
     <section className={styles.hero}>
       <div className='container'>
         <div className={styles.heroContainer}>
-          <h1>Designing Tomorrow&lsquo;s Websites, Today</h1>
+          <h1 className='max-w-[991px] mx-auto'>Designing Tomorrow&lsquo;s Websites, Today</h1>
           <div className={styles.heroFooter}>
             <h6 className={styles.info}>
               Design Visually. <br />

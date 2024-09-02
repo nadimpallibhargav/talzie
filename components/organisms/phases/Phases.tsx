@@ -53,20 +53,20 @@ const phases = [
   },
 ];
 
-function Phases() {
+function Phases({ref}:any) {
   return (
-    <section className={styles.phases}>
+    <section className={styles.phases} ref={ref}>
       <div className='container'>
         <h5 className='headingv2'>8 Phases for smooth work-flow</h5>
-        <div className={styles.phasesGrid}>
+        <div className={`${styles.phasesGrid} items-stretch`}>
           {phases.map((phase, index) => (
             <div key={index} className={styles.phaseCard}>
               <div className={styles.phaseNumber}>{`0${index + 1}`}</div>
               <h6>{phase.title}</h6>
               <p>{phase.content}</p>
-              <a href={phase.link} className={styles.learnMore}>
+              {/* <a href={phase.link} className={styles.learnMore}>
                 Learn More
-              </a>
+              </a> */}
             </div>
           ))}
         </div>

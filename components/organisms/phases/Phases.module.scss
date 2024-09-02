@@ -19,14 +19,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* Ensures the button is pushed to the bottom */
-    height: 100%;
-    /* Ensures the card takes up full height of the grid item */
     overflow: hidden;
-    /* Ensures content doesn't overflow the card */
   }
 
   .phaseCard h6 {
@@ -40,7 +33,7 @@
     font-size: 14px;
     line-height: 1.5;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    // -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;

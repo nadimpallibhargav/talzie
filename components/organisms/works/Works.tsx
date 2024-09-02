@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styles from "./Works.module.scss";
 
-function Works({ data }: any) {
+function Works({ data, ref }: any) {
   return (
-    <section className={styles.works}>
-      <div className="container">
-        <h2 className="headingv2">{data.label}</h2>
+    <section className={styles.works} ref={ref}>
+      <div className='container'>
+        <h2 className='headingv2'>{data.label}</h2>
         <div className={styles.cardContainer}>
           {data?.item?.map((item: any) => (
             <div key={item.id} className={styles.cardWrapper}>
@@ -14,12 +14,12 @@ function Works({ data }: any) {
                   <div className={styles.imageWrapper}>
                     <Image
                       src={item?.url}
-                      alt="works"
+                      alt='works'
                       width={635}
                       height={288}
                     />
                   </div>
-                  <a href="">{data.view}</a>
+                  <span>{data.view}</span>
                 </div>
                 <h5 className={styles.info}>{item?.tag}</h5>
               </div>
