@@ -109,7 +109,7 @@ export default function Home() {
           <Contact />
         </div>
         <Tools />
-        {/* <Works data={blogItems} /> */}
+        <Works data={blogItems} />
       </main>
     </>
   );
