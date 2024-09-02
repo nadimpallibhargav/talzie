@@ -39,7 +39,7 @@ export default function BlogDetail() {
           <h1 className='text-6xl font-bold pb-[30px] font-Syne'>
             {blogData.title}
           </h1>
-          <p className='text-2xl'>{blogData.content}</p>
+          <p className='text-3xl leading-10'>{blogData.content}</p>
         </div>
       </div>
     </section>
