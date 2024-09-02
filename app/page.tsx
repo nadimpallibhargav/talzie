@@ -66,19 +66,15 @@ export default function Home() {
     item: [
       {
         id: 1,
-        name: 'Project Alpha',
+        name: 'Blog 1',
+        url: '/images/tyohaarforever.png',
+        tag: 'HTML',
       },
       {
         id: 2,
-        name: 'Project Beta',
-      },
-      {
-        id: 3,
-        name: 'Project Gamma',
-      },
-      {
-        id: 4,
-        name: 'Project Delta',
+        name: 'Blog 2',
+        url: '/images/amma-cabs-2.png',
+        tag: 'HTML | CSS',
       },
     ],
   };
