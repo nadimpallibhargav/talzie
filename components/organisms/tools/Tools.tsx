@@ -2,8 +2,15 @@ import styles from './Tools.module.scss';
 
 function Tools() {
   const toolsData = [
+    { name: 'React' },
+    { name: 'Angular' },
+    { name: 'Vue' },
+    { name: 'Node Js'},
+    { name: 'Python'},
+    { name: 'GSAP/Animation'},
+    { name: 'Three Js'},
+    { name: 'Blender'},
     { name: 'Figma' },
-    { name: 'Adobe' },
     { name: 'Sketch' },
     { name: 'InVision' },
     { name: 'Framer' },
