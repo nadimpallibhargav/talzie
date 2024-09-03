@@ -1,8 +1,9 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import styles from './Contact.module.scss';
-import emailjs from 'emailjs-com';
+import React, { useState } from "react";
+import styles from "./Contact.module.scss";
+import emailjs from "emailjs-com";
+import toast, { Toaster } from "react-hot-toast";
 
 type FormData = {
   from_name: string;
@@ -12,12 +13,14 @@ type FormData = {
 
 function Contact() {
   const [formData, setFormData] = useState<FormData>({
-    from_name: '',
-    user_email: '',
-    message: '',
+    from_name: "",
+    user_email: "",
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -27,26 +30,48 @@ function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const serviceID = 'service_b0frvz9'; // Replace with your EmailJS Service ID
-    const templateID = 'template_lhwzl98'; // Replace with your EmailJS Template ID
-    const userID = 'L4EmhoTI2BsKkdWyX'; // Replace with your EmailJS User ID
+    const serviceID = "service_b0frvz9"; // Replace with your EmailJS Service ID
+    const templateID = "template_lhwzl98"; // Replace with your EmailJS Template ID
+    const userID = "L4EmhoTI2BsKkdWyX"; // Replace with your EmailJS User ID
 
-    emailjs.send(serviceID, templateID, formData, userID)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Email sent successfully!');
-        setFormData({from_name: '', user_email: '', message: '' }); // Reset form after success
-      })
-      .catch((err) => {
-        console.error('FAILED...', err);
-        alert('Failed to send email. Please try again later.');
-      });
+    const myPromise = emailjs.send(serviceID, templateID, formData, userID);
+
+    toast.promise(
+      myPromise,
+      {
+        loading: "Sending your message...",
+        success: "Email sent successfully!",
+        error: "Failed to send email. Please try again later.",
+      },
+      {
+        style: {
+          minWidth: "250px",
+        },
+        success: {
+          duration: 2000,
+        },
+      }
+    );
+
+    myPromise.then(() => {
+      setFormData({ from_name: "", user_email: "", message: "" }); // Reset form after success
+    });
   };
 
   return (
     <section className={styles.contact}>
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          className: "",
+          style: {
+            fontSize: 18,
+            fontWeight: 600,
+          },
+        }}
+      />
       <div className="container">
-        <h5 className="headingv2" style={{ color: '#000' }}>
+        <h5 className="headingv2" style={{ color: "#000" }}>
           Contact Us
         </h5>
         <form onSubmit={handleSubmit}>
@@ -74,15 +99,13 @@ function Contact() {
             <h5>Here’s what I’m thinking:</h5>
           </div>
           <div className={styles.splitWrap}>
-      
-          <input
-             name="message"
-             value={formData.message}
-             onChange={handleChange}
-            placeholder='spill the ink of your mind right here...'
-            type='text'
-            className='text-black'
-          />
+            <input
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="spill the ink of your mind right here..."
+              type="text"
+            />
           </div>
           <div className={styles.buttonwrap}>
             <button type="submit" className={styles.submitButton}>
