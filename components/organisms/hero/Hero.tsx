@@ -1,4 +1,5 @@
 import styles from './Hero.module.scss';
+import ParticleAnimation from '../animations/ParticalAnimation';
 
 function Hero() {
   return (
@@ -6,6 +7,9 @@ function Hero() {
       <div className='container'>
         <div className={styles.heroContainer}>
           <h1 className='max-w-[991px] mx-auto'>Designing Tomorrow&lsquo;s Websites, Today</h1>
+          <div style={{ width: '100%', height: '50vh', position: 'relative' }}>
+            <ParticleAnimation />
+          </div>
           <div className={styles.heroFooter}>
             <h6 className={styles.info}>
               Design Visually. <br />
