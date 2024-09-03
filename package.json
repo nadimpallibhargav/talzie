@@ -9,11 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-spring/three": "^9.7.4",
+    "@react-three/drei": "^9.112.0",
+    "@react-three/fiber": "^8.17.6",
     "emailjs-com": "^3.2.0",
     "next": "14.2.7",
     "react": "^18",
     "react-dom": "^18",
-    "react-hot-toast": "^2.4.1"
+    "react-hot-toast": "^2.4.1",
+    "three": "^0.168.0"
   },
   "devDependencies": {
     "@types/node": "^20",
