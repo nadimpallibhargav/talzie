@@ -1,6 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
+import Navbar from '@/components/organisms/navbar/Navbar';
+import Link from 'next/link';
 
 const aData = [
   {
@@ -18,7 +20,7 @@ const aData = [
 ];
 
 export default function BlogDetail() {
-  const { id } = useParams(); 
+  const { id } = useParams();
   const [blogData, setBlogData] = useState<any>(null);
 
   useEffect(() => {
@@ -33,15 +35,26 @@ export default function BlogDetail() {
   if (!blogData) return <div>Loading...</div>;
 
   return (
-    <section className='pt-[200px] min-h-100vh bg-white text-black'>
-      <div className='container'>
-        <div className='max-w-[768px] mx-auto'>
-          <h1 className='text-6xl font-bold pb-[30px] font-Syne'>
-            {blogData.title}
-          </h1>
-          <p className='text-3xl leading-10'>{blogData.content}</p>
-        </div>
-      </div>
-    </section>
+    <>
+      <Navbar />
+
+      <main>
+        <section className='pt-[100px] min-h-100vh bg-white text-black'>
+          <div className='container'>
+            <div className='max-w-[700px] mx-auto'>
+              <div className='pb-[20px]'>
+                <Link className='text-2xl underline' href='/'>
+                  Back
+                </Link>
+              </div>
+              <h1 className='text-6xl font-bold pb-[30px] font-Syne'>
+                {blogData.title}
+              </h1>
+              <p className='text-3xl leading-10'>{blogData.content}</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
