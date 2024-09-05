@@ -39,7 +39,7 @@ body {
   }
 }
 
-.font-Syne{
+.font-Syne {
   font-family: "myFont", sans-serif !important;
 }
 
@@ -215,4 +215,44 @@ input[type="submit"] {
   color: #b3b3b3;
   position: sticky;
   top: 132px;
+}
+
+.loadingContainer {
+  max-width: 720px;
+  margin: auto;
+  padding: 150px 0px;
+  height: 100vh;
+  background-color: #ebecf0;
+}
+
+.loadingContainer p {
+  font-size: 42px;
+  font-weight: 800;
+  padding-bottom: 20px;
+}
+
+.blogWrap {
+  background-color: #ebecf0;
+}
+
+.blogContainer {
+  max-width: 720px;
+  margin: auto;
+  padding: 150px 0px;
+}
+
+.blogContainer div {
+  padding-bottom: 20px;
+  color: #000000;
+}
+
+.blogContainer h1 {
+  font-size: 42px;
+  font-weight: 800;
+  padding-bottom: 20px;
+}
+
+.blogContainer p {
+  font-size: 20px;
+  font-weight: 500;
 }
