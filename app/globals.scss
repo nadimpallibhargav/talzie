@@ -166,24 +166,6 @@ input[type="submit"] {
   padding-bottom: 20px;
 }
 
-@media (max-width: 769px) {
-  section {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-
-  .heading {
-    h2 {
-      font-size: 2.4rem;
-    }
-
-    p {
-      font-size: 1.6rem;
-      line-height: 2.6rem;
-    }
-  }
-}
-
 .lotti-wrapper {
   div {
     svg {
@@ -255,4 +237,33 @@ input[type="submit"] {
 .blogContainer p {
   font-size: 20px;
   font-weight: 500;
+}
+
+@media (max-width: 769px) {
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .heading {
+    h2 {
+      font-size: 2.4rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+    }
+  }
+  .blogContainer,
+  .loadingContainer {
+    padding: 70px 20px !important;
+  }
+
+  .blogContainer h1 {
+    font-size: 28px;
+  }
+  .blogContainer p {
+    font-size: 14px;
+  }
 }

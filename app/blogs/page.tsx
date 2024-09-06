@@ -72,7 +72,16 @@ const BlogPage: React.FC = () => {
         {blog.content.map((post) => (
           <div key={post.id}>
             <h1>{post.title}</h1>
-            {/* <img src={post.image} alt={post.title} /> */}
+            {!post.image ? (
+              ""
+            ) : (
+              <img
+                src={post.image}
+                alt={post.title}
+                style={{ marginBottom: 20 }}
+              />
+            )}
+
             <p>{post.content}</p>
           </div>
         ))}

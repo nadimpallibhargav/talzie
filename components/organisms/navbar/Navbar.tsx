@@ -1,29 +1,31 @@
-'use client';
-import React, { useState } from 'react';
-import Image from 'next/image';
-import styles from './Navbar.module.scss';
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import styles from "./Navbar.module.scss";
 
 function Navbar({ sections }: any) {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);
   };
 
   const scrollToSection = (sectionRef: any) => {
-    sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    sectionRef.current.scrollIntoView({ behavior: "smooth" });
     setDrawerOpen(false);
   };
 
   return (
     <header>
       <div className={styles.headerContainer}>
-        <div className='container'>
+        <div className="container">
           <div className={styles.navWrapper}>
             <div className={styles.wrap}>
               <Image
-                src='/talzie-logo-black.png'
-                alt='logo'
+                src="/talzie-logo-black.png"
+                alt="logo"
                 onClick={toggleDrawer}
                 className={styles.logo}
                 width={50}
@@ -38,8 +40,8 @@ function Navbar({ sections }: any) {
               <div className={styles.logoContainer} onClick={toggleDrawer}>
                 <div className={styles.talzieBanner}>
                   <Image
-                    src='/talzie-logo-black.png'
-                    alt='logo'
+                    src="/talzie-logo-black.png"
+                    alt="logo"
                     width={40}
                     height={40}
                   />
@@ -47,28 +49,32 @@ function Navbar({ sections }: any) {
                 <h5>Talzie</h5>
               </div>
               <Image
-                src='/close.svg'
-                alt='close'
+                src="/close.svg"
+                alt="close"
                 width={28}
                 height={28}
                 onClick={toggleDrawer}
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: "pointer" }}
               />
             </div>
-            <div className={styles.body}>
-              <h5 onClick={() => scrollToSection(sections.worksRef)}>
-                Our Work
-              </h5>
-              <h5 onClick={() => scrollToSection(sections.servicesRef)}>
-                Our Services
-              </h5>
-              <h5 onClick={() => scrollToSection(sections.phasesRef)}>
-                Our Process
-              </h5>
-              <h5 onClick={() => scrollToSection(sections.contactRef)}>
-                Contact Us
-              </h5>
-            </div>
+
+            {pathname === "/" && (
+              <div className={styles.body}>
+                <h5 onClick={() => scrollToSection(sections.worksRef)}>
+                  Our Work
+                </h5>
+                <h5 onClick={() => scrollToSection(sections.servicesRef)}>
+                  Our Services
+                </h5>
+                <h5 onClick={() => scrollToSection(sections.phasesRef)}>
+                  Our Process
+                </h5>
+                <h5 onClick={() => scrollToSection(sections.contactRef)}>
+                  Contact Us
+                </h5>
+              </div>
+            )}
+
             <div className={styles.footer}>
               <div className={styles.buttonwrap}>
                 <p>
