@@ -24,7 +24,7 @@ const blogs: Blog[] = [
           "The ChatGPT Hype Is Over — Now Watch How Google Will Kill ChatGPT.",
         content:
           "In this article, we’ll explore those differences and similarities, and offer some guidance for choosing whether Bard or ChatGPT will better suit your needs.",
-        image: "/images/blog1.jpeg",
+        image: "/images/blog1.webp",
       },
       {
         id: 2,
@@ -106,7 +106,7 @@ const blogs: Blog[] = [
         title: "Why Can’t Robots Click The “I’m Not a Robot” Box On Websites?",
         content:
           "If you've ever browsed the internet, you've likely encountered the 'Im Not a Robot' checkbox while filling out a form or logging into a website. This little CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) is designed to filter out automated bots from accessing certain services. But have you ever wondered why robots can’t simply check that box and proceed? After all, bots are designed to automate tasks, so why is this little box such a tricky hurdle?",
-        image: "/images/blog2.jpeg",
+        image: "/images/blog2.webp",
       },
       {
         id: 2,
@@ -211,7 +211,7 @@ const blogs: Blog[] = [
           "Elevate Your Digital Presence with Expert Web Design and Development",
         content:
           "In today’s fast-paced digital landscape, a business’s online presence is more critical than ever. Your website is often the first interaction potential customers have with your brand. But having just any website isn't enough—you need a dynamic, user-friendly, and visually stunning digital experience to capture attention and convert visitors into customers. That’s where a professional web design and development agency, like ours, comes in.",
-        image: "/images/blog31.jpeg",
+        image: "/images/blog31.webp",
       },
       {
         id: 2,
@@ -344,7 +344,7 @@ const blogs: Blog[] = [
           "Why MVP is No Longer Enough: It's Time to Focus on MVE (Minimum Viable Experience)",
         content:
           "For years, the startup and product development worlds have been dominated by the concept of the Minimum Viable Product (MVP)—a pared-down version of a product designed to test the market quickly, gather feedback, and iterate based on real-world use. While the MVP approach has served countless startups well, it's no longer the gold standard it once was. In today’s hyper-competitive market, the focus is shifting to MVE: Minimum Viable Experience.",
-        image: "/images/blog4.jpeg",
+        image: "/images/blog4.webp",
       },
       {
         id: 2,
