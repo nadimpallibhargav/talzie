@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
-// import { Syne } from "next/font/google";
 import localFont from "next/font/local";
-import Navbar from "@/components/organisms/navbar/Navbar";
 import Footer from "@/components/organisms/footer/Footer";
 import "./globals.scss";
-
-// const syne = Syne({ subsets: ['latin'] });
 
 const myFont = localFont({ src: "../public/fonts/gothic/centurygothic.ttf" });
 
@@ -20,7 +16,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
+      <head>
+        <meta
+          name='google-site-verification'
+          content='oWKfbPtzhZQVTil4V6rOts8Z6OIFEfKQrN1Yfwe6z_w'
+        />
+      </head>
       <body className={myFont.className}>
         {children}
         <Footer />
