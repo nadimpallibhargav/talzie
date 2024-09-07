@@ -17,12 +17,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <head>
-        <meta
-          name='google-site-verification'
-          content='oWKfbPtzhZQVTil4V6rOts8Z6OIFEfKQrN1Yfwe6z_w'
-        />
-      </head>
       <body className={myFont.className}>
         {children}
         <Footer />
