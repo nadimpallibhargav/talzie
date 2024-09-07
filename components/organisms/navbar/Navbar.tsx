@@ -20,16 +20,17 @@ function Navbar({ sections }: any) {
   return (
     <header>
       <div className={styles.headerContainer}>
-        <div className="container">
+        <div className='container'>
           <div className={styles.navWrapper}>
             <div className={styles.wrap}>
               <Image
-                src="/talzie-logo-black.png"
-                alt="logo"
+                src='/talzie-logo-black.png'
+                alt='logo'
                 onClick={toggleDrawer}
                 className={styles.logo}
                 width={50}
                 height={50}
+                priority
               />
             </div>
           </div>
@@ -40,25 +41,26 @@ function Navbar({ sections }: any) {
               <div className={styles.logoContainer} onClick={toggleDrawer}>
                 <div className={styles.talzieBanner}>
                   <Image
-                    src="/talzie-logo-black.png"
-                    alt="logo"
+                    src='/talzie-logo-black.png'
+                    alt='logo'
                     width={40}
                     height={40}
+                    priority
                   />
                 </div>
                 <h5>Talzie</h5>
               </div>
               <Image
-                src="/close.svg"
-                alt="close"
+                src='/close.svg'
+                alt='close'
                 width={28}
                 height={28}
                 onClick={toggleDrawer}
-                style={{ cursor: "pointer" }}
+                style={{ cursor: 'pointer' }}
               />
             </div>
 
-            {pathname === "/" && (
+            {pathname === '/' && (
               <div className={styles.body}>
                 <h5 onClick={() => scrollToSection(sections.worksRef)}>
                   Our Work
