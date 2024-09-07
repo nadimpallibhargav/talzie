@@ -24,7 +24,7 @@ function Navbar({ sections }: any) {
           <div className={styles.navWrapper}>
             <div className={styles.wrap}>
               <Image
-                src='/talzie-logo-black.png'
+                src='/talzie-logo-black.webp'
                 alt='logo'
                 onClick={toggleDrawer}
                 className={styles.logo}
@@ -41,7 +41,7 @@ function Navbar({ sections }: any) {
               <div className={styles.logoContainer} onClick={toggleDrawer}>
                 <div className={styles.talzieBanner}>
                   <Image
-                    src='/talzie-logo-black.png'
+                    src='/talzie-logo-black.webp'
                     alt='logo'
                     width={40}
                     height={40}
@@ -80,9 +80,9 @@ function Navbar({ sections }: any) {
             <div className={styles.footer}>
               <div className={styles.buttonwrap}>
                 <p>
-                  At Talzie web solutions, we don&lsquo;t just design and build
+                  At Talzie web solutions, we don&rsquo;t just design and build
                   websites. <br /> — we create digital experiences that
-                  captivate, convert, and inspire. Whether you&lsquo;re a
+                  captivate, convert, and inspire. Whether you&rsquo;re a
                   startup looking to make a bold entrance or an established
                   brand aiming to redefine your online presence, our team of
                   creative experts is here to turn your ideas into reality.
