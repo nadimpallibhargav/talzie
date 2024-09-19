@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
+import Link from 'next/link';
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname } from 'next/navigation';
 import styles from "./Navbar.module.scss";
 
 function Navbar({ sections }: any) {
@@ -13,7 +14,7 @@ function Navbar({ sections }: any) {
   };
 
   const scrollToSection = (sectionRef: any) => {
-    sectionRef.current.scrollIntoView({ behavior: "smooth" });
+    sectionRef.current.scrollIntoView({ behavior: 'smooth' });
     setDrawerOpen(false);
   };
 
@@ -87,7 +88,29 @@ function Navbar({ sections }: any) {
                   brand aiming to redefine your online presence, our team of
                   creative experts is here to turn your ideas into reality.
                 </p>
-                <h5>FOLLOW US ON : LINKEDIN | FACEBOOK | INSTAGRAM</h5>
+                <h5 className='flex items-center gap-[8px] flex-wrap'>
+                  <span className='max-[768px]:w-full'>FOLLOW US ON :</span>
+                  <Link
+                    href='https://www.linkedin.com/company/talzie/'
+                    target='_blank'
+                  >
+                    LINKEDIN
+                  </Link>
+                  <span>|</span>
+                  <Link
+                    href='https://www.facebook.com/people/Talzie-Web-Solutions/61565415118255/'
+                    target='_blank'
+                  >
+                    FACEBOOK
+                  </Link>
+                  <span>|</span>
+                  <Link
+                    href='https://www.instagram.com/talzie.info25/'
+                    target='_blank'
+                  >
+                    INSTAGRAM
+                  </Link>
+                </h5>
               </div>
             </div>
           </div>
