@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Script from 'next/script';
+import { GoogleTagManager } from '@next/third-parties/google';
 import Footer from '@/components/organisms/footer/Footer';
 import './globals.scss';
 
@@ -18,20 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <Script
-        src='https://www.googletagmanager.com/gtag/js?id=G-W4R7H47J'
-        strategy='afterInteractive'
-      />
-      <Script id='google-analytics' strategy='afterInteractive'>
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-W4R7H47J');
-        `}
-      </Script>
+      <GoogleTagManager gtmId='GTM-W4R7H47J' />
       <body className={myFont.className}>
+        <noscript>
+          <iframe
+            src='https://www.googletagmanager.com/ns.html?id=GTM-W4R7H47J'
+            height='0'
+            width='0'
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+
         {children}
         <Footer />
       </body>
