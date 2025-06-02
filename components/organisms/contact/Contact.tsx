@@ -51,7 +51,7 @@ function Contact() {
     }
 
     // Your WhatsApp number (receiver)
-    const phoneNumber = "8277116717";
+    const phoneNumber = "+916301725336";
 
     // Compose the WhatsApp message
     const whatsappMessage = encodeURIComponent(
