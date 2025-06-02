@@ -9,86 +9,113 @@ function Services({ ref }:any) {
   const sections: any = {
     strategy: [
       {
-        title: 'Product Discovery',
-        description: 'Research, User Interviews, and Market Analysis',
+        title: "Product Discovery",
+        description: "Research, User Interviews, and Market Analysis",
       },
       {
-        title: 'Product Architecture',
-        description: 'Creating the Blueprint of the Product',
+        title: "Product Architecture",
+        description: "Creating the Blueprint of the Product",
       },
       {
-        title: 'Go-to-Market Strategy',
-        description: 'Launch Strategy, Positioning, and Marketing',
+        title: "Go-to-Market Strategy",
+        description: "Launch Strategy, Positioning, and Marketing",
       },
       {
-        title: 'Product Roadmap',
-        description: 'Long-Term Vision and Feature Planning',
+        title: "Product Roadmap",
+        description: "Long-Term Vision and Feature Planning",
       },
     ],
     design: [
       {
-        title: 'Wireframing',
-        description: 'Low-Fidelity Mockups to Visualize the Layout',
+        title: "Wireframing",
+        description: "Low-Fidelity Mockups to Visualize the Layout",
       },
       {
-        title: 'Prototyping',
-        description: 'Interactive Models for User Testing',
+        title: "Prototyping",
+        description: "Interactive Models for User Testing",
       },
       {
-        title: 'Visual Design',
-        description: 'Branding, Color Schemes, and Typography',
+        title: "Visual Design",
+        description: "Branding, Color Schemes, and Typography",
       },
       {
-        title: 'UI /UX Design',
-        description: 'Optimizing User Interactions for Better Engagement',
+        title: "UI /UX Design",
+        description: "Optimizing User Interactions for Better Engagement",
       },
     ],
     development: [
       {
-        title: 'Web Development',
+        title: "Web Development",
         description:
-          'Frontend Development, Backend Development, and Integration',
+          "Frontend Development, Backend Development, and Integration",
       },
       {
-        title: 'Mobile Development',
-        description: 'iOS, Android, and Cross-Platform Solutions',
+        title: "Mobile Development",
+        description: "iOS, Android, and Cross-Platform Solutions",
       },
       {
-        title: 'Unit Testing',
-        description: 'QA, Manual Testing, and Engineering',
+        title: "Unit Testing",
+        description: "QA, Manual Testing, and Engineering",
       },
       {
-        title: 'Landing Page',
-        description: 'High-Converting Website for Lead Generation',
+        title: "Landing Page",
+        description: "High-Converting Website for Lead Generation",
+      },
+    ],
+    ai: [
+      {
+        title: "AI Consulting",
+        description:
+          "Strategy, Roadmap, and Implementation Guidance for AI Solutions",
+      },
+      {
+        title: "Custom AI Solutions",
+        description:
+          "Tailored Machine Learning, NLP, and Computer Vision Applications",
+      },
+      {
+        title: "AI Integration",
+        description: "Integrate AI into Existing Products and Workflows",
+      },
+      {
+        title: "Automation & Chatbots",
+        description:
+          "Automate Processes and Enhance Customer Experience with AI",
       },
     ],
   };
 
   return (
     <section className={styles.service} ref={ref}>
-      <div className='container'>
-        <h5 className='headingv2'>Services</h5>
+      <div className="container">
+        <h5 className="headingv2">Services</h5>
 
         <div className={styles.buttonGroup}>
           <button
-            className={activeSection === 'strategy' ? styles.activeButton : ''}
-            onClick={() => setActiveSection('strategy')}
+            className={activeSection === "strategy" ? styles.activeButton : ""}
+            onClick={() => setActiveSection("strategy")}
           >
             Strategy
           </button>
           <button
-            className={activeSection === 'design' ? styles.activeButton : ''}
-            onClick={() => setActiveSection('design')}
+            className={activeSection === "design" ? styles.activeButton : ""}
+            onClick={() => setActiveSection("design")}
           >
             Design
           </button>
           <button
             className={
-              activeSection === 'development' ? styles.activeButton : ''
+              activeSection === "development" ? styles.activeButton : ""
             }
-            onClick={() => setActiveSection('development')}
+            onClick={() => setActiveSection("development")}
           >
             Development
+          </button>
+          <button
+            className={activeSection === "ai" ? styles.activeButton : ""}
+            onClick={() => setActiveSection("ai")}
+          >
+            AI
           </button>
         </div>
 
