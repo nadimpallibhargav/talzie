@@ -83,6 +83,48 @@ function Services({ ref }:any) {
           "Automate Processes and Enhance Customer Experience with AI",
       },
     ],
+    "3d": [
+      {
+        title: "3D Product Visualization",
+        description:
+          "Showcase your products with interactive and photorealistic 3D models for web, mobile, and AR/VR platforms.",
+      },
+      {
+        title: "3D Animation & Motion Graphics",
+        description:
+          "Engaging 3D animations, explainer videos, and motion graphics for marketing, education, and presentations.",
+      },
+      {
+        title: "3D Game Development",
+        description:
+          "Full-cycle 3D game development for PC, mobile, and web using Unity, Unreal Engine, and WebGL.",
+      },
+      {
+        title: "3D Architectural Visualization",
+        description:
+          "Realistic 3D renders and walkthroughs for real estate, architecture, and interior design projects.",
+      },
+      {
+        title: "3D Asset Creation",
+        description:
+          "Custom 3D assets for games, simulations, AR/VR, and digital twins.",
+      },
+      {
+        title: "Immersive Experiences",
+        description:
+          "Virtual reality (VR), augmented reality (AR), and mixed reality (MR) solutions for training, marketing, and entertainment.",
+      },
+      {
+        title: "3D Printing & Prototyping",
+        description:
+          "3D modeling and preparation for rapid prototyping and 3D printing.",
+      },
+      {
+        title: "3D Web Solutions",
+        description:
+          "Interactive 3D experiences, product configurators, and immersive web solutions using WebGL and Three.js.",
+      },
+    ],
   };
 
   return (
@@ -116,6 +158,12 @@ function Services({ ref }:any) {
             onClick={() => setActiveSection("ai")}
           >
             AI
+          </button>
+          <button
+            className={activeSection === "3d" ? styles.activeButton : ""}
+            onClick={() => setActiveSection("3d")}
+          >
+            3D Development
           </button>
         </div>
 
