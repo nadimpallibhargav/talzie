@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import styles from './Services.module.scss';
-import Image from 'next/image';
 
 function Services({ ref }:any) {
   const [activeSection, setActiveSection] = useState('development');
