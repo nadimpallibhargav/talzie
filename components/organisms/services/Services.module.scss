@@ -23,7 +23,16 @@
 
   .buttonGroup {
     display: flex;
-    gap: 10px;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 10px;
+      align-items: stretch;
+      width: 100%;
+    }
   }
 
   .buttonGroup button {
@@ -36,6 +45,9 @@
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid #fff;
+    @media (max-width: 600px) {
+      width: 100%;
+    }
   }
 
   .row {
