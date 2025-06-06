@@ -133,12 +133,6 @@ function Services({ ref }:any) {
 
         <div className={styles.buttonGroup}>
           <button
-            className={activeSection === "strategy" ? styles.activeButton : ""}
-            onClick={() => setActiveSection("strategy")}
-          >
-            Strategy
-          </button>
-          <button
             className={activeSection === "design" ? styles.activeButton : ""}
             onClick={() => setActiveSection("design")}
           >
@@ -163,6 +157,12 @@ function Services({ ref }:any) {
             onClick={() => setActiveSection("3d")}
           >
             3D Development
+          </button>
+          <button
+            className={activeSection === "strategy" ? styles.activeButton : ""}
+            onClick={() => setActiveSection("strategy")}
+          >
+            Strategy
           </button>
         </div>
 
